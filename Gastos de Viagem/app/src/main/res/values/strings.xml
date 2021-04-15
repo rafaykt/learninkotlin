@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Gastos de viagem</string>
+    <string name="distancia">Distância</string>
+    <string name="total_em_kilometros">Total em Kilômetros</string>
+    <string name="kilometros_por_litro">Kilometros por litro</string>
+    <string name="autonomia">Autonomia</string>
+    <string name="preco_por_litro">Preço por litro</string>
+    <string name="preco">Preço</string>
+    <string name="gasto_total">O seu gasto total será de:</string>
+    <string name="valor_final">R$ 0,00</string>
+    <string name="botaoCalcular">Calcular</string>
+    <string name="toast_informar_valor">Informe valores válidos</string>
+</resources>
