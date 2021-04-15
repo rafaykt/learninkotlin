@@ -11,37 +11,21 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        botaoCalcular.setOnClickListener(this)
+        checkboxTint.setOnClickListener(this)
     }
 
     override fun onClick(view: View) {
-        var id = view.id
-        if(id == R.id.botaoCalcular){
-            calculate()
+        val id = view.id
+        if(id == R.id.checkboxTint ){
+            trocarCor()
         }
     }
 
-    private fun calculate(){
-        if(validation()) {
-            try {
-                val precoCombustivel = price_gas.text.toString().toFloat()
-                val autonomia = autonomy.text.toString().toFloat()
-                val distanciaTotal = distance_total.text.toString().toFloat()
-                val valorFinal = (distanciaTotal * precoCombustivel) / autonomia
-                final_value.text = "R$ ${"%.2f".format(valorFinal)}"
-            } catch(nfe: NumberFormatException){
-                Toast.makeText(this, getString(R.string.toast_informar_valor), Toast.LENGTH_LONG).show()
-            }
-
+    private fun trocarCor(){
+        if(checkboxTint.isChecked) {
+            icone_bt.setColorFilter(resources.getColor(R.color.vermelho))
+        }else{
+            icone_bt.setColorFilter(resources.getColor(R.color.cinza))
         }
-        Toast.makeText(this, "Todos os campos devem ser preenchidos", Toast.LENGTH_LONG).show()
     }
-
-    private fun validation() : Boolean{
-        return (distance_total.text.toString() != "" && price_gas.text.toString() != "" && autonomy.text.toString() != "" &&  autonomy.text.toString() != "0")
-
-
-    }
-
 }

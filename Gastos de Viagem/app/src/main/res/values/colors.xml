@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="lightgreen">#FF43C59E</color>
     <color name="darkblue">#FF2E5077</color>
+    <color name="vermelho">#FFFF0000</color>
+    <color name="cinza">#FF666666</color>
 </resources>
