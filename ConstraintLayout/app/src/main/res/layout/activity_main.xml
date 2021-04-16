@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#08ad7f"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/inputEmail"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.2"
+        android:layout_marginHorizontal="20dp"
+        android:background="#fff"
+        android:padding="10dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        />
+
+    <EditText
+        android:id="@+id/inputSenha"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputEmail"
+        android:layout_marginTop="15dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.2"
+        android:layout_marginHorizontal="20dp"
+        android:background="#fff"
+        android:padding="10dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Senha"
+        />
+
+    <Button
+        android:id="@+id/botaoLogin"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputSenha"
+        android:layout_marginTop="15dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.2"
+        android:layout_marginHorizontal="20dp"
+        android:backgroundTint="#bbb"
+        android:textColor="#0aa37d"
+        android:padding="10dp"
+        android:layout_width="0dp"
+
+        android:layout_height="wrap_content"
+
+        android:text="LOGIN"
+        />
+
+    <TextView
+        android:id="@+id/textoCadastro"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/botaoLogin"
+        android:layout_marginTop="15dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.2"
+        android:layout_marginHorizontal="20dp"
+        android:backgroundTint="#bbb"
+        android:textColor="#fff"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:layout_width="0dp"
+        android:text="Ainda não é cadastrado? Cadastre-se!"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
