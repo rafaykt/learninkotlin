@@ -1,12 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".UI.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/mainActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary"
+        >
+
+
+        <ImageView
+            android:id="@+id/imageAll"
+            android:layout_margin="8dp"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            app:tint="@color/white"
+            android:src="@drawable/ic_baseline_all_inclusive_24" />
+
+
+        <ImageView
+            android:id="@+id/imageHappy"
+            android:layout_margin="8dp"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            app:tint="@color/white"
+            android:src="@drawable/ic_baseline_tag_faces_24" />
+
+        <ImageView
+            android:id="@+id/imageMorning"
+            android:layout_margin="8dp"
+            android:layout_width="0dp"
+            app:tint="#fff"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_wb_sunny_24" />
+    </LinearLayout>
+
 
     <TextView
+        android:id="@+id/textName"
+        android:layout_below="@id/mainActionBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!"
@@ -15,4 +59,42 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/frase"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="lalalalalalalalalalala"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:layout_width="120dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/colorAccent"
+        android:layout_below="@id/frase"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:id="@+id/buttonNewPhrase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:padding="16dp"
+        android:text="Nova frase"
+        />
+
+</RelativeLayout>
