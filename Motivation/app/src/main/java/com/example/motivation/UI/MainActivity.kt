@@ -27,7 +27,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         handleNewPhrase()
 
         mSecurityPreferences = SecurityPreferences(this);
-        textName.text = mSecurityPreferences.getString(MotivationConstants.KEY.PERSON_NAME)
+        val name = mSecurityPreferences.getString(MotivationConstants.KEY.PERSON_NAME)
+        textName.text = "Olá, ${name}"
         buttonNewPhrase.setOnClickListener(this)
         imageMorning.setOnClickListener(this)
         imageAll.setOnClickListener(this)

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.example.motivation.Infra.MotivationConstants
 import com.example.motivation.Infra.SecurityPreferences
 import com.example.motivation.R
 import kotlinx.android.synthetic.main.activity_splash.*
@@ -23,6 +24,18 @@ class SplashActivity : AppCompatActivity(), View.OnClickListener  {
         }
 
         buttonSave.setOnClickListener(this)
+
+        //verificação se já logou uma vez
+        verifyName()
+    }
+
+    private fun verifyName(){
+        val nome = mSecurityPreferences.getString((MotivationConstants.KEY.PERSON_NAME))
+        if( nome != ""){
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 
 
@@ -30,6 +43,7 @@ class SplashActivity : AppCompatActivity(), View.OnClickListener  {
         var id = view.id
         if (id == R.id.buttonSave){
             handleSave()
+            finish()
         }
     }
 
