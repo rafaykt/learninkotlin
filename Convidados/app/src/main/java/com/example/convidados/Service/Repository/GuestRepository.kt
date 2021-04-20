@@ -23,6 +23,27 @@ class GuestRepository private constructor(context: Context) {
         }
     }
 
+    fun get (id: Int): GuestModel? {
+        var guest: GuestModel? = null
+        return try{
+            val db = mGuestDataBaseHelper.readableDatabase
+
+
+            val cursor = db.rawQuery("select * from Guest where id = $id", null)
+            if(cursor != null && cursor.count > 0){
+                cursor.moveToFirst()
+                val name = cursor.getString(cursor.getColumnIndex(DataBaseConstants.GUEST.COLUMNS.NAME))
+                val presence = (cursor.getInt(cursor.getColumnIndex(DataBaseConstants.GUEST.COLUMNS.PRESENCE)) == 1)
+                guest = GuestModel(id, name, presence)
+            }
+            cursor?.close()
+            guest
+        }catch (e:Exception){
+            guest
+        }
+
+    }
+
     fun getAll(): List<GuestModel> {
         val list: MutableList<GuestModel> = ArrayList()
         return list
