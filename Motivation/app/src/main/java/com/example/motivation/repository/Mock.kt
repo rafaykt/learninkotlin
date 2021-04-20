@@ -1,4 +1,4 @@
-package com.example.motivation.repository
+ package com.example.motivation.repository
 
 import com.example.motivation.Infra.MotivationConstants
 import kotlin.random.Random
