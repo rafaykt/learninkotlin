@@ -9,9 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Convidados">
-        <activity android:name=".GuestFormActivity2"></activity>
+        <activity android:name=".View.GuestFormActivity"></activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".View.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/Theme.Convidados.NoActionBar">
             <intent-filter>

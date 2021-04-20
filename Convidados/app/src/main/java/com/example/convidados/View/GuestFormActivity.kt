@@ -1,4 +1,4 @@
-package com.example.convidados.ui.gallery
+package com.example.convidados.View
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

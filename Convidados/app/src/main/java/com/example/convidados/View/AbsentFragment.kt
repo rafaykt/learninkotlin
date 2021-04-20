@@ -1,4 +1,4 @@
-package com.example.convidados.ui.slideshow
+package com.example.convidados.View
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.convidados.R
+import com.example.convidados.ViewModel.AbsentViewModel
 
 class AbsentFragment : Fragment() {
 

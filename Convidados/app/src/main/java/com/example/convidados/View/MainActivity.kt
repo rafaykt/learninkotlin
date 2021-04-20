@@ -1,4 +1,4 @@
-package com.example.convidados
+package com.example.convidados.View
 
 import android.content.Intent
 import android.os.Bundle
@@ -12,6 +12,7 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import com.example.convidados.R
 
 class MainActivity : AppCompatActivity() {
 
