@@ -1,7 +1,9 @@
-
+import android.content.ContentValues
 import android.content.Context
+import com.example.convidados.Service.Constants.DataBaseConstants
 import com.example.convidados.Service.Model.GuestModel
 import com.example.convidados.Service.Repository.GuestDataBaseHelper
+import kotlinx.coroutines.selects.select
 import java.util.ArrayList
 
 //classe antes de ser singleton
@@ -9,11 +11,12 @@ import java.util.ArrayList
 class GuestRepository private constructor(context: Context) {
 
     private var mGuestDataBaseHelper: GuestDataBaseHelper = GuestDataBaseHelper(context)
+
     companion object {
         private lateinit var repository: GuestRepository
 
         fun getInstance(context: Context): GuestRepository {
-            if (!::repository.isInitialized){
+            if (!::repository.isInitialized) {
                 repository = GuestRepository(context)
             }
             return repository
@@ -35,17 +38,56 @@ class GuestRepository private constructor(context: Context) {
         return list
     }
 
-    fun save(guest: GuestModel) {
+    fun save(guest: GuestModel): Boolean {
+        return try {
+            val db = mGuestDataBaseHelper.writableDatabase
+
+            val contentValues = ContentValues()
+            contentValues.put(DataBaseConstants.GUEST.COLUMNS.NAME, guest.name)
+            contentValues.put(DataBaseConstants.GUEST.COLUMNS.PRESENCE, guest.presence)
+            db.insert(DataBaseConstants.GUEST.TABLE_NAME, null, contentValues)
+            true
+        } catch (e: Exception) {
+            false
+        }
+    }
+
+    fun update(guest: GuestModel): Boolean {
+        return try {
+            val db = mGuestDataBaseHelper.writableDatabase
+            val contentValues = ContentValues()
+            contentValues.put(DataBaseConstants.GUEST.COLUMNS.NAME, guest.name)
+            contentValues.put(DataBaseConstants.GUEST.COLUMNS.PRESENCE, guest.presence)
+
+            val selection = DataBaseConstants.GUEST.COLUMNS.ID + " = ?"
+            val args = arrayOf(guest.id.toString())
+
+            db.update(DataBaseConstants.GUEST.TABLE_NAME, contentValues, selection, args)
+            true
+        } catch (e: Exception) {
+            false
+        }
+
 
     }
 
-    fun update( guest: GuestModel){
+    fun delete(id: Int): Boolean {
+
+
+        return try {
+            val db = mGuestDataBaseHelper.writableDatabase
+
+            val selection = DataBaseConstants.GUEST.COLUMNS.ID + " = ?"
+            val args = arrayOf(id.toString())
+            db.delete(DataBaseConstants.GUEST.TABLE_NAME,selection, args)
+            true
+        } catch (e: Exception) {
+            false
+        }
+
 
     }
 
-    fun delete (guest: GuestModel){
-
-    }
 
 
 }
