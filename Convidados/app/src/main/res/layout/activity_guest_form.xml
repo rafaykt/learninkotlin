@@ -37,10 +37,12 @@
         app:layout_constraintLeft_toLeftOf="@id/edit_name">
 
         <RadioButton
+            android:id="@+id/radio_presente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Presente" />
         <RadioButton
+            android:id="@+id/radio_ausente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ausente" />
