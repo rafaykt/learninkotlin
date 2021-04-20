@@ -2,9 +2,7 @@ package com.example.convidados
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.Menu
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -28,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         val fab: FloatingActionButton = findViewById(R.id.fab)
         fab.setOnClickListener {
             startActivity(
-                Intent(applicationContext, GuestFormActivity2::class.java)
+                Intent(applicationContext, GuestFormActivity::class.java)
             )
 //            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
 //                    .setAction("Action", null).show()
