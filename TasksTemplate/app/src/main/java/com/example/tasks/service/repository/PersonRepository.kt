@@ -41,4 +41,28 @@ class PersonRepository(val context: Context) {
 
     }
 
+    fun create(name: String, email: String, password: String, listener: APIListener) {
+        val call: Call<HeaderModel> = mRemote.create(name, email, password, false)
+
+        call.enqueue(object : Callback<HeaderModel> {
+            override fun onFailure(call: Call<HeaderModel>, t: Throwable) {
+                val s = ""
+                listener.onFailure(context.getString(R.string.ERROR_UNEXPECTED))
+            }
+
+            override fun onResponse(call: Call<HeaderModel>, response: Response<HeaderModel>) {
+                if (response.code() != TaskConstants.HTTP.SUCCESS) {
+                    val validation =
+                        Gson().fromJson(response.errorBody()!!.string(), String::class.java)
+                    listener.onFailure(validation)
+                }
+
+                //listener.onSuccess(response.body())   essa e a linha de baixo são a mesma coisa
+                response.body()?.let { listener.onSuccess(it) }
+            }
+
+        })
+
+    }
+
 }

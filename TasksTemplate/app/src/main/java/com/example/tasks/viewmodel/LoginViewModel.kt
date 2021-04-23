@@ -15,6 +15,7 @@ class LoginViewModel(application: Application) : AndroidViewModel(application) {
 
     private val mPersonRepository = PersonRepository(application)
     private val mSharedPreferences = SecurityPreferences(application)
+
     private val mLogin = MutableLiveData<ValidationListener>()
     var login : LiveData<ValidationListener> = mLogin
 
