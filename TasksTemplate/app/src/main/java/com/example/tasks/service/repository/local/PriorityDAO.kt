@@ -20,4 +20,7 @@ interface PriorityDAO {
     fun clear()
 
 
+    @Query("Select description from priority where id = :id")
+    fun getDescription(id: Int): String
+
 }
