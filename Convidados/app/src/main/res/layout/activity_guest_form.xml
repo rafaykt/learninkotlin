@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".View.GuestFormActivity">
+<TextView
+    android:id="@+id/title"
+
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    android:textAlignment="center"
+    android:text="Confirmação de Presença"/>
+
+    <EditText
+        android:id="@+id/edit_name"
+        android:layout_width="0dp"
+        android:layout_marginVertical="30dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintLeft_toLeftOf="@id/title"
+        app:layout_constraintRight_toRightOf="@id/title"
+        android:hint="Nome"
+        />
+
+    <RadioGroup
+        android:id="@+id/radiogroup_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/edit_name"
+        app:layout_constraintLeft_toLeftOf="@id/edit_name">
+
+        <RadioButton
+            android:id="@+id/radio_presente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Presente" />
+        <RadioButton
+            android:id="@+id/radio_ausente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ausente" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Salvar"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
