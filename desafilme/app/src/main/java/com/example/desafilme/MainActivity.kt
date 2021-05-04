@@ -16,9 +16,7 @@ import io.reactivex.schedulers.Schedulers
 
 
 class MainActivity : AppCompatActivity() {
-    var listView: ListView? = null
-    var movies= mutableListOf<String>()
-    var movieAdapter: ArrayAdapter<String>? = null
+
 
     @SuppressLint("CheckResult")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,23 +25,9 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
 
-        listView = ListView(this)
-        setContentView(listView)
-        movieAdapter = ArrayAdapter(this,
-                android.R.layout.simple_list_item_1, movies)
-        listView?.adapter = movieAdapter
 
-        val api = MovieRepository()
-        api.loadMovies()
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe ({ movie ->
-                    movies?.add(movie.original_title)
-                }, { e ->
-                    e.printStackTrace()
-                },{
-                    movieAdapter?.notifyDataSetChanged()
-                })
+
+
 
 
     }

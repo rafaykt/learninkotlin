@@ -15,24 +15,8 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 
 class MovieRepository {
-    val service: MovieService
 
-    init {
-        val logging = HttpLoggingInterceptor()
-        logging.level = HttpLoggingInterceptor.Level.BODY
-
-        val httpClient = OkHttpClient.Builder()
-        httpClient.addInterceptor(logging)
-
-        val gson = GsonBuilder().setLenient().create()
-        val retrofit = Retrofit.Builder()
-                .baseUrl("https://api.themoviedb.org/3/movie/")
-                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                .addConverterFactory(GsonConverterFactory.create(gson))
-                .client((httpClient.build()))
-                .build()
-        service = retrofit.create<MovieService>(MovieService::class.java)
-    }
+    private val service = RetrofitClient.createService(MovieService::class.java)
 
     fun loadMovies(): Observable<Movie> {
         return service.getMoviePopularList()
