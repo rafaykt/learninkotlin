@@ -3,12 +3,16 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'kotlin-android-extensions'
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
+    androidExtensions {
+        experimental = true
+    }
     defaultConfig {
         applicationId "com.example.desafio_filme20"
         minSdkVersion 23
@@ -76,4 +80,5 @@ dependencies {
 
 //  Image handler - Picasso
     implementation 'com.squareup.picasso:picasso:2.71828'
+
 }

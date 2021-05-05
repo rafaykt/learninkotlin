@@ -11,7 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.desafio_filme20.R
 import com.example.desafio_filme20.viewmodel.DashboardViewModel
 
-class DashboardFragment : Fragment() {
+class FavoritosFragment : Fragment() {
 
     private lateinit var dashboardViewModel: DashboardViewModel
 

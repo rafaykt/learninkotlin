@@ -1,7 +1,10 @@
 package com.example.desafio_filme20.service.model
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
-
+import kotlinx.android.parcel.Parcelize
+import java.io.Serializable
+@Parcelize
 data class Film(
     @SerializedName("adult")
     val adult: Boolean,
@@ -31,4 +34,4 @@ data class Film(
     val vote_average: Double,
     @SerializedName("vote_count")
     val vote_count: Int
-)
+): Parcelable
