@@ -9,17 +9,25 @@
         android:id="@+id/navigation_home"
         android:name="com.example.desafio_filme20.view.HomeFragment"
         android:label="HomePage"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_details2"
+            app:destination="@id/navigation_details" />
+    </fragment>
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.desafio_filme20.view.DashboardFragment"
+        android:id="@+id/navigation_favorites"
+        android:name="com.example.desafio_filme20.view.FavoritosFragment"
         android:label="Favoritos"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.desafio_filme20.view.NotificationsFragment"
+        android:id="@+id/navigation_details"
+        android:name="com.example.desafio_filme20.view.DetalhesFragment"
         android:label="Descrição"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_notifications" >
+        <argument
+            android:name="filme"
+            app:argType="com.example.desafio_filme20.service.model.Film" />
+    </fragment>
 </navigation>
