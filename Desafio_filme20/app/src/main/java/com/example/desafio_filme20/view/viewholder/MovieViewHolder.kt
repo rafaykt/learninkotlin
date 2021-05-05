@@ -1,6 +1,7 @@
 package com.example.desafio_filme20.view.viewholder
 
 import android.view.View
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -18,6 +19,7 @@ class MovieViewHolder(itemView: View, val listener: MovieListener, var filme: Fi
     private var mPoster: ImageView = itemView.findViewById(R.id.poster_movie)
     private var mBody: ConstraintLayout = itemView.findViewById(R.id.body)
     private val baseUrlFilme = "https://image.tmdb.org/t/p/w200"
+    private val mFavoriteStar: ImageButton = itemView.findViewById(R.id.btn_favorite_film)
     /**
      * Atribui valores aos elementos de interface e também eventos
      */
@@ -30,13 +32,13 @@ class MovieViewHolder(itemView: View, val listener: MovieListener, var filme: Fi
 
         // Eventos
         mBody.setOnClickListener { listener.onListClick(film) }
-//        mImageTask.setOnClickListener {
-//            if(task.complete){
-//                listener.onUndoClick(task.id)
-//            }else{
-//                listener.onCompleteClick(task.id)
-//            }
-//        }
+        mFavoriteStar.setOnClickListener {
+            if(film.favorite){
+                listener.undoFavorite(film)
+            }else{
+                listener.onFavorite(film)
+            }
+        }
 //
 //        mTextDescription.setOnLongClickListener {
 //            AlertDialog.Builder(itemView.context)
