@@ -19,13 +19,13 @@
         android:id="@+id/navigation_favorites"
         android:name="com.example.desafio_filme20.view.FavoritosFragment"
         android:label="Favoritos"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_favorites" />
 
     <fragment
         android:id="@+id/navigation_details"
         android:name="com.example.desafio_filme20.view.DetalhesFragment"
         android:label="Descrição"
-        tools:layout="@layout/fragment_notifications" >
+        tools:layout="@layout/fragment_details" >
         <argument
             android:name="filme"
             app:argType="com.example.desafio_filme20.service.model.Film" />
