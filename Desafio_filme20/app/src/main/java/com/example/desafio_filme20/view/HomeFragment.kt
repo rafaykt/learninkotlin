@@ -49,6 +49,15 @@ class HomeFragment : Fragment() {
                 view?.findNavController()?.navigate(directions)
             }
 
+            override fun onFavorite(filme: Film) {
+                homeViewModel.addToFavorites(filme)
+                Toast.makeText(context, "O filme foi adicionado aos favoritos?", Toast.LENGTH_SHORT).show()
+            }
+
+            override fun undoFavorite(filme: Film) {
+                TODO("Not yet implemented")
+            }
+
 
         }
 

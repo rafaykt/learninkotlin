@@ -41,7 +41,10 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
 
     override fun onCleared() {
         super.onCleared()
+    }
 
+    fun addToFavorites(film: Film): Boolean {
+        return mRepository.save(film)
     }
 
 

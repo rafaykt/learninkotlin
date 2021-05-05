@@ -10,6 +10,9 @@ interface MovieListener {
      */
     fun onListClick(filme: Film)
 
+    fun onFavorite(filme: Film)
+
+    fun undoFavorite(filme: Film)
 //    fun onDeleteClick(id: Int)
 //
 //    /**
