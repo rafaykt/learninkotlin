@@ -19,6 +19,7 @@ class MovieViewHolder(itemView: View, val listener: MovieListener, var filme: Fi
     private var mPoster: ImageView = itemView.findViewById(R.id.poster_movie)
     private var mBody: ConstraintLayout = itemView.findViewById(R.id.body)
     private val baseUrlFilme = "https://image.tmdb.org/t/p/w200"
+
     private val mFavoriteStar: ImageButton = itemView.findViewById(R.id.btn_favorite_film)
     /**
      * Atribui valores aos elementos de interface e também eventos
@@ -35,10 +36,13 @@ class MovieViewHolder(itemView: View, val listener: MovieListener, var filme: Fi
         mFavoriteStar.setOnClickListener {
             if(film.favorite){
                 listener.undoFavorite(film)
+                mFavoriteStar.setImageResource(R.drawable.ic_not_favorite)
             }else{
                 listener.onFavorite(film)
+                mFavoriteStar.setImageResource(R.drawable.ic_favorite)
             }
         }
+
 //
 //        mTextDescription.setOnLongClickListener {
 //            AlertDialog.Builder(itemView.context)
@@ -53,5 +57,8 @@ class MovieViewHolder(itemView: View, val listener: MovieListener, var filme: Fi
 //        }
 
     }
+
+
+
 
 }

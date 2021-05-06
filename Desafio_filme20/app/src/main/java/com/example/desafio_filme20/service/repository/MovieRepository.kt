@@ -32,4 +32,8 @@ class MovieRepository(context: Context) {
     fun update(film: Film): Boolean {
         return mDataBaseLocal.update(film) > 0
     }
+
+    fun delete(film: Film){
+        return mDataBaseLocal.delete(film)
+    }
 }

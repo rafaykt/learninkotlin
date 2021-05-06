@@ -47,5 +47,10 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
         return mRepository.save(film)
     }
 
+    fun removeFromFavorites(film: Film) {
+        film.favorite=false
+        mRepository.delete(film)
+    }
+
 
 }

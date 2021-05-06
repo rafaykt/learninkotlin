@@ -97,6 +97,7 @@
                 app:layout_constraintStart_toStartOf="@id/overview_movie"
                 app:layout_constraintTop_toBottomOf="@id/overview_movie"
                 android:src="@drawable/ic_not_favorite"
+                android:background="#fff"
                 />
 
             <TextView
