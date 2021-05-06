@@ -61,9 +61,10 @@
 
             <ImageView
                 android:id="@+id/poster_movie"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
@@ -71,6 +72,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Movie Name"
+                android:layout_marginLeft="5dp"
                 android:textStyle="bold"
 
                 app:layout_constraintLeft_toRightOf="@+id/poster_movie"
@@ -86,7 +88,7 @@
                 android:maxLines="3"
                 android:ellipsize="end"
                 app:layout_constraintLeft_toRightOf="@+id/poster_movie"
-                app:layout_constraintStart_toEndOf="@id/poster_movie"
+                app:layout_constraintStart_toStartOf="@id/title_movie"
 
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/title_movie" />

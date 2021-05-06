@@ -2,10 +2,7 @@ package com.example.desafio_filme20.viewmodel
 
 import android.annotation.SuppressLint
 import android.app.Application
-import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import androidx.lifecycle.*
 import com.example.desafio_filme20.service.model.Film
 import com.example.desafio_filme20.service.repository.MovieRepository
 import com.example.desafio_filme20.view.adapter.MovieAdapter
@@ -29,13 +26,12 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({
-                mList.postValue(it.results)
+                mList.postValue(verificaFavorito(it.results))
             }, { e ->
                 e.printStackTrace()
-            },
-                {
-                    movieAdapter?.notifyDataSetChanged()
-                })
+            }, {
+                movieAdapter?.notifyDataSetChanged()
+            })
 
     }
 
@@ -48,8 +44,13 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     fun removeFromFavorites(film: Film) {
-        film.favorite=false
+        film.favorite = false
         mRepository.delete(film)
+    }
+
+    private fun verificaFavorito(filmList: List<Film>): List<Film>{
+        filmList.forEach { it.favorite = mRepository.isFavorite(it) }
+        return filmList
     }
 
 
