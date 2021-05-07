@@ -17,9 +17,13 @@
 
     <fragment
         android:id="@+id/navigation_favorites"
-        android:name="com.example.desafio_filme20.view.FavoritosFragment"
+        android:name="com.example.desafio_filme20.view.FavoriteFragment"
         android:label="Favoritos"
-        tools:layout="@layout/fragment_favorites" />
+        tools:layout="@layout/fragment_favorites" >
+        <action
+            android:id="@+id/action_navigation_favorites_to_navigation_details2"
+            app:destination="@id/navigation_details" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_details"

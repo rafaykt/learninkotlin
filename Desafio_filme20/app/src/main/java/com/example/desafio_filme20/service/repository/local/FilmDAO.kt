@@ -2,6 +2,7 @@ package com.example.desafio_filme20.service.repository.local
 
 import androidx.room.*
 import com.example.desafio_filme20.service.model.Film
+import io.reactivex.Observable
 
 @Dao
 interface FilmDAO {
@@ -15,7 +16,9 @@ interface FilmDAO {
     @Delete
     fun delete(film: Film)
 
-    @Query("SELECT * FROM Film where favorite = 1")
-    fun getFavoriteList () : List< Film >
+    @Query("SELECT * FROM Film ORDER BY popularity DESC")
+    fun getFavoriteList () : Observable<List<Film>>
 
+    @Query("SELECT favorite FROM Film WHERE id = :id")
+    fun isFavorite(id: Int): Boolean
 }

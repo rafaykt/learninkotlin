@@ -13,14 +13,13 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.navArgs
 import com.example.desafio_filme20.R
 import com.example.desafio_filme20.service.model.Film
-import com.example.desafio_filme20.viewmodel.NotificationsViewModel
+import com.example.desafio_filme20.viewmodel.FavoriteViewModel
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.row_list_films.*
 
 
 class DetalhesFragment : Fragment() {
 
-    private lateinit var detailsViewModel: NotificationsViewModel
+    private lateinit var detailsViewModel: FavoriteViewModel
     private val args: DetalhesFragmentArgs by navArgs()
 
 
@@ -30,23 +29,23 @@ class DetalhesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         detailsViewModel =
-            ViewModelProvider(this).get(NotificationsViewModel::class.java)
+            ViewModelProvider(this).get(FavoriteViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_details, container, false)
         val textView: TextView = root.findViewById(R.id.title_details)
         val film: Film = args.filme
-        detailsViewModel.text.observe(viewLifecycleOwner, Observer {
-//            textView.text = film.original_title
+//        detailsViewModel.text.observe(viewLifecycleOwner, Observer {
+////            textView.text = film.original_title
 
-            val bundle = arguments
-            if (bundle != null){
-                val filmeParcela = bundle.getParcelable<Film>("filme")
-                if (filmeParcela != null) {
-                    loadDetails(filmeParcela, root)
-                }
-                //setando os dados assim que recebo o objeto
+        val bundle = arguments
+        if (bundle != null){
+            val filmeParcela = bundle.getParcelable<Film>("filme")
+            if (filmeParcela != null) {
+                loadDetails(filmeParcela, root)
             }
+            //setando os dados assim que recebo o objeto
+        }
 
-        })
+//        })
 
         return root
     }
