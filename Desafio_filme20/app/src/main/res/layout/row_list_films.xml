@@ -1,49 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?><!--<androidx.constraintlayout.widget.ConstraintLayout-->
-<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
-<!--    xmlns:tools="http://schemas.android.com/tools"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_marginRight="8dp"-->
-<!--    android:layout_marginBottom="10dp"-->
-<!--    android:layout_height="wrap_content">-->
-
-<!--    <ImageView-->
-<!--        android:id="@+id/poster_movie"-->
-<!--        android:layout_width="70dp"-->
-<!--        android:layout_height="match_parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"/>-->
-<!--    <TextView-->
-<!--        android:id="@+id/title_movie"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="20dp"-->
-<!--        android:text="Título"-->
-<!--        android:textSize="15sp"-->
-<!--        app:layout_constraintStart_toEndOf="@id/poster_movie"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/overview_movie"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:autoSizeStepGranularity="2sp"-->
-<!--        android:layout_marginTop="20dp"-->
-<!--        android:paddingRight="10dp"-->
-<!--        android:textSize="13sp"-->
-<!--        android:text="Descrição"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/title_movie"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/title_movie" />-->
-<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
-
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:layout_margin="http://schemas.android.com/apk/res-auto">
-
     <data>
-
     </data>
-
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -51,12 +11,10 @@
         android:padding="8dp"
         layout_margin:cardCornerRadius="4dp"
         layout_margin:cardElevation="5dp">
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/body"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             >
 
             <ImageView
@@ -74,7 +32,6 @@
                 android:text="Movie Name"
                 android:layout_marginLeft="5dp"
                 android:textStyle="bold"
-
                 app:layout_constraintLeft_toRightOf="@+id/poster_movie"
                 app:layout_constraintTop_toTopOf="parent" />
 

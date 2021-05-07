@@ -7,6 +7,7 @@ import com.example.desafio_filme20.service.model.Film
 import com.example.desafio_filme20.service.repository.MovieRepository
 import com.example.desafio_filme20.view.adapter.MovieAdapter
 import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 
 class HomeViewModel(application: Application) : AndroidViewModel(application) {
@@ -16,28 +17,23 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
     var list: LiveData<List<Film>> = mList
     var listTeste = mutableListOf<Film>()
 
-    private val movieAdapter: MovieAdapter by lazy {
-        MovieAdapter()
-    }
+
 
     @SuppressLint("CheckResult")
     fun listPopularFilms() {
-        mRepository.loadMovies()
-            .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe({
-                mList.postValue(verificaFavorito(it.results))
-            }, { e ->
-                e.printStackTrace()
-            }, {
-                movieAdapter?.notifyDataSetChanged()
-            })
-
+        CompositeDisposable(
+            mRepository.loadMovies()
+                .subscribeOn(Schedulers.io())
+                .observeOn(Schedulers.io())
+                .subscribe({
+                    mList.postValue(verificaFavorito(it.results))
+                }, { e ->
+                    e.printStackTrace()
+                })
+        )
     }
 
-    override fun onCleared() {
-        super.onCleared()
-    }
+
 
     fun addToFavorites(film: Film): Boolean {
         return mRepository.save(film)
@@ -48,10 +44,14 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
         mRepository.delete(film)
     }
 
-    private fun verificaFavorito(filmList: List<Film>): List<Film>{
+    private fun verificaFavorito(filmList: List<Film>): List<Film> {
         filmList.forEach { it.favorite = mRepository.isFavorite(it) }
         return filmList
     }
 
+    override fun onCleared() {
+        super.onCleared()
+        CompositeDisposable().dispose()
+    }
 
 }

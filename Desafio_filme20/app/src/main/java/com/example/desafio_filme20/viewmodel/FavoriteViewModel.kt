@@ -18,6 +18,7 @@ import com.example.desafio_filme20.view.HomeFragmentDirections
 import com.example.desafio_filme20.view.adapter.FavoriteAdapter
 import com.example.desafio_filme20.view.adapter.MovieAdapter
 import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 
 class FavoriteViewModel(application: Application) : AndroidViewModel(application) {
@@ -26,29 +27,29 @@ class FavoriteViewModel(application: Application) : AndroidViewModel(application
     private val mList = MutableLiveData<List<Film>>()
     var list: LiveData<List<Film>> = mList
 
-    private val favoriteAdapter: FavoriteAdapter by lazy {
-        FavoriteAdapter()
-    }
 
-    @SuppressLint("CheckResult")
+
     fun getListFavoriteFilms() {
-        mRepository.loadFavoriteMovies()
-            .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe({
-                mList.postValue(it)
-            }, { e ->
-                e.printStackTrace()
-            },
-                {
-                    favoriteAdapter?.notifyDataSetChanged()
+        CompositeDisposable(
+            mRepository.loadFavoriteMovies()
+                .subscribeOn(Schedulers.io())
+                .observeOn(Schedulers.io())
+                .subscribe({
+                    mList.postValue(it)
+                }, { e ->
+                    e.printStackTrace()
                 })
-
+        )
     }
 
     fun removeFromFavorites(film: Film) {
-        film.favorite=false
+        film.favorite = false
         mRepository.delete(film)
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        CompositeDisposable().dispose()
     }
 
 }

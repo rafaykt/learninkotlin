@@ -1,6 +1,7 @@
 package com.example.desafio_filme20.view
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -72,7 +73,9 @@ class FavoriteFragment : Fragment() {
 
     private fun observe() {
         favoriteViewModel.list.observe(viewLifecycleOwner, Observer {
+            mAdapter.notifyDataSetChanged()
             mAdapter.updateListener(it)
+
         })
 
     }
