@@ -16,7 +16,7 @@ abstract class FilmDataBase: RoomDatabase() {
         fun getDatabase(context: Context) : FilmDataBase{
             if (!::INSTANCE.isInitialized){
                  INSTANCE = Room.databaseBuilder(context, FilmDataBase::class.java, "filmDB")
-
+                     .allowMainThreadQueries()
                      .build()
             }
             return INSTANCE
