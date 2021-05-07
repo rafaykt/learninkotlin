@@ -1,11 +1,9 @@
 package com.example.desafio_filme20.view
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -16,9 +14,7 @@ import com.example.desafio_filme20.R
 import com.example.desafio_filme20.service.listeners.MovieListener
 import com.example.desafio_filme20.service.model.Film
 import com.example.desafio_filme20.view.adapter.MovieAdapter
-import com.example.desafio_filme20.viewmodel.DashboardViewModel
 import com.example.desafio_filme20.viewmodel.FavoriteViewModel
-import com.example.desafio_filme20.viewmodel.HomeViewModel
 
 class FavoriteFragment : Fragment() {
 
