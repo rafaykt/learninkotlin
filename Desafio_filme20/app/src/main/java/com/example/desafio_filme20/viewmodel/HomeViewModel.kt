@@ -2,10 +2,12 @@ package com.example.desafio_filme20.viewmodel
 
 import android.annotation.SuppressLint
 import android.app.Application
+import android.util.Log
 import androidx.lifecycle.*
 import com.example.desafio_filme20.service.model.Film
 import com.example.desafio_filme20.service.repository.MovieRepository
 import com.example.desafio_filme20.view.adapter.MovieAdapter
+import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
@@ -17,11 +19,11 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
     var list: LiveData<List<Film>> = mList
     var listTeste = mutableListOf<Film>()
 
-
+    var compositeDisposable = CompositeDisposable()
 
     @SuppressLint("CheckResult")
     fun listPopularFilms() {
-        CompositeDisposable(
+        compositeDisposable.add(
             mRepository.loadMovies()
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -35,13 +37,14 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
 
 
 
-    fun addToFavorites(film: Film): Boolean {
-        return mRepository.save(film)
+    fun addToFavorites(film: Film){
+        film.favorite = true
+        compositeDisposable.add(mRepository.save(film).subscribe{})
     }
 
     fun removeFromFavorites(film: Film) {
         film.favorite = false
-        mRepository.delete(film)
+        compositeDisposable.add(mRepository.delete(film).subscribe{})
     }
 
     private fun verificaFavorito(filmList: List<Film>): List<Film> {
@@ -51,7 +54,7 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
 
     override fun onCleared() {
         super.onCleared()
-        CompositeDisposable().dispose()
+        compositeDisposable.dispose()
     }
 
 }
