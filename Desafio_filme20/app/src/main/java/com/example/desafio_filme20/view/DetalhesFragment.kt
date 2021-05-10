@@ -57,7 +57,7 @@ class DetalhesFragment : Fragment() {
         var posterDetails: ImageView = root.findViewById(R.id.image_poster_details)
         var releaseDate: TextView = root.findViewById(R.id.year_details)
         var overView: TextView = root.findViewById(R.id.overViewDetails)
-        var baseUrlFilme = "https://image.tmdb.org/t/p/w200"
+        var baseUrlFilme = "https://image.tmdb.org/t/p/w500"
         var favoriteIcon : ImageButton = root.icon_favorite
 
         titleDetails.setText(film.original_title)
