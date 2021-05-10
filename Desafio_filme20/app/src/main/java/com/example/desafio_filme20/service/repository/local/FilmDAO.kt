@@ -2,16 +2,15 @@ package com.example.desafio_filme20.service.repository.local
 
 import androidx.room.*
 import com.example.desafio_filme20.service.model.Film
+import io.reactivex.Completable
 import io.reactivex.Observable
 
 @Dao
 interface FilmDAO {
 
     @Insert
-    fun save( film: Film): Long
+    fun save( film: Film)
 
-    @Update
-    fun update( film: Film): Int
 
     @Delete
     fun delete(film: Film)

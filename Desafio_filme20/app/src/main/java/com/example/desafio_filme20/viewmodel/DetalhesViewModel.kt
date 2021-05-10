@@ -7,6 +7,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.desafio_filme20.service.model.Film
 import com.example.desafio_filme20.service.repository.MovieRepository
+import io.reactivex.disposables.CompositeDisposable
 
 class DetalhesViewModel(application: Application) : AndroidViewModel(application) {
     private val mRepository = MovieRepository(application)
@@ -14,15 +15,20 @@ class DetalhesViewModel(application: Application) : AndroidViewModel(application
         value = "This is dashboard Fragment"
     }
     val text: LiveData<String> = _text
-
+    var compositeDisposable = CompositeDisposable()
     fun addToFavorites(film: Film) {
         film.favorite = true
-        mRepository.save(film)
+        compositeDisposable.add(mRepository.save(film).subscribe{})
     }
 
     fun removeFromFavorites(film: Film) {
         film.favorite = false
-        mRepository.delete(film)
+        compositeDisposable.add(mRepository.delete(film).subscribe{})
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        compositeDisposable.dispose()
     }
 
 }

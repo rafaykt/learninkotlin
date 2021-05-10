@@ -15,9 +15,9 @@ class FavoriteViewModel(application: Application) : AndroidViewModel(application
     private val mRepository = MovieRepository(application)
     private val mList = MutableLiveData<List<Film>>()
     var list: LiveData<List<Film>> = mList
-
+    val compositeDisposable = CompositeDisposable()
     fun getListFavoriteFilms() {
-        CompositeDisposable(
+        compositeDisposable.add(
             mRepository.loadFavoriteMovies()
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
@@ -31,12 +31,12 @@ class FavoriteViewModel(application: Application) : AndroidViewModel(application
 
     fun removeFromFavorites(film: Film) {
         film.favorite = false
-        mRepository.delete(film)
+        compositeDisposable.add(mRepository.delete(film).subscribe{})
     }
 
     override fun onCleared() {
         super.onCleared()
-        CompositeDisposable().dispose()
+        compositeDisposable.dispose()
     }
 
 }
