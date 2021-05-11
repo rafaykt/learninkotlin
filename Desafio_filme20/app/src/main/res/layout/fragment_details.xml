@@ -1,90 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".view.DetalhesFragment">
 
-    <ImageView
-        android:id="@+id/image_poster_details"
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="450dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:scaleType="fitXY"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent"
+        tools:context=".view.DetalhesFragment">
 
-    <TextView
-        android:id="@+id/title_details"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:text="Título do texto"
-        android:textColor="#000"
-        android:textSize="28sp"
-        app:layout_constraintStart_toStartOf="@id/image_poster_details"
-        app:layout_constraintEnd_toEndOf="@id/image_poster_details"
-        app:layout_constraintTop_toBottomOf="@id/image_poster_details" />
+        <ImageView
+            android:id="@+id/image_poster_details"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/year_details"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="Release: 20/02/2002"
-        android:textSize="9sp"
-        app:layout_constraintStart_toStartOf="@id/image_poster_details"
-        app:layout_constraintTop_toBottomOf="@id/overViewDetails" />
+        <TextView
+            android:id="@+id/title_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="@{film.original_title}"
+            tools:text="Titulo"
+            android:textColor="#000"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="@id/image_poster_details"
+            app:layout_constraintStart_toStartOf="@id/image_poster_details"
+            app:layout_constraintTop_toBottomOf="@id/image_poster_details" />
 
-
-    <TextView
-        android:id="@+id/text_notifications"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-<!--    <TextView-->
-<!--        android:id="@+id/text_favorito"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginRight="30dp"-->
-<!--        android:text="Favorite este filme"-->
-<!--        app:layout_constraintBottom_toBottomOf="@id/viewHeader"-->
-<!--        app:layout_constraintEnd_toEndOf="@id/" />-->
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/icon_favorite"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_not_favorite"
-        app:layout_constraintTop_toBottomOf="@id/image_poster_details"
-        app:layout_constraintBottom_toTopOf="@id/title_details"
-        android:elevation="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginRight="25dp"
-        android:backgroundTint="@color/material_on_primary_emphasis_high_type"
-
-        />
-
-    <TextView
-        android:id="@+id/overViewDetails"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:gravity="center"
-        android:text="OverView: \t Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sagittis ipsum ex, quis dictum erat porttitor vel. Phasellus tempus posuere convallis. Quisque massa diam, commodo vitae aliquet a, accumsan vitae lacus. Fusce cursus, enim non semper sollicitudin, sapien eros viverra felis, id fringilla sem turpis tempus ante. Ut suscipit vitae sem nec sodales. Morbi pretium enim neque, ut dictum nibh aliquam nec. Maecenas tempus tincidunt tincidunt. Vivamus vitae nisl quis ex posuere ullamcorper. Aenean consectetur in lorem ac consequat. In ultrices rutrum urna, id auctor sem volutpat in."
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title_details" />
+        <TextView
+            android:id="@+id/year_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@{film.release_date"
+            tools:text="Release date: 01/01/2010"
+            android:textSize="9sp"
+            app:layout_constraintStart_toStartOf="@id/image_poster_details"
+            app:layout_constraintTop_toBottomOf="@id/overViewDetails" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!--    <TextView-->
+        <!--        android:id="@+id/text_favorito"-->
+        <!--        android:layout_width="0dp"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_marginRight="30dp"-->
+        <!--        android:text="Favorite este filme"-->
+        <!--        app:layout_constraintBottom_toBottomOf="@id/viewHeader"-->
+        <!--        app:layout_constraintEnd_toEndOf="@id/" />-->
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/icon_favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25dp"
+            android:backgroundTint="@color/material_on_primary_emphasis_high_type"
+            android:elevation="4dp"
+            android:src="@drawable/ic_not_favorite"
+            app:layout_constraintBottom_toTopOf="@id/title_details"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_poster_details"
+
+            />
+
+        <TextView
+            android:id="@+id/overViewDetails"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text=""
+            tools:text="OverView: \t Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sagittis ipsum ex, quis dictum erat porttitor vel. Phasellus tempus posuere convallis. Quisque massa diam, commodo vitae aliquet a, accumsan vitae lacus. Fusce cursus, enim non semper sollicitudin, sapien eros viverra felis, id fringilla sem turpis tempus ante. Ut suscipit vitae sem nec sodales. Morbi pretium enim neque, ut dictum nibh aliquam nec. Maecenas tempus tincidunt tincidunt. Vivamus vitae nisl quis ex posuere ullamcorper. Aenean consectetur in lorem ac consequat. In ultrices rutrum urna, id auctor sem volutpat in."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_details" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
