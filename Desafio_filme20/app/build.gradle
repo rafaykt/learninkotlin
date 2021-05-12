@@ -40,10 +40,12 @@ android {
     //    databinding import
     buildFeatures{
         dataBinding = true
+        viewBinding = true
     }
     dataBinding {
         enabled true
     }
+
 
 }
 

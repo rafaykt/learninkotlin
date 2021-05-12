@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.desafio_filme20.R
+import com.example.desafio_filme20.databinding.RowListFilmsBinding
 import com.example.desafio_filme20.service.listeners.MovieListener
 import com.example.desafio_filme20.service.model.Film
 import com.example.desafio_filme20.view.viewholder.MovieViewHolder
@@ -14,9 +15,8 @@ class MovieAdapter : RecyclerView.Adapter<MovieViewHolder>() {
     private lateinit var mListener: MovieListener
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {
-        val item =
-            LayoutInflater.from(parent.context).inflate(R.layout.row_list_films, parent, false)
-        return MovieViewHolder(item, mListener)
+        val rowListFilmsBinding = RowListFilmsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return MovieViewHolder(rowListFilmsBinding, mListener)
     }
 
     override fun getItemCount(): Int {
