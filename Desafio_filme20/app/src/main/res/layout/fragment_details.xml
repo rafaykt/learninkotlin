@@ -1,16 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="0dp"
+
+    android:background="@color/sub_background_claro"
+    tools:layout_editor_absoluteY="0dp">
+
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/sub_background_claro"
         tools:context=".view.DetalhesFragment">
 
         <ImageView
             android:id="@+id/image_poster_details"
             android:layout_width="match_parent"
-            android:layout_height="500dp"
+            android:layout_height="480dp"
             android:scaleType="fitXY"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -21,34 +32,29 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
+            android:fontFamily="@font/fira_mono"
+            android:gravity="center"
             android:text="@{film.original_title}"
-            tools:text="Titulo"
-            android:textColor="#000"
-            android:textSize="28sp"
+            android:textColor="@color/sub_laranja"
+            android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="@id/image_poster_details"
             app:layout_constraintStart_toStartOf="@id/image_poster_details"
-            app:layout_constraintTop_toBottomOf="@id/image_poster_details" />
+            app:layout_constraintTop_toBottomOf="@id/image_poster_details"
+            tools:text="Titulo" />
 
         <TextView
             android:id="@+id/year_details"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:text="@{film.release_date"
-            tools:text="Release date: 01/01/2010"
+            android:fontFamily="@font/fira_mono"
+            android:isScrollContainer="true"
+            android:textColor="@color/sub_azul"
             android:textSize="9sp"
-            app:layout_constraintStart_toStartOf="@id/image_poster_details"
-            app:layout_constraintTop_toBottomOf="@id/overViewDetails" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/overViewDetails"
+            app:layout_constraintTop_toBottomOf="@id/overViewDetails"
+            tools:text="Release date: 01/01/2010" />
 
-
-        <!--    <TextView-->
-        <!--        android:id="@+id/text_favorito"-->
-        <!--        android:layout_width="0dp"-->
-        <!--        android:layout_height="wrap_content"-->
-        <!--        android:layout_marginRight="30dp"-->
-        <!--        android:text="Favorite este filme"-->
-        <!--        app:layout_constraintBottom_toBottomOf="@id/viewHeader"-->
-        <!--        app:layout_constraintEnd_toEndOf="@id/" />-->
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/icon_favorite"
@@ -58,9 +64,11 @@
             android:backgroundTint="@color/material_on_primary_emphasis_high_type"
             android:elevation="4dp"
             android:src="@drawable/ic_not_favorite"
+            app:fabSize="auto"
             app:layout_constraintBottom_toTopOf="@id/title_details"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/image_poster_details"
+            app:tint="@null"
 
             />
 
@@ -68,13 +76,18 @@
             android:id="@+id/overViewDetails"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/fira_mono"
             android:gravity="center"
             android:text=""
-            tools:text="OverView: \t Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sagittis ipsum ex, quis dictum erat porttitor vel. Phasellus tempus posuere convallis. Quisque massa diam, commodo vitae aliquet a, accumsan vitae lacus. Fusce cursus, enim non semper sollicitudin, sapien eros viverra felis, id fringilla sem turpis tempus ante. Ut suscipit vitae sem nec sodales. Morbi pretium enim neque, ut dictum nibh aliquam nec. Maecenas tempus tincidunt tincidunt. Vivamus vitae nisl quis ex posuere ullamcorper. Aenean consectetur in lorem ac consequat. In ultrices rutrum urna, id auctor sem volutpat in."
+            android:textColor="@color/white"
+            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/title_details" />
+            app:layout_constraintTop_toBottomOf="@id/title_details"
+            tools:text="OverView: \t Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sagittis ipsum ex, quis dictum erat porttitor vel. Phasellus tempus posuere convallis. Quisque massa diam, commodo vitae aliquet a, accumsan vitae lacus. Fusce cursus, enim non semper sollicitudin, sapien eros viverra felis, id fringilla sem turpis tempus ante. Ut suscipit vitae sem nec sodales. Morbi pretium enim neque, ut dictum nibh aliquam nec. Maecenas tempus tincidunt tincidunt. Vivamus vitae nisl quis ex posuere ullamcorper. Aenean consectetur in lorem ac consequat. In ultrices rutrum urna, id auctor sem volutpat in." />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
