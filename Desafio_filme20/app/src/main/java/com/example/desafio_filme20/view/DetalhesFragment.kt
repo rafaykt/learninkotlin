@@ -28,8 +28,8 @@ class DetalhesFragment : Fragment() {
     private val args: DetalhesFragmentArgs by navArgs()
     private lateinit var mListener: MovieListener
 
-    private var _binding: FragmentDetailsBinding? = null
-    private val binding get() = _binding!!
+        private var _binding: FragmentDetailsBinding? = null
+        private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater,

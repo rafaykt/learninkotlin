@@ -81,7 +81,6 @@
         app:layout_constraintEnd_toEndOf="@id/text_favorito"
         app:layout_constraintBottom_toTopOf="@id/text_favorito"
         android:background="#b1b1b1"
-
         />
 
     <TextView
