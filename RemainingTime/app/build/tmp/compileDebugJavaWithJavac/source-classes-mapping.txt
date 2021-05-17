@@ -1,4 +1,0 @@
-com/example/remainingtime/BuildConfig.java
- com.example.remainingtime.BuildConfig
-com/example/remainingtime/databinding/ActivityMainBinding.java
- com.example.remainingtime.databinding.ActivityMainBinding
