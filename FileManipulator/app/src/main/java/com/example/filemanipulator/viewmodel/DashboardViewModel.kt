@@ -1,4 +1,4 @@
-package com.example.filemanipulator.ui.dashboard
+package com.example.filemanipulator.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

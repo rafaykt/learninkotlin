@@ -49,15 +49,12 @@ class HomeFragment : Fragment() {
             override fun onFavorite(filme: Film) {
                 homeViewModel.addToFavorites(filme)
                 filme.favorite=true
-
             }
 
             override fun undoFavorite(filme: Film) {
                 homeViewModel.removeFromFavorites(filme)
                 filme.favorite=false
             }
-
-
         }
 
         /*Listener*/
