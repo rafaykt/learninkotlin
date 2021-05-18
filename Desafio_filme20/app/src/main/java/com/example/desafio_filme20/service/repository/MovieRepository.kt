@@ -27,10 +27,10 @@ class MovieRepository(context: Context) {
                 it.onError(e)
             }
         }
-            .subscribeOn(Schedulers.io())
-            .observeOn(Schedulers.io())
+//            .subscribeOn(Schedulers.io())
+//            .observeOn(Schedulers.io())
     }
-
+    // Maybe
 
     fun delete(film: Film): Completable {
         return Completable.create {

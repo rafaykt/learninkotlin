@@ -8,12 +8,14 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.navArgs
 import com.example.desafio_filme20.R
 import com.example.desafio_filme20.databinding.FragmentDetailsBinding
+import com.example.desafio_filme20.service.constants.MovieConstants
 import com.example.desafio_filme20.service.listeners.MovieListener
 import com.example.desafio_filme20.service.model.Film
 import com.example.desafio_filme20.viewmodel.DetalhesViewModel
@@ -26,7 +28,6 @@ class DetalhesFragment : Fragment() {
 
     private lateinit var detailsViewModel: DetalhesViewModel
     private val args: DetalhesFragmentArgs by navArgs()
-    private lateinit var mListener: MovieListener
 
         private var _binding: FragmentDetailsBinding? = null
         private val binding get() = _binding!!
@@ -50,6 +51,7 @@ class DetalhesFragment : Fragment() {
             }
             //setando os dados assim que recebo o objeto
         }
+
         return view
     }
 
@@ -60,7 +62,7 @@ class DetalhesFragment : Fragment() {
     }
 
     private fun loadDetails(film: Film) {
-        var baseUrlFilme = "https://image.tmdb.org/t/p/w500"
+        var baseUrlFilme = MovieConstants.API.baseUrlFilme500
         binding.titleDetails.text = film.original_title
         binding.yearDetails.text = "Release: ${film.release_date}"
         binding.overViewDetails.text = film.overview
