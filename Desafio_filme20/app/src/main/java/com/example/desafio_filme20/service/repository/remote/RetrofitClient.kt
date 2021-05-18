@@ -1,5 +1,7 @@
 package com.example.desafio_filme20.service.repository.remote
 
+import com.example.desafio_filme20.service.constants.MovieConstants
+import okhttp3.HttpUrl
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -10,7 +12,6 @@ class RetrofitClient private constructor() {
 
     companion object {
         private lateinit var retrofit: Retrofit
-        private var baseUrl = "https://api.themoviedb.org/3/movie/"
 
 
         private fun getRetrofitInstance(): Retrofit {
@@ -21,11 +22,10 @@ class RetrofitClient private constructor() {
             }
             val httpClient = OkHttpClient.Builder().addInterceptor(logging)
 
-
             if (!Companion::retrofit.isInitialized)
                 retrofit = Retrofit.Builder()
                     .client(httpClient.build())
-                    .baseUrl(baseUrl)
+                    .baseUrl(MovieConstants.API.baseUrl)
                     .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                     .addConverterFactory(GsonConverterFactory.create())
                     .build()

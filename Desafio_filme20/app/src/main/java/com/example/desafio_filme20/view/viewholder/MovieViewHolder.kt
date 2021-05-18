@@ -8,6 +8,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.example.desafio_filme20.R
 import com.example.desafio_filme20.databinding.RowListFilmsBinding
+import com.example.desafio_filme20.service.constants.MovieConstants
 import com.example.desafio_filme20.service.listeners.MovieListener
 import com.example.desafio_filme20.service.model.Film
 import com.squareup.picasso.Picasso
@@ -15,7 +16,7 @@ import com.squareup.picasso.Picasso
 class MovieViewHolder(private val binding: RowListFilmsBinding, val listener: MovieListener, var filme: Film? = null) :
     RecyclerView.ViewHolder(binding.root) {
 
-    private val baseUrlFilme = "https://image.tmdb.org/t/p/w200"
+    private val baseUrlFilme = MovieConstants.API.baseUrlFilme200
 
     /**
      * Atribui valores aos elementos de interface e também eventos

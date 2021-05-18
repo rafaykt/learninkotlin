@@ -12,6 +12,7 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.desafio_filme20.R
+import com.example.desafio_filme20.databinding.FragmentHomeBinding
 import com.example.desafio_filme20.service.listeners.MovieListener
 import com.example.desafio_filme20.service.model.Film
 import com.example.desafio_filme20.view.adapter.MovieAdapter
@@ -24,6 +25,8 @@ class HomeFragment : Fragment() {
     private lateinit var mListener : MovieListener
     private val mAdapter = MovieAdapter()
 
+    private var _binding: FragmentHomeBinding?=null
+    private val binding get() = _binding!!
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
@@ -33,15 +36,14 @@ class HomeFragment : Fragment() {
                 ViewModelProvider(this).get(HomeViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_home, container, false)
         /*recycler*/
-            val recycler = root.findViewById<RecyclerView>(R.id.rv_listFilms)
-            recycler.layoutManager = LinearLayoutManager(context)
-            recycler.adapter = mAdapter
+        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        binding.rvListFilms.layoutManager = LinearLayoutManager(context)
+        binding.rvListFilms.adapter=mAdapter
         /*recycler*/
 
         /*Listener*/
         mListener = object : MovieListener{
             override fun onListClick(filme: Film) {
-//                Toast.makeText(context, "Filme: ${filme.title}", Toast.LENGTH_SHORT).show()
             val directions = HomeFragmentDirections.actionNavigationHomeToNavigationDetails2(filme)
                 view?.findNavController()?.navigate(directions)
             }
@@ -60,13 +62,18 @@ class HomeFragment : Fragment() {
         /*Listener*/
         observe()
 
-        return root
+        return binding.root
     }
 
     override fun onResume(){
         super.onResume()
         mAdapter.attachListener(mListener)
         homeViewModel.listPopularFilms()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        viewModelStore.clear()
     }
 
     private fun observe() {
