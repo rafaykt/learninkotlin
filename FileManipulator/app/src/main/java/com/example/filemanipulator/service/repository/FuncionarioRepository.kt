@@ -1,43 +1,30 @@
 package com.example.filemanipulator.service.repository
 
 import android.content.Context
+import android.net.Uri
 import com.example.filemanipulator.service.model.Funcionario
 import com.example.filemanipulator.service.repository.remote.FuncionarioDataBase
 import io.reactivex.Completable
 import io.reactivex.Observable
 import io.reactivex.schedulers.Schedulers
+import java.io.BufferedReader
+import java.io.InputStreamReader
 
 class FuncionarioRepository(context: Context) {
 
     private val mDatabase = FuncionarioDataBase.getDatabase(context).funcionarioDAO()
 
-    fun getFuncionarioList(): Observable<List<Funcionario>> {
+    suspend fun getFuncionarioList(): List<Funcionario> {
         return mDatabase.getFuncionarioList()
     }
 
-    fun save (funcionario: Funcionario): Completable{
-        return Completable.create{
-            try{
-                mDatabase.save(funcionario)
-                it.onComplete()
-            }catch (e: Exception){
-                it.onError(e)
-            }
-        }
-            .subscribeOn(Schedulers.io())
-            .observeOn(Schedulers.io())
+    suspend fun save (funcionario: Funcionario){
+        return mDatabase.save(funcionario)
     }
 
-    fun delete (funcionario: Funcionario): Completable{
-        return Completable.create{
-            try{
-                mDatabase.delete(funcionario)
-                it.onComplete()
-            }catch (e: Exception){
-                it.onError(e)
-            }
-        }
-            .subscribeOn(Schedulers.io())
-            .observeOn(Schedulers.io())
+    suspend fun delete (funcionario: Funcionario){
+        return mDatabase.delete(funcionario)
     }
+
+
 }

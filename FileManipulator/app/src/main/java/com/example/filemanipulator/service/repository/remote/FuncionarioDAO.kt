@@ -11,13 +11,13 @@ import io.reactivex.Observable
 interface FuncionarioDAO {
 
     @Insert
-    fun save(funcionario: Funcionario)
+    suspend fun save(funcionario: Funcionario)
 
     @Delete
-    fun delete(funcionario:Funcionario)
+    suspend fun delete(funcionario:Funcionario)
 
     @Query ("SELECT * FROM Funcionario")
-    fun getFuncionarioList() : Observable<List<Funcionario>>
+    suspend fun getFuncionarioList() : List<Funcionario>
 
 
 }

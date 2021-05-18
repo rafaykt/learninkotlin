@@ -7,10 +7,13 @@
     tools:context=".view.DashboardFragment"
     android:background="#424141"
     >
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:listitem="@layout/row_funcionario"
         />
+</ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
