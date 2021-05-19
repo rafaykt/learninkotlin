@@ -1,16 +1,13 @@
 package com.example.filemanipulator.service.repository.remote
 
-import androidx.room.Dao
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Query
+import androidx.room.*
 import com.example.filemanipulator.service.model.Funcionario
 import io.reactivex.Observable
 
 @Dao
 interface FuncionarioDAO {
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun save(funcionario: Funcionario)
 
     @Delete

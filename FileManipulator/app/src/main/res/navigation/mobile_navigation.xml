@@ -9,11 +9,25 @@
         android:id="@+id/navigation_home"
         android:name="com.example.filemanipulator.view.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_form_funcionario"
+            app:destination="@id/form_funcionario" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="com.example.filemanipulator.view.DashboardFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/form_funcionario"
+        android:name="com.example.filemanipulator.view.FormFuncionarioFragment"
+        android:label="FormFuncionário"
+        tools:layout="@layout/form_funcionario_fragment" >
+        <action
+            android:id="@+id/action_form_funcionario_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
 </navigation>
