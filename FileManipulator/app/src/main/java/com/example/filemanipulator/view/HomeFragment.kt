@@ -13,7 +13,12 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.filemanipulator.databinding.FragmentHomeBinding
+import com.example.filemanipulator.service.listener.ActionListener
+import com.example.filemanipulator.service.model.Funcionario
+import com.example.filemanipulator.view.viewholder.HomeAdapter
 import com.example.filemanipulator.viewmodel.HomeViewModel
 import kotlinx.coroutines.coroutineScope
 
@@ -22,9 +27,8 @@ class HomeFragment : Fragment() {
 
     private lateinit var homeViewModel: HomeViewModel
     private var _binding: FragmentHomeBinding? = null
-
-
-
+    val mAdapter = HomeAdapter()
+    private lateinit var mListener : ActionListener
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
@@ -40,10 +44,8 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+        binding.rvFuncionario.layoutManager = LinearLayoutManager(context)
+        binding.rvFuncionario.adapter=mAdapter
 
         binding.filePickerButton.setOnClickListener {
             val intent = Intent(Intent.ACTION_GET_CONTENT)
@@ -51,9 +53,33 @@ class HomeFragment : Fragment() {
             startActivityForResult(intent, 1000)
         }
 
+        binding.createButton.setOnClickListener{
+            val directions = HomeFragmentDirections.actionNavigationHomeToFormFuncionario(null)
+            view?.findNavController()?.navigate(directions)
+        }
+
+        homeViewModel.getFuncionarioList()
+
+        mListener = object: ActionListener{
+            override fun showDetails(funcionario: Funcionario) {
+                val directions = HomeFragmentDirections.actionNavigationHomeToFormFuncionario(funcionario)
+                view?.findNavController()?.navigate(directions)
+
+            }
+
+            override fun deleteFunc(funcionario: Funcionario) {
+                homeViewModel.deleteFuncionario(funcionario)
+            }
+        }
+        observe()
+
         return root
     }
 
+    override fun onResume() {
+        super.onResume()
+        mAdapter.attachListener(mListener)
+    }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?){
         super.onActivityResult(requestCode, resultCode, data)
@@ -70,4 +96,12 @@ class HomeFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
+    private fun observe() {
+        homeViewModel.funcionarioList.observe(viewLifecycleOwner,{
+            mAdapter.updateListener(it)
+        })
+
+    }
+
 }

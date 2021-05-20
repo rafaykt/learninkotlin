@@ -25,6 +25,9 @@ class HomeViewHolder(
         binding.body.setOnClickListener{
             listener.showDetails(funcionario)
         }
+        binding.buttonDelete.setOnClickListener{
+            listener.deleteFunc(funcionario)
+        }
 
     }
 
