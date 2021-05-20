@@ -18,6 +18,7 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
     fun readFile(uri: Uri) {
         viewModelScope.launch(Dispatchers.IO){
             mFuncionarioList.postValue(mRepository.getFuncionariosFromFile(uri,getApplication()))
+            mRepository.writeFuncionariosIntoFile(getApplication())
         }
     }
 
@@ -28,7 +29,12 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     fun deleteFuncionario(funcionario: Funcionario){
-        viewModelScope.launch(Dispatchers.IO){mRepository.delete(funcionario)}
-        getFuncionarioList()
+        viewModelScope.launch(Dispatchers.IO){
+            mRepository.delete(funcionario)
+            getFuncionarioList()
+            mRepository.writeFuncionariosIntoFile(getApplication())
+        }
     }
+
+
 }

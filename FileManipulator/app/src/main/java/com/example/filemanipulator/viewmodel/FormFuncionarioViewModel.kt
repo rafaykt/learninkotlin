@@ -14,11 +14,30 @@ class FormFuncionarioViewModel(application: Application) : AndroidViewModel(appl
 
     private val mRepository = FuncionarioRepository(application)
 
-    fun saveFuncionario (funcionario: Funcionario){
-        viewModelScope.launch(Dispatchers.IO) { mRepository.save(funcionario) }
+    fun saveFuncionario(funcionario: Funcionario) {
+        viewModelScope.launch(Dispatchers.IO) {
+            mRepository.save(funcionario)
+            gravarFuncionario()
+        }
     }
 
-    fun updateFuncionario( funcionario: Funcionario){
-        viewModelScope.launch(Dispatchers.IO) { mRepository.update(funcionario) }
+    fun updateFuncionario(funcionario: Funcionario) {
+        viewModelScope.launch(Dispatchers.IO) {
+            mRepository.update(funcionario)
+            gravarFuncionario()
+        }
+    }
+
+
+    fun gravarFuncionario() {
+        viewModelScope.launch(Dispatchers.IO) { mRepository.writeFuncionariosIntoFile(getApplication()) }
+    }
+
+    fun validarDados(funcionario: Funcionario): Boolean {
+        return !((funcionario.descFuncionario == "") ||
+                (funcionario.codFuncionario == "") ||
+                (funcionario.complemento == "") ||
+                (funcionario.reservado1 == "") ||
+                (funcionario.reservado2 == ""))
     }
 }

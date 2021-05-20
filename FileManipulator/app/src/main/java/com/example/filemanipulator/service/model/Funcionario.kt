@@ -9,7 +9,7 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class Funcionario(
     @PrimaryKey
-    var codFuncionario: Long = 0,
+    var codFuncionario: String = "",
     var descFuncionario: String = "",
     var complemento: String = "",
     var reservado1: String = "",

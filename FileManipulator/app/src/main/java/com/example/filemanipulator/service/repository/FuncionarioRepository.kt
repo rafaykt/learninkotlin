@@ -5,11 +5,7 @@ import android.net.Uri
 import com.example.filemanipulator.service.model.Funcionario
 import com.example.filemanipulator.service.repository.remote.FuncionarioDataBase
 import com.example.filemanipulator.service.util.FileManager
-import io.reactivex.Completable
-import io.reactivex.Observable
-import io.reactivex.schedulers.Schedulers
-import java.io.BufferedReader
-import java.io.InputStreamReader
+
 
 class FuncionarioRepository(context: Context) {
 
@@ -33,10 +29,19 @@ class FuncionarioRepository(context: Context) {
         listaFuncionario.forEach{
             save(it)
         }
+        listaFuncionario = getFuncionarioList()
         return listaFuncionario
+    }
+
+    suspend fun writeFuncionariosIntoFile( context: Context){
+        val lista = getFuncionarioList()
+        return file.writeFuncionariosIntoFile(context, lista)
     }
 
     suspend fun update (funcionario: Funcionario){
         return mDatabase.updateFuncionario(funcionario.codFuncionario, funcionario.descFuncionario, funcionario.complemento, funcionario.reservado1, funcionario.reservado2)
     }
+
+
+
 }
