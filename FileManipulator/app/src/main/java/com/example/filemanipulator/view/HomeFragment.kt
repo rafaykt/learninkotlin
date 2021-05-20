@@ -94,6 +94,7 @@ class HomeFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
+        viewModelStore.clear()
         _binding = null
     }
 

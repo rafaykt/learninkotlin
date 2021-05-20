@@ -13,7 +13,7 @@ class HomeViewHolder(
 
 
     fun bindData(funcionario: Funcionario) {
-        binding.idFuncionario.text = funcionario.codFuncionario.toString()
+        binding.idFuncionario.text = funcionario.codFuncionario
         binding.nomeFuncionario.text = funcionario.descFuncionario
         binding.cargoFuncionario.text = funcionario.complemento
         binding.reservado1Funcionario.text = funcionario.reservado1

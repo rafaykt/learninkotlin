@@ -4,11 +4,10 @@ import android.content.Context
 import androidx.room.*
 import com.example.filemanipulator.service.model.Funcionario
 
-@Database(entities = [Funcionario::class], version=1, exportSchema = false)
+@Database(entities = [Funcionario::class], version=2, exportSchema = false)
 abstract class FuncionarioDataBase: RoomDatabase() {
 
     abstract fun funcionarioDAO() : FuncionarioDAO
-
     companion object {
         private lateinit var INSTANCE: FuncionarioDataBase
         fun getDatabase(context: Context) : FuncionarioDataBase{

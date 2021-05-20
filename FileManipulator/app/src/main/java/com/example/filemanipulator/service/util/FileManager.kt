@@ -2,11 +2,12 @@ package com.example.filemanipulator.service.util
 
 import android.content.Context
 import android.net.Uri
+import android.widget.Toast
+import androidx.core.net.toUri
 import androidx.lifecycle.viewModelScope
 import com.example.filemanipulator.service.model.Funcionario
 import kotlinx.coroutines.launch
-import java.io.BufferedReader
-import java.io.InputStreamReader
+import java.io.*
 
 class FileManager() {
 
@@ -22,7 +23,7 @@ class FileManager() {
                     if (line != null) {
                         splitter = line.split(";")
                         val funcionario = Funcionario(
-                            splitter[0].toLong(),
+                            splitter[0],
                             splitter[1],
                             splitter[2],
                             splitter[3],
@@ -31,10 +32,30 @@ class FileManager() {
                         funcionarioList.add(funcionario)
                     }
                 }
+                reader.close()
             }
         }
         return funcionarioList
     }
 
+
+    suspend fun writeFuncionariosIntoFile(context: Context, listaFuncionarios: List<Funcionario> ){
+
+        val contentResolver = context.contentResolver
+        val funcionarioList = arrayListOf<Funcionario>()
+        val fileOutputStream: FileOutputStream
+
+
+        try{
+            val file = FileWriter(context.getFileStreamPath("stream.txt").toString())
+            listaFuncionarios.forEach {
+                file.write("${it.codFuncionario};${it.descFuncionario};${it.complemento};${it.reservado1};${it.reservado2}\n")
+            }
+            file.close()
+        }catch(e: Exception){
+            e.printStackTrace()
+        }
+
+    }
 
 }
