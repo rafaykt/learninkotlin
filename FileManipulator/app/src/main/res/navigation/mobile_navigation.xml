@@ -29,5 +29,9 @@
         <action
             android:id="@+id/action_form_funcionario_to_navigation_home"
             app:destination="@id/navigation_home" />
+        <argument
+            android:name="funcionario"
+            app:argType="com.example.filemanipulator.service.model.Funcionario"
+            app:nullable="true" />
     </fragment>
 </navigation>

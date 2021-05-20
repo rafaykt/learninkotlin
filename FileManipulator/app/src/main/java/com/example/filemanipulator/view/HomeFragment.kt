@@ -54,7 +54,7 @@ class HomeFragment : Fragment() {
         }
 
         binding.createButton.setOnClickListener{
-            val directions = HomeFragmentDirections.actionNavigationHomeToFormFuncionario()
+            val directions = HomeFragmentDirections.actionNavigationHomeToFormFuncionario(null)
             view?.findNavController()?.navigate(directions)
         }
 
@@ -62,13 +62,14 @@ class HomeFragment : Fragment() {
 
         mListener = object: ActionListener{
             override fun showDetails(funcionario: Funcionario) {
-                Toast.makeText(context, "Click", Toast.LENGTH_SHORT).show()
+                val directions = HomeFragmentDirections.actionNavigationHomeToFormFuncionario(funcionario)
+                view?.findNavController()?.navigate(directions)
+
             }
 
             override fun deleteFunc(funcionario: Funcionario) {
                 homeViewModel.deleteFuncionario(funcionario)
             }
-
         }
         observe()
 

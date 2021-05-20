@@ -17,4 +17,8 @@ class FormFuncionarioViewModel(application: Application) : AndroidViewModel(appl
     fun saveFuncionario (funcionario: Funcionario){
         viewModelScope.launch(Dispatchers.IO) { mRepository.save(funcionario) }
     }
+
+    fun updateFuncionario( funcionario: Funcionario){
+        viewModelScope.launch(Dispatchers.IO) { mRepository.update(funcionario) }
+    }
 }

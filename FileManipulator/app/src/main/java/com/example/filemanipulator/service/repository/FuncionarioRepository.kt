@@ -36,5 +36,7 @@ class FuncionarioRepository(context: Context) {
         return listaFuncionario
     }
 
-
+    suspend fun update (funcionario: Funcionario){
+        return mDatabase.updateFuncionario(funcionario.codFuncionario, funcionario.descFuncionario, funcionario.complemento, funcionario.reservado1, funcionario.reservado2)
+    }
 }

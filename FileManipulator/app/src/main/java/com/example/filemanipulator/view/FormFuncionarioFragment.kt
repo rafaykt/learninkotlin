@@ -34,33 +34,63 @@ class FormFuncionarioFragment : Fragment() {
 
         viewModel = ViewModelProvider(this).get(FormFuncionarioViewModel::class.java)
 
-        binding.submitButtonForm.setOnClickListener{
-            cadastrarFuncionario(binding)
+        val bundle = arguments
+
+        val funcionarioByArgument = bundle?.getParcelable<Funcionario>("funcionario")
+        if (funcionarioByArgument!=null) {
+            loadTelaUpdate(funcionarioByArgument, binding)
+            binding.submitButtonForm.setOnClickListener {
+                atualizarFuncionario(funcionarioByArgument, binding)
+                val directions = FormFuncionarioFragmentDirections.actionFormFuncionarioToNavigationHome()
+                view?.findNavController()?.navigate(directions)
+            }
+
+        } else {
+            binding.submitButtonForm.setOnClickListener {
+                cadastrarFuncionario(binding)
+                val directions = FormFuncionarioFragmentDirections.actionFormFuncionarioToNavigationHome()
+                view?.findNavController()?.navigate(directions)
+            }
         }
-
-
 
         return root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(FormFuncionarioViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
-
-    fun cadastrarFuncionario(binding: FormFuncionarioFragmentBinding){
+    private fun cadastrarFuncionario(binding: FormFuncionarioFragmentBinding) {
         val funcionario = Funcionario(
             binding.formId.editText?.text.toString().toLong(),
-                    binding.formNome.editText?.text.toString(),
-                    binding.formComplemento.editText?.text.toString(),
-                    binding.formReservado1.editText?.text.toString(),
-                    binding.formReservado2.editText?.text.toString()
+            binding.formNome.editText?.text.toString(),
+            binding.formComplemento.editText?.text.toString(),
+            binding.formReservado1.editText?.text.toString(),
+            binding.formReservado2.editText?.text.toString()
         )
         viewModel.saveFuncionario(funcionario)
-        val directions = FormFuncionarioFragmentDirections.actionFormFuncionarioToNavigationHome()
-        view?.findNavController()?.navigate(directions)
 
+    }
+
+
+    private fun loadTelaUpdate(funcionario: Funcionario, binding: FormFuncionarioFragmentBinding){
+        binding.header.text = "Update cadastro"
+        binding.formId.hint = "Código: ${funcionario.codFuncionario}"
+        binding.formId.isEnabled=false
+
+        binding.formNome.placeholderText = funcionario.descFuncionario
+        binding.formComplemento.placeholderText = funcionario.complemento
+        binding.formReservado1.placeholderText = funcionario.reservado1
+        binding.formReservado2.placeholderText = funcionario.reservado2
+        binding.submitButtonForm.text ="Atualizar usuário"
+    }
+
+    private fun atualizarFuncionario(funcionario: Funcionario, binding: FormFuncionarioFragmentBinding){
+        val funcionarioUpdate: Funcionario = funcionario
+
+        funcionarioUpdate.codFuncionario = binding.formId.editText?.text.toString().toLong()
+        if(binding.formNome.editText?.text.toString()!="") funcionarioUpdate.descFuncionario = binding.formNome.editText?.text.toString()
+        if(binding.formComplemento.editText?.text.toString()!="") funcionarioUpdate.complemento = binding.formComplemento.editText?.text.toString()
+        if(binding.formReservado1.editText?.text.toString()!="") funcionarioUpdate.reservado1 = binding.formReservado1.editText?.text.toString()
+        if(binding.formReservado2.editText?.text.toString()!="") funcionarioUpdate.reservado2 = binding.formReservado2.editText?.text.toString()
+
+        viewModel.updateFuncionario(funcionarioUpdate)
     }
 
 }

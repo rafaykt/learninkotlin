@@ -16,5 +16,6 @@ interface FuncionarioDAO {
     @Query ("SELECT * FROM Funcionario")
     suspend fun getFuncionarioList() : List<Funcionario>
 
-
+    @Query ("UPDATE Funcionario SET descFuncionario = :descFuncionario, complemento = :complemento, reservado1 = :reservado1 , reservado2 = :reservado2 WHERE codFuncionario = :codFuncionario ")
+    suspend fun updateFuncionario (codFuncionario: Long, descFuncionario: String, complemento: String, reservado1: String, reservado2: String)
 }

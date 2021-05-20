@@ -2,17 +2,12 @@ package com.example.filemanipulator.viewmodel
 
 import android.app.Application
 import android.net.Uri
-import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import com.example.filemanipulator.service.model.Funcionario
 import com.example.filemanipulator.service.repository.FuncionarioRepository
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.invoke
 import kotlinx.coroutines.launch
-import java.io.BufferedReader
-import java.io.InputStreamReader
+
 
 class HomeViewModel(application: Application) : AndroidViewModel(application) {
     private val mRepository = FuncionarioRepository(application)
