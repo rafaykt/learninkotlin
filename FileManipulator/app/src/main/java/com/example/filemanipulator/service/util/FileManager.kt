@@ -17,9 +17,21 @@ class FileManager() {
         contentResolver.openInputStream(uri)?.use { inputStream ->
             BufferedReader(InputStreamReader(inputStream, "ISO-8859-1")).use { reader ->
                 var line: String? = reader.readLine()
+                if(line != null){
+                    var splitterFirst = line.split(";")
+                    val funcionarioFirst = Funcionario(
+                        splitterFirst[0],
+                        splitterFirst[1],
+                        splitterFirst[2],
+                        splitterFirst[3],
+                        splitterFirst[4]
+                    )
+                    funcionarioList.add(funcionarioFirst)
+                }
                 var splitter: List<String>
                 while (line != null) {
                     line = reader.readLine()
+
                     if (line != null) {
                         splitter = line.split(";")
                         val funcionario = Funcionario(
@@ -47,7 +59,7 @@ class FileManager() {
 
 
         try{
-            val file = FileWriter(context.getFileStreamPath("stream.txt").toString())
+            val file = FileWriter(context.getFileStreamPath("output_desafio.txt").toString())
             listaFuncionarios.forEach {
                 file.write("${it.codFuncionario};${it.descFuncionario};${it.complemento};${it.reservado1};${it.reservado2}\n")
             }

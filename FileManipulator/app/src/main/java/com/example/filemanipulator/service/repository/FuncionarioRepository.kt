@@ -24,6 +24,11 @@ class FuncionarioRepository(context: Context) {
         return mDatabase.delete(funcionario)
     }
 
+    suspend fun update (funcionario: Funcionario){
+        return mDatabase.updateFuncionario(funcionario.codFuncionario, funcionario.descFuncionario, funcionario.complemento, funcionario.reservado1, funcionario.reservado2)
+    }
+
+    /*File Manager*/
     suspend fun getFuncionariosFromFile( uri: Uri, context: Context): List<Funcionario>{
         var listaFuncionario = file.readFuncionariosFromFile(uri, context)
         listaFuncionario.forEach{
@@ -38,9 +43,6 @@ class FuncionarioRepository(context: Context) {
         return file.writeFuncionariosIntoFile(context, lista)
     }
 
-    suspend fun update (funcionario: Funcionario){
-        return mDatabase.updateFuncionario(funcionario.codFuncionario, funcionario.descFuncionario, funcionario.complemento, funcionario.reservado1, funcionario.reservado2)
-    }
 
 
 

@@ -44,33 +44,13 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        binding.rvFuncionario.layoutManager = LinearLayoutManager(context)
-        binding.rvFuncionario.adapter=mAdapter
-
-        binding.filePickerButton.setOnClickListener {
-            val intent = Intent(Intent.ACTION_GET_CONTENT)
-            intent.type = "*/*"
-            startActivityForResult(intent, 1000)
-        }
-
-        binding.createButton.setOnClickListener{
-            val directions = HomeFragmentDirections.actionNavigationHomeToFormFuncionario(null)
-            view?.findNavController()?.navigate(directions)
-        }
 
         homeViewModel.getFuncionarioList()
 
-        mListener = object: ActionListener{
-            override fun showDetails(funcionario: Funcionario) {
-                val directions = HomeFragmentDirections.actionNavigationHomeToFormFuncionario(funcionario)
-                view?.findNavController()?.navigate(directions)
+        binding.rvFuncionario.layoutManager = LinearLayoutManager(context)
+        binding.rvFuncionario.adapter=mAdapter
 
-            }
-
-            override fun deleteFunc(funcionario: Funcionario) {
-                homeViewModel.deleteFuncionario(funcionario)
-            }
-        }
+        createListeners()
         observe()
 
         return root
@@ -100,9 +80,33 @@ class HomeFragment : Fragment() {
 
     private fun observe() {
         homeViewModel.funcionarioList.observe(viewLifecycleOwner,{
-            mAdapter.updateListener(it)
+            mAdapter.updateList(it)
         })
-
     }
+
+    private fun createListeners(){
+        binding.filePickerButton.setOnClickListener {
+            val intent = Intent(Intent.ACTION_GET_CONTENT)
+            intent.type = "*/*"
+            startActivityForResult(intent, 1000)
+        }
+
+        binding.createButton.setOnClickListener{
+            val directions = HomeFragmentDirections.actionNavigationHomeToFormFuncionario(null)
+            view?.findNavController()?.navigate(directions)
+        }
+
+        mListener = object: ActionListener{
+            override fun showDetails(funcionario: Funcionario) {
+                val directions = HomeFragmentDirections.actionNavigationHomeToFormFuncionario(funcionario)
+                view?.findNavController()?.navigate(directions)
+            }
+
+            override fun deleteFunc(funcionario: Funcionario) {
+                homeViewModel.deleteFuncionario(funcionario)
+            }
+        }
+    }
+
 
 }

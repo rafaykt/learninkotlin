@@ -16,12 +16,6 @@
     </fragment>
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.filemanipulator.view.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
-
-    <fragment
         android:id="@+id/form_funcionario"
         android:name="com.example.filemanipulator.view.FormFuncionarioFragment"
         android:label="FormFuncionário"

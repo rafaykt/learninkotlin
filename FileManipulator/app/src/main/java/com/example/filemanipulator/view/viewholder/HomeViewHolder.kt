@@ -10,15 +10,12 @@ class HomeViewHolder(
     val listener: ActionListener,
     var funcionario: Funcionario? = null
 ) : RecyclerView.ViewHolder(binding.root) {
-
-
     fun bindData(funcionario: Funcionario) {
-        binding.idFuncionario.text = funcionario.codFuncionario
-        binding.nomeFuncionario.text = funcionario.descFuncionario
-        binding.cargoFuncionario.text = funcionario.complemento
-        binding.reservado1Funcionario.text = funcionario.reservado1
-        binding.reservado2Funcionario.text = funcionario.reservado2
-
+        binding.idFuncionario.text = "Cod: ${funcionario.codFuncionario}"
+        binding.nomeFuncionario.text = funcionario.descFuncionario.toUpperCase()
+        binding.cargoFuncionario.text = "Cargo: ${funcionario.complemento}"
+        binding.reservado1Funcionario.text = "R1: ${funcionario.reservado1}"
+        binding.reservado2Funcionario.text = "R2: ${funcionario.reservado2}"
 
 
         //bind eventos
@@ -28,7 +25,5 @@ class HomeViewHolder(
         binding.buttonDelete.setOnClickListener{
             listener.deleteFunc(funcionario)
         }
-
     }
-
 }
