@@ -17,9 +17,21 @@ class FileManager() {
         contentResolver.openInputStream(uri)?.use { inputStream ->
             BufferedReader(InputStreamReader(inputStream, "ISO-8859-1")).use { reader ->
                 var line: String? = reader.readLine()
+                if(line != null){
+                    var splitterFirst = line.split(";")
+                    val funcionarioFirst = Funcionario(
+                        splitterFirst[0],
+                        splitterFirst[1],
+                        splitterFirst[2],
+                        splitterFirst[3],
+                        splitterFirst[4]
+                    )
+                    funcionarioList.add(funcionarioFirst)
+                }
                 var splitter: List<String>
                 while (line != null) {
                     line = reader.readLine()
+
                     if (line != null) {
                         splitter = line.split(";")
                         val funcionario = Funcionario(

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:tools="http://schemas.android.com/tools"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:backgroundTint="#662454"
     android:layout_margin="3dp"
-    app:cardCornerRadius="7dp"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:backgroundTint="#662454"
     android:elevation="4dp"
+    app:cardCornerRadius="7dp"
 
->
+    >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/body"
@@ -22,9 +22,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/raleway"
             android:paddingTop="4dp"
             android:text="Nome do funcionario"
-            android:fontFamily="@font/raleway"
             android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -41,68 +42,65 @@
             android:textAlignment="viewEnd"
             android:textColor="@color/white"
             android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/nome_funcionario"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/nome_funcionario"
-            app:layout_constraintTop_toTopOf="@id/nome_funcionario"
-            app:layout_constraintBottom_toBottomOf="@id/nome_funcionario"/>
+            app:layout_constraintTop_toTopOf="@id/nome_funcionario" />
 
 
         <TextView
             android:id="@+id/cargo_funcionario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginTop="15dp"
-            android:text="Cargo"
+            android:layout_marginTop="8dp"
             android:fontFamily="@font/raleway"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:text="Cargo"
             android:textColor="@color/white"
             android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/reservado1_funcionario"
             app:layout_constraintStart_toStartOf="@+id/nome_funcionario"
-            app:layout_constraintTop_toBottomOf="@id/nome_funcionario"
-
-            />
+            app:layout_constraintTop_toBottomOf="@id/nome_funcionario" />
 
         <TextView
             android:id="@+id/reservado1_funcionario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
+            android:layout_marginBottom="5dp"
             android:fontFamily="@font/raleway"
             android:text="reservado 1"
             android:textColor="@color/white"
             android:textSize="13sp"
-
-            app:layout_constraintStart_toStartOf="@id/cargo_funcionario"
-            app:layout_constraintBottom_toBottomOf="@id/button_delete"
-            />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/cargo_funcionario" />
 
         <TextView
             android:id="@+id/reservado2_funcionario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
+            android:layout_marginBottom="5dp"
             android:fontFamily="@font/raleway"
             android:text="reservado 2"
             android:textColor="@color/white"
             android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/reservado1_funcionario"
-            app:layout_constraintBottom_toBottomOf="@id/button_delete"
 
             />
 
         <ImageButton
             android:id="@+id/button_delete"
-            android:layout_width="50dp"
-            android:layout_height="47dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_marginTop="15dp"
             android:background="@null"
+            android:elevation="4dp"
             android:src="@drawable/ic_delete48"
             app:layout_constraintEnd_toEndOf="@id/id_funcionario"
             app:layout_constraintTop_toBottomOf="@id/id_funcionario" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
 
 </com.google.android.material.card.MaterialCardView>
