@@ -13,6 +13,7 @@
         android:gravity="center"
         android:text="Cadastro"
         android:textSize="30sp"
+        android:textColor="@color/purple_700"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

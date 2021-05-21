@@ -16,20 +16,23 @@
        app:layout_constraintBottom_toTopOf="@id/create_button"
        tools:listitem="@layout/row_funcionario"
    />
+
     <Button
         android:id="@+id/create_button"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:backgroundTint="#b8860b"
         app:layout_constraintBottom_toTopOf="@id/file_picker_button"
+
         app:layout_constraintStart_toStartOf="parent"
         android:text="criar novo registro" />
     <Button
         android:id="@+id/file_picker_button"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:backgroundTint="#b8860b"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-
         android:text="File Picker" />
 
 

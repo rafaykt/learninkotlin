@@ -47,7 +47,7 @@ class FileManager() {
 
 
         try{
-            val file = FileWriter(context.getFileStreamPath("stream.txt").toString())
+            val file = FileWriter(context.getFileStreamPath("output_desafio.txt").toString())
             listaFuncionarios.forEach {
                 file.write("${it.codFuncionario};${it.descFuncionario};${it.complemento};${it.reservado1};${it.reservado2}\n")
             }

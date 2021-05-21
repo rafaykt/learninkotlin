@@ -11,7 +11,6 @@ class HomeAdapter: RecyclerView.Adapter<HomeViewHolder>() {
     private var mList : List<Funcionario> = arrayListOf()
     private lateinit var mListener: ActionListener
 
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeViewHolder {
         val rowFuncionarioBinding = RowFuncionarioBinding.inflate(LayoutInflater.from(parent.context),parent, false)
         return HomeViewHolder(rowFuncionarioBinding, mListener)
@@ -29,7 +28,7 @@ class HomeAdapter: RecyclerView.Adapter<HomeViewHolder>() {
         mListener = listener
     }
 
-    fun updateListener(list: List<Funcionario>){
+    fun updateList(list: List<Funcionario>){
         mList = list
         notifyDataSetChanged()
     }
