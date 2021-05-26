@@ -1,10 +1,10 @@
-package com.jetbrains.handson.kmm.shared.entity
+package me.rafael.yokota.shared.com.jetbrains.handson.kmm.shared.entity
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-private data class RocketLaunch(
+data class RocketLaunch(
     @SerialName("flight_number")
     val flightNumber: Int,
     @SerialName("mission_name")

@@ -96,3 +96,4 @@ sqldelight {
         packageName = "com.jetbrains.handson.kmm.shared.cache"
     }
 }
+
