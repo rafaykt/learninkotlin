@@ -25,7 +25,12 @@ class FuncionarioRepository(context: Context) {
     }
 
     suspend fun update (funcionario: Funcionario){
-        return mDatabase.updateFuncionario(funcionario.codFuncionario, funcionario.descFuncionario, funcionario.complemento, funcionario.reservado1, funcionario.reservado2)
+        return mDatabase.updateFuncionario(funcionario.codFuncionario,
+            funcionario.descFuncionario,
+            funcionario.complemento,
+            funcionario.reservado1,
+            funcionario.reservado2
+        )
     }
 
     /*File Manager*/
@@ -42,8 +47,4 @@ class FuncionarioRepository(context: Context) {
         val lista = getFuncionarioList()
         return file.writeFuncionariosIntoFile(context, lista)
     }
-
-
-
-
 }

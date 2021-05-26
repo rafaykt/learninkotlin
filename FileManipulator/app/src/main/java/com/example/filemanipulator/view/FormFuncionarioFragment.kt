@@ -87,6 +87,7 @@ class FormFuncionarioFragment : Fragment() {
         binding.header.text = "Update cadastro"
         binding.formId.hint = "Código: ${funcionario.codFuncionario}"
         binding.formId.isEnabled = false
+        binding.editTextFormId.setText(funcionario.codFuncionario)
 
         binding.formNome.placeholderText = funcionario.descFuncionario
         binding.formComplemento.placeholderText = funcionario.complemento
@@ -117,6 +118,7 @@ class FormFuncionarioFragment : Fragment() {
         super.onDestroyView()
         _binding = null
         viewModelStore.clear()
+        binding.formNome.editText?.isCursorVisible = false
     }
 
 }

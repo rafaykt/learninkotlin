@@ -28,9 +28,10 @@ class FormFuncionarioViewModel(application: Application) : AndroidViewModel(appl
         }
     }
 
-
     fun gravarFuncionario() {
-        viewModelScope.launch(Dispatchers.IO) { mRepository.writeFuncionariosIntoFile(getApplication()) }
+        viewModelScope.launch(Dispatchers.IO) {
+            mRepository.writeFuncionariosIntoFile(getApplication())
+        }
     }
 
     fun validarDados(funcionario: Funcionario): Boolean {
