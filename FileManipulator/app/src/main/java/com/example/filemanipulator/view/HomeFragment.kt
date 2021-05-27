@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
@@ -44,9 +45,8 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-
-        homeViewModel.getFuncionarioList()
-
+//        homeViewModel.getFuncionarioList()
+        lifecycle.addObserver(homeViewModel)
         binding.rvFuncionario.layoutManager = LinearLayoutManager(context)
         binding.rvFuncionario.adapter=mAdapter
 
@@ -68,7 +68,7 @@ class HomeFragment : Fragment() {
             if (uri != null) {
                 homeViewModel.readFile(uri)
             }
-            Toast.makeText(context, uri.toString(), Toast.LENGTH_SHORT).show()
+//            Toast.makeText(context, uri.toString(), Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -101,7 +101,6 @@ class HomeFragment : Fragment() {
                 val directions = HomeFragmentDirections.actionNavigationHomeToFormFuncionario(funcionario)
                 view?.findNavController()?.navigate(directions)
             }
-
             override fun deleteFunc(funcionario: Funcionario) {
                 homeViewModel.deleteFuncionario(funcionario)
             }

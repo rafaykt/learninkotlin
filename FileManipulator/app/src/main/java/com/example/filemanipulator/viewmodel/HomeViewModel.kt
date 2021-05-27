@@ -9,7 +9,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 
-class HomeViewModel(application: Application) : AndroidViewModel(application) {
+class HomeViewModel(application: Application) : AndroidViewModel(application), LifecycleObserver {
     private val mRepository = FuncionarioRepository(application)
 
     private val mFuncionarioList = MutableLiveData<List<Funcionario>>()
@@ -22,6 +22,7 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
+    @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
     fun getFuncionarioList(){
         viewModelScope.launch(Dispatchers.IO) {
             mFuncionarioList.postValue(mRepository.getFuncionarioList())

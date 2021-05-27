@@ -32,4 +32,5 @@ class HomeAdapter: RecyclerView.Adapter<HomeViewHolder>() {
         mList = list
         notifyDataSetChanged()
     }
+
 }
