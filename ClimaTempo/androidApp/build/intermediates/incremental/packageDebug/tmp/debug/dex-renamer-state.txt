@@ -1,4 +1,4 @@
-#Thu May 27 11:58:12 BRT 2021
+#Fri May 28 18:09:07 BRT 2021
 base.2=C\:\\Users\\Rafael Yokota\\Documents\\Projetos\\learninkotlin\\ClimaTempo\\androidApp\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\classes_0.dex
 path.2=classes_0.dex
 base.1=C\:\\Users\\Rafael Yokota\\Documents\\Projetos\\learninkotlin\\ClimaTempo\\androidApp\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex
