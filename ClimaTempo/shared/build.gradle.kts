@@ -15,7 +15,9 @@ val sqlDelightVersion: String by project
 val ktorVersion = "1.4.0"
 
 kotlin {
-    android()
+    android(){
+
+    }
     ios {
         binaries {
             framework {
