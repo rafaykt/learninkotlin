@@ -7,7 +7,7 @@ class WeatherSDK() {
     private val api = WeatherAPI()
 
     @Throws(Exception::class)
-    suspend fun getWeatherDetails(lat: Float, long: Float): Result {
+    suspend fun getWeatherDetails(lat: Double, long: Double): Result {
         return api.getWeather(lat,long)
     }
 }

@@ -15,7 +15,9 @@ class ClimaViewModel() {
     private val _weatherNow = MutableStateFlow<Result>(
         Result(
             cod = 0,
-            coord = Coord(0.0, 0.0), id = 0,
+
+            coord = Coord(0.0, 0.0),
+            id = 0,
             main = Main(0.0, 0, 0, 0, 0, 0.0, 0.0, 0.0),
             name = "",
             weather = emptyList()
@@ -23,7 +25,9 @@ class ClimaViewModel() {
     )
     val weatherNow: StateFlow<Result> get() = _weatherNow
 
-    suspend fun getClimaTempo ()  {_weatherNow.value= WeatherAPI().getWeather(-21.2115F,-50.4261F)}
+    suspend fun getClimaTempo (lat: Double, long: Double)  {_weatherNow.value= WeatherAPI().getWeather(lat,long)}
 
+    fun setCoords(lat: Double, lon: Double){
 
+    }
 }

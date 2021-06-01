@@ -34,7 +34,7 @@ kotlin {
                 implementation("io.ktor:ktor-client-core:$ktorVersion")
                 implementation("io.ktor:ktor-client-serialization:$ktorVersion")
                 implementation("com.squareup.sqldelight:runtime:$sqlDelightVersion")
-
+                implementation("com.google.android.gms:play-services-location:18.0.0")
 
         }}
         val commonTest by getting {

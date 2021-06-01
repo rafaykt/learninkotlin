@@ -23,7 +23,7 @@ class WeatherAPI {
                 "&lang=pt_br"
     }
 
-    suspend fun getWeather(lat: Float, lon: Float): Result {
+    suspend fun getWeather(lat: Double, lon: Double): Result {
         return httpClient.get(LAUNCHES_ENDPOINT+"&lat=${lat}&lon=${lon}")
 
     }

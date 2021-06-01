@@ -4,6 +4,7 @@ package me.rafael.yokota.androidApp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,12 +20,38 @@ public final class ClimaFragmentBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final Button buttonLatlong;
+
+  @NonNull
+  public final TextView latitude;
+
+  @NonNull
+  public final TextView longitude;
+
+  @NonNull
   public final TextView textViewClima;
 
-  private ClimaFragmentBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextView textViewClima) {
+  @NonNull
+  public final TextView tvCityname;
+
+  @NonNull
+  public final TextView tvDescription;
+
+  @NonNull
+  public final TextView tvTemperature;
+
+  private ClimaFragmentBinding(@NonNull ConstraintLayout rootView, @NonNull Button buttonLatlong,
+      @NonNull TextView latitude, @NonNull TextView longitude, @NonNull TextView textViewClima,
+      @NonNull TextView tvCityname, @NonNull TextView tvDescription,
+      @NonNull TextView tvTemperature) {
     this.rootView = rootView;
+    this.buttonLatlong = buttonLatlong;
+    this.latitude = latitude;
+    this.longitude = longitude;
     this.textViewClima = textViewClima;
+    this.tvCityname = tvCityname;
+    this.tvDescription = tvDescription;
+    this.tvTemperature = tvTemperature;
   }
 
   @Override
@@ -54,13 +81,50 @@ public final class ClimaFragmentBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.button_latlong;
+      Button buttonLatlong = rootView.findViewById(id);
+      if (buttonLatlong == null) {
+        break missingId;
+      }
+
+      id = R.id.latitude;
+      TextView latitude = rootView.findViewById(id);
+      if (latitude == null) {
+        break missingId;
+      }
+
+      id = R.id.longitude;
+      TextView longitude = rootView.findViewById(id);
+      if (longitude == null) {
+        break missingId;
+      }
+
       id = R.id.textViewClima;
       TextView textViewClima = rootView.findViewById(id);
       if (textViewClima == null) {
         break missingId;
       }
 
-      return new ClimaFragmentBinding((ConstraintLayout) rootView, textViewClima);
+      id = R.id.tv_cityname;
+      TextView tvCityname = rootView.findViewById(id);
+      if (tvCityname == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_description;
+      TextView tvDescription = rootView.findViewById(id);
+      if (tvDescription == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_temperature;
+      TextView tvTemperature = rootView.findViewById(id);
+      if (tvTemperature == null) {
+        break missingId;
+      }
+
+      return new ClimaFragmentBinding((ConstraintLayout) rootView, buttonLatlong, latitude,
+          longitude, textViewClima, tvCityname, tvDescription, tvTemperature);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
