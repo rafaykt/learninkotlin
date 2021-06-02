@@ -2,7 +2,5 @@ me/rafael/yokota/androidApp/BuildConfig.java
  me.rafael.yokota.androidApp.BuildConfig
 me/rafael/yokota/androidApp/databinding/ClimaFragmentBinding.java
  me.rafael.yokota.androidApp.databinding.ClimaFragmentBinding
-me/rafael/yokota/androidApp/databinding/FragmentClimaBinding.java
- me.rafael.yokota.androidApp.databinding.FragmentClimaBinding
 me/rafael/yokota/androidApp/databinding/ActivityMainBinding.java
  me.rafael.yokota.androidApp.databinding.ActivityMainBinding

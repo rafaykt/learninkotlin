@@ -24,6 +24,7 @@ class WeatherAPI {
     }
 
     suspend fun getWeather(lat: Double, lon: Double): Result {
+         println(LAUNCHES_ENDPOINT+"&lat=${lat}&lon=${lon}")
         return httpClient.get(LAUNCHES_ENDPOINT+"&lat=${lat}&lon=${lon}")
 
     }

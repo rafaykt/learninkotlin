@@ -8,10 +8,6 @@
         "source": "C:\\Users\\Rafael Yokota\\Documents\\Projetos\\learninkotlin\\ClimaTempo\\androidApp\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\Rafael Yokota\\Documents\\Projetos\\learninkotlin\\ClimaTempo\\androidApp\\build\\intermediates\\res\\merged\\debug\\layout_fragment_clima.xml.flat",
-        "source": "C:\\Users\\Rafael Yokota\\Documents\\Projetos\\learninkotlin\\ClimaTempo\\androidApp\\src\\main\\res\\layout\\fragment_clima.xml"
-    },
-    {
         "merged": "C:\\Users\\Rafael Yokota\\Documents\\Projetos\\learninkotlin\\ClimaTempo\\androidApp\\build\\intermediates\\res\\merged\\debug\\layout_clima_fragment.xml.flat",
         "source": "C:\\Users\\Rafael Yokota\\Documents\\Projetos\\learninkotlin\\ClimaTempo\\androidApp\\src\\main\\res\\layout\\clima_fragment.xml"
     }

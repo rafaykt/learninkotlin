@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
+import com.github.pwittchen.weathericonview.WeatherIconView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -29,6 +30,9 @@ public final class ClimaFragmentBinding implements ViewBinding {
   public final TextView longitude;
 
   @NonNull
+  public final WeatherIconView myWeatherIcon;
+
+  @NonNull
   public final TextView textViewClima;
 
   @NonNull
@@ -41,13 +45,15 @@ public final class ClimaFragmentBinding implements ViewBinding {
   public final TextView tvTemperature;
 
   private ClimaFragmentBinding(@NonNull ConstraintLayout rootView, @NonNull Button buttonLatlong,
-      @NonNull TextView latitude, @NonNull TextView longitude, @NonNull TextView textViewClima,
+      @NonNull TextView latitude, @NonNull TextView longitude,
+      @NonNull WeatherIconView myWeatherIcon, @NonNull TextView textViewClima,
       @NonNull TextView tvCityname, @NonNull TextView tvDescription,
       @NonNull TextView tvTemperature) {
     this.rootView = rootView;
     this.buttonLatlong = buttonLatlong;
     this.latitude = latitude;
     this.longitude = longitude;
+    this.myWeatherIcon = myWeatherIcon;
     this.textViewClima = textViewClima;
     this.tvCityname = tvCityname;
     this.tvDescription = tvDescription;
@@ -99,6 +105,12 @@ public final class ClimaFragmentBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.my_weather_icon;
+      WeatherIconView myWeatherIcon = rootView.findViewById(id);
+      if (myWeatherIcon == null) {
+        break missingId;
+      }
+
       id = R.id.textViewClima;
       TextView textViewClima = rootView.findViewById(id);
       if (textViewClima == null) {
@@ -124,7 +136,7 @@ public final class ClimaFragmentBinding implements ViewBinding {
       }
 
       return new ClimaFragmentBinding((ConstraintLayout) rootView, buttonLatlong, latitude,
-          longitude, textViewClima, tvCityname, tvDescription, tvTemperature);
+          longitude, myWeatherIcon, textViewClima, tvCityname, tvDescription, tvTemperature);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

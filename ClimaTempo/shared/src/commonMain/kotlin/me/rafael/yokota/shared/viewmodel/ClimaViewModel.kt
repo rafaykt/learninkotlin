@@ -18,7 +18,7 @@ class ClimaViewModel() {
 
             coord = Coord(0.0, 0.0),
             id = 0,
-            main = Main(0.0, 0, 0, 0, 0, 0.0, 0.0, 0.0),
+            main = Main(0.0, 0.0, 0.0, 0.0),
             name = "",
             weather = emptyList()
         )

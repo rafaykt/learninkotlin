@@ -13,7 +13,6 @@ dependencies {
     implementation("com.google.android.material:material:1.2.1")
     implementation("androidx.appcompat:appcompat:1.2.0")
     implementation("androidx.constraintlayout:constraintlayout:2.0.2")
-
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
     implementation("androidx.core:core-ktx:1.3.1")
     implementation("androidx.recyclerview:recyclerview:1.1.0")
@@ -25,6 +24,8 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:2.3.5")
     implementation("androidx.navigation:navigation-ui-ktx:2.3.5")
     implementation ("com.google.android.gms:play-services-location:17.0.0")
+    implementation("com.github.pwittchen:weathericonview:1.1.0")
+    implementation ("androidx.datastore:datastore:1.0.0-beta01")
 }
 
 android {

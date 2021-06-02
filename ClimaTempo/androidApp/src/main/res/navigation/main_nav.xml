@@ -9,5 +9,5 @@
             android:id="@+id/climaFragment2"
             android:name="me.rafael.yokota.androidApp.ClimaFragment"
             android:label="fragment_clima"
-            tools:layout="@layout/fragment_clima" />
+            tools:layout="@layout/clima_fragment" />
 </navigation>
