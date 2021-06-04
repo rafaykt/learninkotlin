@@ -8,6 +8,6 @@
     <fragment
             android:id="@+id/climaFragment2"
             android:name="me.rafael.yokota.androidApp.ClimaFragment"
-            android:label="fragment_clima"
+            android:label="clima_fragment"
             tools:layout="@layout/clima_fragment" />
 </navigation>

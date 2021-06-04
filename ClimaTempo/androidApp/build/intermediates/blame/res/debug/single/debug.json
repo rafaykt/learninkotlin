@@ -1,5 +1,17 @@
 [
     {
+        "merged": "C:\\Users\\Rafael Yokota\\Documents\\Projetos\\learninkotlin\\ClimaTempo\\androidApp\\build\\intermediates\\res\\merged\\debug\\drawable_rain.png.flat",
+        "source": "C:\\Users\\Rafael Yokota\\Documents\\Projetos\\learninkotlin\\ClimaTempo\\androidApp\\src\\main\\res\\drawable\\rain.png"
+    },
+    {
+        "merged": "C:\\Users\\Rafael Yokota\\Documents\\Projetos\\learninkotlin\\ClimaTempo\\androidApp\\build\\intermediates\\res\\merged\\debug\\drawable_so_hot.png.flat",
+        "source": "C:\\Users\\Rafael Yokota\\Documents\\Projetos\\learninkotlin\\ClimaTempo\\androidApp\\src\\main\\res\\drawable\\so_hot.png"
+    },
+    {
+        "merged": "C:\\Users\\Rafael Yokota\\Documents\\Projetos\\learninkotlin\\ClimaTempo\\androidApp\\build\\intermediates\\res\\merged\\debug\\layout_row_item_weather.xml.flat",
+        "source": "C:\\Users\\Rafael Yokota\\Documents\\Projetos\\learninkotlin\\ClimaTempo\\androidApp\\src\\main\\res\\layout\\row_item_weather.xml"
+    },
+    {
         "merged": "C:\\Users\\Rafael Yokota\\Documents\\Projetos\\learninkotlin\\ClimaTempo\\androidApp\\build\\intermediates\\res\\merged\\debug\\navigation_main_nav.xml.flat",
         "source": "C:\\Users\\Rafael Yokota\\Documents\\Projetos\\learninkotlin\\ClimaTempo\\androidApp\\src\\main\\res\\navigation\\main_nav.xml"
     },
@@ -8,7 +20,27 @@
         "source": "C:\\Users\\Rafael Yokota\\Documents\\Projetos\\learninkotlin\\ClimaTempo\\androidApp\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
+        "merged": "C:\\Users\\Rafael Yokota\\Documents\\Projetos\\learninkotlin\\ClimaTempo\\androidApp\\build\\intermediates\\res\\merged\\debug\\drawable_rounded_corner.xml.flat",
+        "source": "C:\\Users\\Rafael Yokota\\Documents\\Projetos\\learninkotlin\\ClimaTempo\\androidApp\\src\\main\\res\\drawable\\rounded_corner.xml"
+    },
+    {
+        "merged": "C:\\Users\\Rafael Yokota\\Documents\\Projetos\\learninkotlin\\ClimaTempo\\androidApp\\build\\intermediates\\res\\merged\\debug\\drawable_afternoon.png.flat",
+        "source": "C:\\Users\\Rafael Yokota\\Documents\\Projetos\\learninkotlin\\ClimaTempo\\androidApp\\src\\main\\res\\drawable\\afternoon.png"
+    },
+    {
+        "merged": "C:\\Users\\Rafael Yokota\\Documents\\Projetos\\learninkotlin\\ClimaTempo\\androidApp\\build\\intermediates\\res\\merged\\debug\\drawable_night.png.flat",
+        "source": "C:\\Users\\Rafael Yokota\\Documents\\Projetos\\learninkotlin\\ClimaTempo\\androidApp\\src\\main\\res\\drawable\\night.png"
+    },
+    {
+        "merged": "C:\\Users\\Rafael Yokota\\Documents\\Projetos\\learninkotlin\\ClimaTempo\\androidApp\\build\\intermediates\\res\\merged\\debug\\drawable_beautiful_night.png.flat",
+        "source": "C:\\Users\\Rafael Yokota\\Documents\\Projetos\\learninkotlin\\ClimaTempo\\androidApp\\src\\main\\res\\drawable\\beautiful_night.png"
+    },
+    {
         "merged": "C:\\Users\\Rafael Yokota\\Documents\\Projetos\\learninkotlin\\ClimaTempo\\androidApp\\build\\intermediates\\res\\merged\\debug\\layout_clima_fragment.xml.flat",
         "source": "C:\\Users\\Rafael Yokota\\Documents\\Projetos\\learninkotlin\\ClimaTempo\\androidApp\\src\\main\\res\\layout\\clima_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\Rafael Yokota\\Documents\\Projetos\\learninkotlin\\ClimaTempo\\androidApp\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_my_location_24.xml.flat",
+        "source": "C:\\Users\\Rafael Yokota\\Documents\\Projetos\\learninkotlin\\ClimaTempo\\androidApp\\src\\main\\res\\drawable\\ic_baseline_my_location_24.xml"
     }
 ]

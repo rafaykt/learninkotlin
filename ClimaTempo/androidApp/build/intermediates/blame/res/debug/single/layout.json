@@ -4,6 +4,10 @@
         "source": "C:\\Users\\Rafael Yokota\\Documents\\Projetos\\learninkotlin\\ClimaTempo\\androidApp\\src\\main\\res\\layout\\clima_fragment.xml"
     },
     {
+        "merged": "C:\\Users\\Rafael Yokota\\Documents\\Projetos\\learninkotlin\\ClimaTempo\\androidApp\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\row_item_weather.xml",
+        "source": "C:\\Users\\Rafael Yokota\\Documents\\Projetos\\learninkotlin\\ClimaTempo\\androidApp\\src\\main\\res\\layout\\row_item_weather.xml"
+    },
+    {
         "merged": "C:\\Users\\Rafael Yokota\\Documents\\Projetos\\learninkotlin\\ClimaTempo\\androidApp\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
         "source": "C:\\Users\\Rafael Yokota\\Documents\\Projetos\\learninkotlin\\ClimaTempo\\androidApp\\src\\main\\res\\layout\\activity_main.xml"
     }

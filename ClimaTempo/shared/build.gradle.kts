@@ -48,6 +48,7 @@ kotlin {
                 implementation("com.google.android.material:material:1.2.1")
                 implementation("io.ktor:ktor-client-android:$ktorVersion")
                 implementation("com.squareup.sqldelight:android-driver:$sqlDelightVersion")
+                implementation("com.vmadalin:easypermissions-ktx:1.0.0")
             }
         }
         val androidTest by getting {

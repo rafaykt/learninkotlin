@@ -1,6 +1,6 @@
 package me.rafael.yokota.shared.viewmodel
 
-import api_weather.WeatherSDK
+import me.rafael.yokota.shared.shared_sdk.WeatherSDK
 
 
 class Greeting {

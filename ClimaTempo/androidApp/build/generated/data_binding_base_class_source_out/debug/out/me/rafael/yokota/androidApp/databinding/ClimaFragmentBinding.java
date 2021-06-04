@@ -5,12 +5,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
-import com.github.pwittchen.weathericonview.WeatherIconView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -30,10 +31,7 @@ public final class ClimaFragmentBinding implements ViewBinding {
   public final TextView longitude;
 
   @NonNull
-  public final WeatherIconView myWeatherIcon;
-
-  @NonNull
-  public final TextView textViewClima;
+  public final RecyclerView rowItemWeather;
 
   @NonNull
   public final TextView tvCityname;
@@ -44,20 +42,22 @@ public final class ClimaFragmentBinding implements ViewBinding {
   @NonNull
   public final TextView tvTemperature;
 
+  @NonNull
+  public final ImageView weatherIcon;
+
   private ClimaFragmentBinding(@NonNull ConstraintLayout rootView, @NonNull Button buttonLatlong,
-      @NonNull TextView latitude, @NonNull TextView longitude,
-      @NonNull WeatherIconView myWeatherIcon, @NonNull TextView textViewClima,
+      @NonNull TextView latitude, @NonNull TextView longitude, @NonNull RecyclerView rowItemWeather,
       @NonNull TextView tvCityname, @NonNull TextView tvDescription,
-      @NonNull TextView tvTemperature) {
+      @NonNull TextView tvTemperature, @NonNull ImageView weatherIcon) {
     this.rootView = rootView;
     this.buttonLatlong = buttonLatlong;
     this.latitude = latitude;
     this.longitude = longitude;
-    this.myWeatherIcon = myWeatherIcon;
-    this.textViewClima = textViewClima;
+    this.rowItemWeather = rowItemWeather;
     this.tvCityname = tvCityname;
     this.tvDescription = tvDescription;
     this.tvTemperature = tvTemperature;
+    this.weatherIcon = weatherIcon;
   }
 
   @Override
@@ -105,15 +105,9 @@ public final class ClimaFragmentBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.my_weather_icon;
-      WeatherIconView myWeatherIcon = rootView.findViewById(id);
-      if (myWeatherIcon == null) {
-        break missingId;
-      }
-
-      id = R.id.textViewClima;
-      TextView textViewClima = rootView.findViewById(id);
-      if (textViewClima == null) {
+      id = R.id.row_item_weather;
+      RecyclerView rowItemWeather = rootView.findViewById(id);
+      if (rowItemWeather == null) {
         break missingId;
       }
 
@@ -135,8 +129,14 @@ public final class ClimaFragmentBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.weather_icon;
+      ImageView weatherIcon = rootView.findViewById(id);
+      if (weatherIcon == null) {
+        break missingId;
+      }
+
       return new ClimaFragmentBinding((ConstraintLayout) rootView, buttonLatlong, latitude,
-          longitude, myWeatherIcon, textViewClima, tvCityname, tvDescription, tvTemperature);
+          longitude, rowItemWeather, tvCityname, tvDescription, tvTemperature, weatherIcon);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

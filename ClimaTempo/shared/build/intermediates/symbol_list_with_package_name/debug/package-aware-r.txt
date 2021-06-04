@@ -27,6 +27,13 @@ anim design_bottom_sheet_slide_in
 anim design_bottom_sheet_slide_out
 anim design_snackbar_in
 anim design_snackbar_out
+anim fragment_close_enter
+anim fragment_close_exit
+anim fragment_fade_enter
+anim fragment_fade_exit
+anim fragment_fast_out_extra_slow_in
+anim fragment_open_enter
+anim fragment_open_exit
 anim mtrl_bottom_sheet_slide_in
 anim mtrl_bottom_sheet_slide_out
 anim mtrl_card_lowers_interpolator
@@ -714,6 +721,8 @@ color abc_background_cache_hint_selector_material_light
 color abc_btn_colored_borderless_text_material
 color abc_btn_colored_text_material
 color abc_color_highlight_material
+color abc_decor_view_status_guard
+color abc_decor_view_status_guard_light
 color abc_hint_foreground_material_dark
 color abc_hint_foreground_material_light
 color abc_input_method_navigation_guard
@@ -735,6 +744,8 @@ color abc_tint_spinner
 color abc_tint_switch_track
 color accent_material_dark
 color accent_material_light
+color androidx_core_ripple_material_light
+color androidx_core_secondary_text_default_material_light
 color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
@@ -752,6 +763,9 @@ color cardview_light_background
 color cardview_shadow_end_color
 color cardview_shadow_start_color
 color checkbox_themeable_attribute_color
+color colorAccent
+color colorPrimary
+color colorPrimaryDark
 color common_google_signin_btn_text_dark
 color common_google_signin_btn_text_dark_default
 color common_google_signin_btn_text_dark_disabled
@@ -1525,6 +1539,7 @@ id filled
 id fixed
 id floating
 id forever
+id fragment_container_view_tag
 id ghost_view
 id ghost_view_holder
 id gone
@@ -1676,6 +1691,7 @@ id unlabeled
 id up
 id view_offset_helper
 id visible
+id visible_removing_fragment_view_tag
 id wide
 id withinBounds
 id wrap_content
@@ -1911,8 +1927,11 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string rationale_ask
+string rationale_ask_again
 string search_menu_title
 string status_bar_notification_info_overflow
+string title_settings_dialog
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style AndroidThemeColorAccentYellow
@@ -2140,6 +2159,7 @@ style Base_Widget_MaterialComponents_TextView
 style CardView
 style CardView_Dark
 style CardView_Light
+style EasyPermissions
 style EmptyTheme
 style MaterialAlertDialog_MaterialComponents
 style MaterialAlertDialog_MaterialComponents_Body_Text
@@ -2358,6 +2378,7 @@ style Theme_AppCompat_Dialog
 style Theme_AppCompat_DialogWhenLarge
 style Theme_AppCompat_Dialog_Alert
 style Theme_AppCompat_Dialog_MinWidth
+style Theme_AppCompat_Empty
 style Theme_AppCompat_Light
 style Theme_AppCompat_Light_DarkActionBar
 style Theme_AppCompat_Light_Dialog
@@ -2645,6 +2666,8 @@ styleable FlowLayout itemSpacing lineSpacing
 styleable FontFamily fontProviderAuthority fontProviderCerts fontProviderFetchStrategy fontProviderFetchTimeout fontProviderPackage fontProviderQuery
 styleable FontFamilyFont android_font android_fontStyle android_fontVariationSettings android_fontWeight android_ttcIndex font fontStyle fontVariationSettings fontWeight ttcIndex
 styleable ForegroundLinearLayout android_foreground android_foregroundGravity foregroundInsidePadding
+styleable Fragment android_id android_name android_tag
+styleable FragmentContainerView android_name android_tag
 styleable GradientColor android_centerColor android_centerX android_centerY android_endColor android_endX android_endY android_gradientRadius android_startColor android_startX android_startY android_tileMode android_type
 styleable GradientColorItem android_color android_offset
 styleable Insets paddingBottomSystemWindowInsets paddingLeftSystemWindowInsets paddingRightSystemWindowInsets

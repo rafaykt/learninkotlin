@@ -1,10 +1,8 @@
 package me.rafael.yokota.androidApp.util
 
 import android.content.Context
-import androidx.datastore.core.DataStore
 
 import me.rafael.yokota.shared.model.Coord
-import java.util.prefs.Preferences
 
 
 class SharedPreferencesUtil{
@@ -35,7 +33,6 @@ class SharedPreferencesUtil{
             val coords = sharedPreferences.edit()
             coords.putFloat("latitude",lat.toFloat())
             coords.putFloat("longitude", lon.toFloat())
-            println("SharedPrefs: ${getCoordenadas(context).toString()}")
             coords.apply()
         }
     }

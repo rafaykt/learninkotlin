@@ -4,3 +4,5 @@ me/rafael/yokota/androidApp/databinding/ClimaFragmentBinding.java
  me.rafael.yokota.androidApp.databinding.ClimaFragmentBinding
 me/rafael/yokota/androidApp/databinding/ActivityMainBinding.java
  me.rafael.yokota.androidApp.databinding.ActivityMainBinding
+me/rafael/yokota/androidApp/databinding/RowItemWeatherBinding.java
+ me.rafael.yokota.androidApp.databinding.RowItemWeatherBinding

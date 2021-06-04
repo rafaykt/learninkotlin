@@ -6,6 +6,8 @@ import io.ktor.client.features.json.JsonFeature
 import io.ktor.client.features.json.serializer.KotlinxSerializer
 import io.ktor.client.request.*
 import kotlinx.serialization.json.Json
+import me.rafael.yokota.shared.constants.Constants
+import me.rafael.yokota.shared.model.OneCallResult
 import me.rafael.yokota.shared.model.Result
 
 class WeatherAPI {
@@ -16,16 +18,16 @@ class WeatherAPI {
         }
     }
 
-    companion object {
-        private const val LAUNCHES_ENDPOINT = "" +
-                "https://api.openweathermap.org/data/2.5/weather?" +
-                "&appid=880664442efed4788979022ef7a60484" +
-                "&lang=pt_br"
-    }
+
 
     suspend fun getWeather(lat: Double, lon: Double): Result {
-         println(LAUNCHES_ENDPOINT+"&lat=${lat}&lon=${lon}")
-        return httpClient.get(LAUNCHES_ENDPOINT+"&lat=${lat}&lon=${lon}")
+        return httpClient.get(Constants.API.baseUrl+"&lat=${lat}&lon=${lon}")
+
+    }
+
+    suspend fun getOneCallApi(lat: Double, lon: Double): OneCallResult {
+        println(Constants.API.baseOneCallApiUrl+"&lat=${lat}&lon=${lon}")
+        return httpClient.get(Constants.API.baseOneCallApiUrl+"&lat=${lat}&lon=${lon}")
 
     }
 }
