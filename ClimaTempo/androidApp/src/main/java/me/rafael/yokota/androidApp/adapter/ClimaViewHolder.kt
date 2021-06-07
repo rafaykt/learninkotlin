@@ -12,7 +12,7 @@ class ClimaViewHolder(private var binding: RowItemWeatherBinding, var daily: Dai
     fun bindData(daily: Daily) {
         binding.dateWeather.text = daily.dt.toString()
         binding.description.text = daily.weather[0].description
-//        Picasso.get().load(Constants.API.basUrlIcon+daily.weather[0].icon+"@2x.png").into(binding.icon);
+        Picasso.get().load(Constants.API.basUrlIcon+daily.weather[0].icon+"@2x.png").into(binding.icon);
         binding.minimax.text = "${daily.temp.min}ºC / ${daily.temp.max}ºC"
 
 

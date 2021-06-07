@@ -51,17 +51,15 @@ class ClimaFragment : Fragment(), EasyPermissions.PermissionCallbacks {
         savedInstanceState: Bundle?
     ): View {
 
-        coordenadas = sharedPreferencesUtil.getCoordenadas(requireContext())
-
-        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(context)
-
-
-        /*recycler*/
+       /*recycler*/
         _binding = ClimaFragmentBinding.inflate(inflater, container, false)
-        binding.rowItemWeather.layoutManager = LinearLayoutManager(context)
+        binding.rowItemWeather.layoutManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL, false)
+
         binding.rowItemWeather.adapter = mAdapter
         /*recycler*/
 
+        coordenadas = sharedPreferencesUtil.getCoordenadas(requireContext())
+        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(context)
 
         val view = binding.root
         if (!hasLocationPermission())
@@ -89,9 +87,7 @@ class ClimaFragment : Fragment(), EasyPermissions.PermissionCallbacks {
                     val d = ""
                 }
             }
-//            lifecycleScope.launch {
 
-//            }
         }
 
 
@@ -103,6 +99,11 @@ class ClimaFragment : Fragment(), EasyPermissions.PermissionCallbacks {
             viewModel.getOneCallData(coordenadas?.lat!!, coordenadas?.lon!!)
             val s = ""
         }
+
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         lifecycleScope.launch {
 
             viewModel.oneCallWeather.collect {
@@ -110,8 +111,6 @@ class ClimaFragment : Fragment(), EasyPermissions.PermissionCallbacks {
                 mAdapter.notifyDataSetChanged()
             }
         }
-
-
     }
 
     private fun hasLocationPermission() =

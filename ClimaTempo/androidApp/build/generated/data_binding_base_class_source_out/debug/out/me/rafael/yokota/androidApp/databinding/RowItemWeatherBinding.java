@@ -8,8 +8,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
-import com.google.android.material.card.MaterialCardView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -17,7 +17,7 @@ import me.rafael.yokota.androidApp.R;
 
 public final class RowItemWeatherBinding implements ViewBinding {
   @NonNull
-  private final MaterialCardView rootView;
+  private final ConstraintLayout rootView;
 
   @NonNull
   public final TextView dateWeather;
@@ -26,7 +26,7 @@ public final class RowItemWeatherBinding implements ViewBinding {
   public final TextView description;
 
   @NonNull
-  public final MaterialCardView forecast1;
+  public final ConstraintLayout forecast1;
 
   @NonNull
   public final ImageView icon;
@@ -34,8 +34,8 @@ public final class RowItemWeatherBinding implements ViewBinding {
   @NonNull
   public final TextView minimax;
 
-  private RowItemWeatherBinding(@NonNull MaterialCardView rootView, @NonNull TextView dateWeather,
-      @NonNull TextView description, @NonNull MaterialCardView forecast1, @NonNull ImageView icon,
+  private RowItemWeatherBinding(@NonNull ConstraintLayout rootView, @NonNull TextView dateWeather,
+      @NonNull TextView description, @NonNull ConstraintLayout forecast1, @NonNull ImageView icon,
       @NonNull TextView minimax) {
     this.rootView = rootView;
     this.dateWeather = dateWeather;
@@ -47,7 +47,7 @@ public final class RowItemWeatherBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public MaterialCardView getRoot() {
+  public ConstraintLayout getRoot() {
     return rootView;
   }
 
@@ -84,7 +84,7 @@ public final class RowItemWeatherBinding implements ViewBinding {
         break missingId;
       }
 
-      MaterialCardView forecast1 = (MaterialCardView) rootView;
+      ConstraintLayout forecast1 = (ConstraintLayout) rootView;
 
       id = R.id.icon;
       ImageView icon = rootView.findViewById(id);
@@ -98,7 +98,7 @@ public final class RowItemWeatherBinding implements ViewBinding {
         break missingId;
       }
 
-      return new RowItemWeatherBinding((MaterialCardView) rootView, dateWeather, description,
+      return new RowItemWeatherBinding((ConstraintLayout) rootView, dateWeather, description,
           forecast1, icon, minimax);
     }
     String missingId = rootView.getResources().getResourceName(id);
