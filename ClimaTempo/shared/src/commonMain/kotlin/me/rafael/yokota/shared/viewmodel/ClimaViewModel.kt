@@ -35,12 +35,15 @@ class ClimaViewModel() {
 
 
     suspend fun getClimaTempo (lat: Double, long: Double)  {
+
         _weatherNow.value= mRepository.getWeather(lat,long)
-        getOneCallData(lat,long)
+
 
     }
 
     suspend fun getOneCallData(lat: Double, long: Double) {
+//        val s = ""
         _oneCallWeather.value = mRepository.getOneCallApi(lat, long)
+//        val x = ""
     }
 }
