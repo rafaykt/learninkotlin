@@ -57,12 +57,10 @@ class ClimaFragment : Fragment(), EasyPermissions.PermissionCallbacks {
 
 
         /*recycler*/
-        _binding = ClimaFragmentBinding.inflate(inflater,container,false)
-        binding.rowItemWeather.layoutManager =LinearLayoutManager(context)
+        _binding = ClimaFragmentBinding.inflate(inflater, container, false)
+        binding.rowItemWeather.layoutManager = LinearLayoutManager(context)
         binding.rowItemWeather.adapter = mAdapter
         /*recycler*/
-
-
 
 
         val view = binding.root
@@ -91,18 +89,28 @@ class ClimaFragment : Fragment(), EasyPermissions.PermissionCallbacks {
                     val d = ""
                 }
             }
-            lifecycleScope.launch {
-                viewModel.oneCallWeather.collect{
-                    mAdapter.updateList(listOf(it.daily[0],it.daily[1]))
-                    mAdapter.notifyDataSetChanged()
-                    val s = ""
-                }
-            }
+//            lifecycleScope.launch {
+
+//            }
         }
+
+
     }
 
     override fun onResume() {
         super.onResume()
+        lifecycleScope.launchWhenResumed {
+            viewModel.getOneCallData(coordenadas?.lat!!, coordenadas?.lon!!)
+            val s = ""
+        }
+        lifecycleScope.launch {
+
+            viewModel.oneCallWeather.collect {
+                mAdapter.updateList(it.daily)
+                mAdapter.notifyDataSetChanged()
+            }
+        }
+
 
     }
 
@@ -129,6 +137,7 @@ class ClimaFragment : Fragment(), EasyPermissions.PermissionCallbacks {
                 )
                 lifecycleScope.launchWhenStarted {
                     viewModel.getClimaTempo(location.latitude, location.longitude)
+                    viewModel.getOneCallData(location.latitude, location.longitude)
                     val s = ""
                 }
             }
@@ -144,7 +153,8 @@ class ClimaFragment : Fragment(), EasyPermissions.PermissionCallbacks {
         binding.tvDescription.text = result.weather[0].description
         binding.latitude.text = "Latitude: ${result.coord.lat}"
         binding.longitude.text = "Longitude: ${result.coord.lon}"
-        Picasso.get().load(Constants.API.basUrlIcon+result.weather[0].icon+"@2x.png").into(binding.weatherIcon);
+        Picasso.get().load(Constants.API.basUrlIcon + result.weather[0].icon + "@2x.png")
+            .into(binding.weatherIcon);
 //        println(Constants.API.basUrlIcon+result.weather[0].icon+"@2x.png")
     }
 

@@ -30,58 +30,59 @@
 19        android:extractNativeLibs="false"
 20        android:supportsRtl="true"
 20-->C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:10:13-39
-21        android:theme="@style/AppTheme"
-21-->C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:11:13-44
-22        android:usesCleartextTraffic="true" >
-22-->C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:8:13-48
-23        <activity android:name="me.rafael.yokota.androidApp.MainActivity" >
-23-->C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:12:9-17:20
-23-->C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:12:19-47
-24            <intent-filter>
-24-->C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:13:13-16:29
-25                <action android:name="android.intent.action.MAIN" />
-25-->C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:14:17-68
-25-->C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:14:25-66
-26
-27                <category android:name="android.intent.category.LAUNCHER" />
-27-->C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:15:17-76
-27-->C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:15:27-74
-28            </intent-filter>
-29        </activity>
-30        <activity android:name="com.vmadalin.easypermissions.components.TestActivity" />
-30-->[com.vmadalin:easypermissions-ktx:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\d72a40c1e0db6d828b3bea1be7255fde\easypermissions-ktx-1.0.0\AndroidManifest.xml:13:9-89
-30-->[com.vmadalin:easypermissions-ktx:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\d72a40c1e0db6d828b3bea1be7255fde\easypermissions-ktx-1.0.0\AndroidManifest.xml:13:19-86
-31        <activity android:name="com.vmadalin.easypermissions.components.TestAppCompatActivity" />
-31-->[com.vmadalin:easypermissions-ktx:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\d72a40c1e0db6d828b3bea1be7255fde\easypermissions-ktx-1.0.0\AndroidManifest.xml:14:9-98
-31-->[com.vmadalin:easypermissions-ktx:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\d72a40c1e0db6d828b3bea1be7255fde\easypermissions-ktx-1.0.0\AndroidManifest.xml:14:19-95
-32        <activity android:name="com.vmadalin.easypermissions.components.TestSupportFragmentActivity" />
-32-->[com.vmadalin:easypermissions-ktx:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\d72a40c1e0db6d828b3bea1be7255fde\easypermissions-ktx-1.0.0\AndroidManifest.xml:15:9-104
-32-->[com.vmadalin:easypermissions-ktx:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\d72a40c1e0db6d828b3bea1be7255fde\easypermissions-ktx-1.0.0\AndroidManifest.xml:15:19-101
-33
-34        <provider
-34-->[com.squareup.picasso:picasso:2.71828] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\4d982326c0e09d759246263fd38db886\picasso-2.71828\AndroidManifest.xml:8:9-11:40
-35            android:name="com.squareup.picasso.PicassoProvider"
-35-->[com.squareup.picasso:picasso:2.71828] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\4d982326c0e09d759246263fd38db886\picasso-2.71828\AndroidManifest.xml:9:13-64
-36            android:authorities="me.rafael.yokota.androidApp.com.squareup.picasso"
-36-->[com.squareup.picasso:picasso:2.71828] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\4d982326c0e09d759246263fd38db886\picasso-2.71828\AndroidManifest.xml:10:13-72
-37            android:exported="false" />
-37-->[com.squareup.picasso:picasso:2.71828] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\4d982326c0e09d759246263fd38db886\picasso-2.71828\AndroidManifest.xml:11:13-37
-38
-39        <activity
-39-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\335d7ba71a1456f4ab93af9a08c1b5e5\play-services-base-17.5.0\AndroidManifest.xml:23:9-26:75
-40            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-40-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\335d7ba71a1456f4ab93af9a08c1b5e5\play-services-base-17.5.0\AndroidManifest.xml:24:13-79
-41            android:exported="false"
-41-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\335d7ba71a1456f4ab93af9a08c1b5e5\play-services-base-17.5.0\AndroidManifest.xml:25:13-37
-42            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-42-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\335d7ba71a1456f4ab93af9a08c1b5e5\play-services-base-17.5.0\AndroidManifest.xml:26:13-72
-43
-44        <meta-data
-44-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\3c6f906fc19bd5f05c24b057d2cc2946\play-services-basement-17.5.0\AndroidManifest.xml:23:9-25:69
-45            android:name="com.google.android.gms.version"
-45-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\3c6f906fc19bd5f05c24b057d2cc2946\play-services-basement-17.5.0\AndroidManifest.xml:24:13-58
-46            android:value="@integer/google_play_services_version" />
-46-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\3c6f906fc19bd5f05c24b057d2cc2946\play-services-basement-17.5.0\AndroidManifest.xml:25:13-66
-47    </application>
-48
-49</manifest>
+21        android:testOnly="true"
+22        android:theme="@style/AppTheme"
+22-->C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:11:13-44
+23        android:usesCleartextTraffic="true" >
+23-->C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:8:13-48
+24        <activity android:name="me.rafael.yokota.androidApp.MainActivity" >
+24-->C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:12:9-17:20
+24-->C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:12:19-47
+25            <intent-filter>
+25-->C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:13:13-16:29
+26                <action android:name="android.intent.action.MAIN" />
+26-->C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:14:17-68
+26-->C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:14:25-66
+27
+28                <category android:name="android.intent.category.LAUNCHER" />
+28-->C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:15:17-76
+28-->C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:15:27-74
+29            </intent-filter>
+30        </activity>
+31        <activity android:name="com.vmadalin.easypermissions.components.TestActivity" />
+31-->[com.vmadalin:easypermissions-ktx:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\d72a40c1e0db6d828b3bea1be7255fde\easypermissions-ktx-1.0.0\AndroidManifest.xml:13:9-89
+31-->[com.vmadalin:easypermissions-ktx:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\d72a40c1e0db6d828b3bea1be7255fde\easypermissions-ktx-1.0.0\AndroidManifest.xml:13:19-86
+32        <activity android:name="com.vmadalin.easypermissions.components.TestAppCompatActivity" />
+32-->[com.vmadalin:easypermissions-ktx:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\d72a40c1e0db6d828b3bea1be7255fde\easypermissions-ktx-1.0.0\AndroidManifest.xml:14:9-98
+32-->[com.vmadalin:easypermissions-ktx:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\d72a40c1e0db6d828b3bea1be7255fde\easypermissions-ktx-1.0.0\AndroidManifest.xml:14:19-95
+33        <activity android:name="com.vmadalin.easypermissions.components.TestSupportFragmentActivity" />
+33-->[com.vmadalin:easypermissions-ktx:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\d72a40c1e0db6d828b3bea1be7255fde\easypermissions-ktx-1.0.0\AndroidManifest.xml:15:9-104
+33-->[com.vmadalin:easypermissions-ktx:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\d72a40c1e0db6d828b3bea1be7255fde\easypermissions-ktx-1.0.0\AndroidManifest.xml:15:19-101
+34
+35        <provider
+35-->[com.squareup.picasso:picasso:2.71828] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\4d982326c0e09d759246263fd38db886\picasso-2.71828\AndroidManifest.xml:8:9-11:40
+36            android:name="com.squareup.picasso.PicassoProvider"
+36-->[com.squareup.picasso:picasso:2.71828] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\4d982326c0e09d759246263fd38db886\picasso-2.71828\AndroidManifest.xml:9:13-64
+37            android:authorities="me.rafael.yokota.androidApp.com.squareup.picasso"
+37-->[com.squareup.picasso:picasso:2.71828] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\4d982326c0e09d759246263fd38db886\picasso-2.71828\AndroidManifest.xml:10:13-72
+38            android:exported="false" />
+38-->[com.squareup.picasso:picasso:2.71828] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\4d982326c0e09d759246263fd38db886\picasso-2.71828\AndroidManifest.xml:11:13-37
+39
+40        <activity
+40-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\335d7ba71a1456f4ab93af9a08c1b5e5\play-services-base-17.5.0\AndroidManifest.xml:23:9-26:75
+41            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+41-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\335d7ba71a1456f4ab93af9a08c1b5e5\play-services-base-17.5.0\AndroidManifest.xml:24:13-79
+42            android:exported="false"
+42-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\335d7ba71a1456f4ab93af9a08c1b5e5\play-services-base-17.5.0\AndroidManifest.xml:25:13-37
+43            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+43-->[com.google.android.gms:play-services-base:17.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\335d7ba71a1456f4ab93af9a08c1b5e5\play-services-base-17.5.0\AndroidManifest.xml:26:13-72
+44
+45        <meta-data
+45-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\3c6f906fc19bd5f05c24b057d2cc2946\play-services-basement-17.5.0\AndroidManifest.xml:23:9-25:69
+46            android:name="com.google.android.gms.version"
+46-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\3c6f906fc19bd5f05c24b057d2cc2946\play-services-basement-17.5.0\AndroidManifest.xml:24:13-58
+47            android:value="@integer/google_play_services_version" />
+47-->[com.google.android.gms:play-services-basement:17.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\3c6f906fc19bd5f05c24b057d2cc2946\play-services-basement-17.5.0\AndroidManifest.xml:25:13-66
+48    </application>
+49
+50</manifest>
