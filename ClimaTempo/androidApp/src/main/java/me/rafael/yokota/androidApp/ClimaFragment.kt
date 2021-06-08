@@ -9,6 +9,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -17,6 +18,7 @@ import com.google.android.gms.location.LocationServices
 import com.squareup.picasso.Picasso
 import com.vmadalin.easypermissions.EasyPermissions
 import com.vmadalin.easypermissions.dialogs.SettingsDialog
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import me.rafael.yokota.androidApp.databinding.ClimaFragmentBinding
@@ -24,88 +26,52 @@ import me.rafael.yokota.androidApp.util.SharedPreferencesUtil
 import me.rafael.yokota.shared.constants.Constants
 import me.rafael.yokota.shared.model.Coord
 import me.rafael.yokota.shared.model.Result
-import me.rafael.yokota.shared.viewmodel.ClimaViewModel
+import me.rafael.yokota.shared.viewmodel.ClimaViewModelShared
 
 class ClimaFragment : Fragment(), EasyPermissions.PermissionCallbacks {
-    private val viewModel = ClimaViewModel()
+
+    private val viewModel = ClimaViewModelShared()
+    private val mAdapter = ClimaAdapter()
+    private var sharedPreferencesUtil = SharedPreferencesUtil
 
     private var _binding: ClimaFragmentBinding? = null
     private val binding get() = _binding!!
 
     private lateinit var fusedLocationProviderClient: FusedLocationProviderClient
-    private var locationPermissionGranted = false
-
-    private var sharedPreferencesUtil = SharedPreferencesUtil
-
     private var coordenadas: Coord? = null
-    private var permissions = arrayOf(Manifest.permission.ACCESS_FINE_LOCATION)
 
     companion object {
         const val REQUEST_CODE_LOCATION = 99
     }
 
-    private val mAdapter = ClimaAdapter()
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
-       /*recycler*/
+        /*recycler*/
         _binding = ClimaFragmentBinding.inflate(inflater, container, false)
-        binding.rowItemWeather.layoutManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL, false)
-
+        binding.rowItemWeather.layoutManager =
+            LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         binding.rowItemWeather.adapter = mAdapter
         /*recycler*/
-
         coordenadas = sharedPreferencesUtil.getCoordenadas(requireContext())
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(context)
 
-        val view = binding.root
-        if (!hasLocationPermission())
-            requestLocationPermission()
-        binding.buttonLatlong.setOnClickListener {
-            if (hasLocationPermission()) {
-                getDeviceLocation()
-            } else {
-                requestLocationPermission()
-            }
-        }
-
-        return view
-    }
-
-    override fun onStart() {
-        super.onStart()
-        lifecycleScope.launchWhenStarted {
-            viewModel.weatherNow.collect {
-                if (it.coord.lat != 0.0 && it.coord.lon != 0.0) fillScreen(it)
-                else if (coordenadas?.lat == 0.0 && coordenadas?.lon == 0.0) clearScreen()
-                else {
-                    clearScreen()
-                    getDeviceLocation()
-                    val d = ""
-                }
-            }
-
-        }
-
-
-    }
-
-    override fun onResume() {
-        super.onResume()
-        lifecycleScope.launchWhenResumed {
-            viewModel.getOneCallData(coordenadas?.lat!!, coordenadas?.lon!!)
-            val s = ""
-        }
-
+        if (!hasLocationPermission()) requestLocationPermission()
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        lifecycleScope.launch {
+        lifecycleScope.launch(Dispatchers.Main) {
+            viewModel.weatherNow.collect {
+                if (it.coord.lat != 0.0 && it.coord.lon != 0.0) {
+                    fillScreen(it)
+                } else clearScreen()
+            }
+        }
 
+        lifecycleScope.launch {
             viewModel.oneCallWeather.collect {
                 mAdapter.updateList(it.daily)
                 mAdapter.notifyDataSetChanged()
@@ -113,6 +79,13 @@ class ClimaFragment : Fragment(), EasyPermissions.PermissionCallbacks {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        if (hasLocationPermission())
+            getDeviceLocation()
+    }
+
+    /* Easy permissions  */
     private fun hasLocationPermission() =
         EasyPermissions.hasPermissions(requireContext(), Manifest.permission.ACCESS_FINE_LOCATION)
 
@@ -125,19 +98,30 @@ class ClimaFragment : Fragment(), EasyPermissions.PermissionCallbacks {
         )
     }
 
+    override fun onPermissionsDenied(requestCode: Int, perms: List<String>) {
+        if (EasyPermissions.somePermissionPermanentlyDenied(this, perms)) {
+            SettingsDialog.Builder(requireActivity()).build().show()
+        } else {
+            requestLocationPermission()
+        }
+    }
+
+    override fun onPermissionsGranted(requestCode: Int, perms: List<String>) {
+        Toast.makeText(requireContext(), "Got permission", Toast.LENGTH_SHORT).show()
+    }
+    /* Easy permissions  */
 
     private fun getDeviceLocation() {
         try {
-            fusedLocationProviderClient.lastLocation.addOnSuccessListener { location: Location? ->
+            fusedLocationProviderClient.lastLocation.addOnSuccessListener { location: Location ->
                 sharedPreferencesUtil.setCoordenadas(
                     requireContext(),
-                    location?.latitude!!,
+                    location.latitude,
                     location.longitude
                 )
-                lifecycleScope.launchWhenStarted {
+                lifecycleScope.launch(Dispatchers.IO) {
                     viewModel.getClimaTempo(location.latitude, location.longitude)
                     viewModel.getOneCallData(location.latitude, location.longitude)
-                    val s = ""
                 }
             }
         } catch (e: SecurityException) {
@@ -154,7 +138,6 @@ class ClimaFragment : Fragment(), EasyPermissions.PermissionCallbacks {
         binding.longitude.text = "Longitude: ${result.coord.lon}"
         Picasso.get().load(Constants.API.basUrlIcon + result.weather[0].icon + "@2x.png")
             .into(binding.weatherIcon);
-//        println(Constants.API.basUrlIcon+result.weather[0].icon+"@2x.png")
     }
 
     private fun clearScreen() {
@@ -163,20 +146,6 @@ class ClimaFragment : Fragment(), EasyPermissions.PermissionCallbacks {
         binding.tvDescription.text = ""
         binding.latitude.text = ""
         binding.longitude.text = ""
-
     }
-
-    override fun onPermissionsDenied(requestCode: Int, perms: List<String>) {
-        if (EasyPermissions.somePermissionPermanentlyDenied(this, perms)) {
-            SettingsDialog.Builder(requireActivity()).build().show()
-        } else {
-            requestLocationPermission()
-        }
-    }
-
-    override fun onPermissionsGranted(requestCode: Int, perms: List<String>) {
-        getDeviceLocation()
-    }
-
 
 }

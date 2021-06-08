@@ -29,5 +29,4 @@ class ClimaAdapter : RecyclerView.Adapter<ClimaViewHolder>() {
         mList= list
         notifyDataSetChanged()
     }
-
 }
