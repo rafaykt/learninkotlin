@@ -45,7 +45,6 @@ class FavoriteFragment : Fragment() {
         /*Listener*/
         mListener = object : MovieListener {
             override fun onListClick(filme: Film) {
-
                 val directions = FavoriteFragmentDirections.actionNavigationFavoritesToNavigationDetails2(filme)
                 view?.findNavController()?.navigate(directions)
             }
@@ -59,6 +58,7 @@ class FavoriteFragment : Fragment() {
             }
         }
         /*Listener*/
+
         observe()
 
         return binding.root

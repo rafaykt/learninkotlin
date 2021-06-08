@@ -8,7 +8,4 @@ class MovieConstants {
         const val baseUrlFilme200 = "https://image.tmdb.org/t/p/w200"
         const val baseUrlFilme500 = "https://image.tmdb.org/t/p/w500"
     }
-
-
-
 }

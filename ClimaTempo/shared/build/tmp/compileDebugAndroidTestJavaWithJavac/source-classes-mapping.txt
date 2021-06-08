@@ -1,0 +1,2 @@
+me/rafael/yokota/shared/test/BuildConfig.java
+ me.rafael.yokota.shared.test.BuildConfig

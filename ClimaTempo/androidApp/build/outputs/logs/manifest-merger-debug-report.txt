@@ -1,0 +1,346 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:2:1-19:12
+INJECTED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:2:1-19:12
+INJECTED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:2:1-19:12
+INJECTED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:2:1-19:12
+MERGED from [androidx.databinding:viewbinding:4.0.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\8e86a200a91d84825c2bd65b3d61e9bd\viewbinding-4.0.1\AndroidManifest.xml:17:1-22:12
+MERGED from [:shared] C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\shared\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [com.vmadalin:easypermissions-ktx:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\d72a40c1e0db6d828b3bea1be7255fde\easypermissions-ktx-1.0.0\AndroidManifest.xml:3:1-18:12
+MERGED from [androidx.navigation:navigation-ui-ktx:2.3.5] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\f93b44a6442c5532a663d2ae9d6bd458\navigation-ui-ktx-2.3.5\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-ui:2.3.5] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\8cbbf9c986f717ac645fcb5e55d60f63\navigation-ui-2.3.5\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.material:material:1.3.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\4db9b4a70f21b73fa51005cfc6b90712\material-1.3.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.2] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\cb11a934a5ec34a4d81b197773528543\constraintlayout-2.0.2\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat:1.3.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\562f830943b4b2eda474ef0b6b001d8f\appcompat-1.3.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.3.5] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\9f01cf8013eeec8dfdc88323cf740982\navigation-fragment-ktx-2.3.5\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.3.5] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\3b4a6c83b6a1e20190445f5a4df27bc3\navigation-runtime-ktx-2.3.5\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment-ktx:1.2.5] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\f72c66da3ef2767bbad0284a2a1876e8\fragment-ktx-1.2.5\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity-ktx:1.1.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\509ef79109563e9e43981a4e7209ab60\activity-ktx-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.3.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\1f237e6ab1e79050827e8fe2129014ad\lifecycle-runtime-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\cb02aa294d77ef7bb4e2e9fb291a2012\lifecycle-viewmodel-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-common-ktx:2.3.5] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\859d637a6107df79cb913bb986c3d608\navigation-common-ktx-2.3.5\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core-ktx:1.3.2] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\7bb26a201b45d51da94659cd8bf5d234\core-ktx-1.3.2\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\1c4e0991d94283d28a4b62ee1f738d28\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\b12a7f0e891fcedbef9abdb35e178779\recyclerview-1.2.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.3.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\12ae04dc0bfefe905f76593573346d5a\lifecycle-livedata-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.datastore:datastore:1.0.0-beta01] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\0de77b99eabefa648a20e27b3c1a6e02\datastore-1.0.0-beta01\AndroidManifest.xml:17:1-24:12
+MERGED from [com.squareup.sqldelight:android-driver:1.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\f28f0d6d0199b9b7b2a7d210f41c180a\android-driver-1.5.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\f4af8bf9671515ca0a7a257326805b5c\lifecycle-livedata-core-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\298105974a831c0edfceaebf422890fa\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-location:18.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\fffdeabdb09e0e6a8450630a5d423372\play-services-location-18.0.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.github.pwittchen:weathericonview:1.1.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\df91cbecde5c807eb45bdc1b2fc4f7e5\weathericonview-1.1.0\AndroidManifest.xml:2:1-14:12
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\4d982326c0e09d759246263fd38db886\picasso-2.71828\AndroidManifest.xml:2:1-14:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\699597802ca69b37e7548c47485c01e2\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\71b6237e0fde5cdaf4dc3ec83a788741\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\991b69979474e7cf37c4d9c84e2a52d0\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.3.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\bf2ab0b9f9b2ef551a2b44ce04e19c3b\appcompat-resources-1.3.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\ef4127f0a749a2fc4b69bebd9c4ab7f2\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\f5508ea9e02b7e2dcea2ec338182d75a\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\2a7a7a6e1a734b0d27bc369069a8f52a\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\344113a6d294c7c39ad9f5cf0b85ece9\navigation-fragment-2.3.5\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\335d7ba71a1456f4ab93af9a08c1b5e5\play-services-base-17.5.0\AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\a677ae62d4d94c558b4763a3d153448c\play-services-places-placereport-17.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-tasks:17.2.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\d0dd96e66081ee53ade60f0fdf3fdd87\play-services-tasks-17.2.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:17.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\3c6f906fc19bd5f05c24b057d2cc2946\play-services-basement-17.5.0\AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.fragment:fragment:1.3.4] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\59b87f5f861a83a32bb6677101422d45\fragment-1.3.4\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-runtime:2.3.5] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\259dc97da48fe4fed52661d578da62d9\navigation-runtime-2.3.5\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.2.3] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\712bb48be296e5de8b9b14058db2db67\activity-1.2.3\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.media:media:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\2128df6c5fd0f42cad500db40649c7f1\media-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\3c3ae3b1976c8d6db79adccb83adb1d5\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\1268a30dca0e2ca331acc2d8fd83fb70\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\f19a4fdbf6a56d8f54a607df72748642\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\d1e62aca7a974eb44cf50b17bad662de\slidingpanelayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\53f03823a62ef6ec6dc8b59dd96de0d7\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\0bcb7ee9cd7a57be5cf79306aa3a4f3f\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\83133b04557ff1c38369964d65f18350\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\837c762166c5ad88bfd05db529b9476e\customview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.3.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\dcfbaf287b5550131fe04d051a4c5253\transition-1.3.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-common:2.3.5] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\04e6b9511ed7e451bdb660ab855d93cd\navigation-common-2.3.5\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\15648aef3b2439df80412b8bcf6d960e\core-1.5.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\bceb26aa3aa3b25cf7ab74b10cc10927\lifecycle-runtime-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\b6bf9a17f17906708acd88381fd4793b\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\633d69ab5cf54471293194959e1e10c6\lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\f13554fe05d7007604a91890f7bdda5b\savedstate-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\6601affaa949b1b6e208adfa13e02cd2\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.sqlite:sqlite-framework:2.1.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\fbaa7d7d296949085f74be4eac363070\sqlite-framework-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.sqlite:sqlite:2.1.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\a4a038b40ebca7b99890d355a5ca73f4\sqlite-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\92aa0eddbaeaebb93707e64ce4139ae2\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.3.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\32a9aecdfa6d779d338446fe31babb32\lifecycle-livedata-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\b248ebb6b121335105524eb45cc450c0\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\2937e87cb34d283d9c76cb4d5759a606\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\04fbb32f320640a5fa641c62c442163b\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\8f3708861a4301092e7c600208b5a7b0\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\4a8895587c2e5d48093ab6127a4c0467\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\c99cdfac8d86165eb67a18b20b01b00c\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\fb10c4d323d18d17c7f4e749a50904b6\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\8f366673ff4ee68bbea359401dfd137e\annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:exifinterface:27.1.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\8df71f4b8bac8af98eb88a3ae4085960\exifinterface-27.1.0\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:2:1-19:12
+INJECTED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:2:1-19:12
+INJECTED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:2:1-19:12
+	package
+		ADDED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:2:70-107
+		INJECTED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:2:1-19:12
+		INJECTED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:2:1-19:12
+		INJECTED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:3:5-67
+	android:name
+		ADDED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:3:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:4:5-79
+	android:name
+		ADDED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:4:22-76
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:5:5-79
+	android:name
+		ADDED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:5:22-76
+application
+ADDED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:7:5-18:19
+MERGED from [com.vmadalin:easypermissions-ktx:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\d72a40c1e0db6d828b3bea1be7255fde\easypermissions-ktx-1.0.0\AndroidManifest.xml:12:5-16:19
+MERGED from [com.vmadalin:easypermissions-ktx:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\d72a40c1e0db6d828b3bea1be7255fde\easypermissions-ktx-1.0.0\AndroidManifest.xml:12:5-16:19
+MERGED from [com.google.android.material:material:1.3.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\4db9b4a70f21b73fa51005cfc6b90712\material-1.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.3.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\4db9b4a70f21b73fa51005cfc6b90712\material-1.3.0\AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.2] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\cb11a934a5ec34a4d81b197773528543\constraintlayout-2.0.2\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.2] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\cb11a934a5ec34a4d81b197773528543\constraintlayout-2.0.2\AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-location:18.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\fffdeabdb09e0e6a8450630a5d423372\play-services-location-18.0.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-location:18.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\fffdeabdb09e0e6a8450630a5d423372\play-services-location-18.0.0\AndroidManifest.xml:7:5-20
+MERGED from [com.github.pwittchen:weathericonview:1.1.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\df91cbecde5c807eb45bdc1b2fc4f7e5\weathericonview-1.1.0\AndroidManifest.xml:12:5-20
+MERGED from [com.github.pwittchen:weathericonview:1.1.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\df91cbecde5c807eb45bdc1b2fc4f7e5\weathericonview-1.1.0\AndroidManifest.xml:12:5-20
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\4d982326c0e09d759246263fd38db886\picasso-2.71828\AndroidManifest.xml:7:5-12:19
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\4d982326c0e09d759246263fd38db886\picasso-2.71828\AndroidManifest.xml:7:5-12:19
+MERGED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\335d7ba71a1456f4ab93af9a08c1b5e5\play-services-base-17.5.0\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\335d7ba71a1456f4ab93af9a08c1b5e5\play-services-base-17.5.0\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\a677ae62d4d94c558b4763a3d153448c\play-services-places-placereport-17.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\a677ae62d4d94c558b4763a3d153448c\play-services-places-placereport-17.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-tasks:17.2.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\d0dd96e66081ee53ade60f0fdf3fdd87\play-services-tasks-17.2.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:17.2.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\d0dd96e66081ee53ade60f0fdf3fdd87\play-services-tasks-17.2.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:17.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\3c6f906fc19bd5f05c24b057d2cc2946\play-services-basement-17.5.0\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\3c6f906fc19bd5f05c24b057d2cc2946\play-services-basement-17.5.0\AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.core:core:1.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\15648aef3b2439df80412b8bcf6d960e\core-1.5.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\15648aef3b2439df80412b8bcf6d960e\core-1.5.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\92aa0eddbaeaebb93707e64ce4139ae2\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\92aa0eddbaeaebb93707e64ce4139ae2\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\15648aef3b2439df80412b8bcf6d960e\core-1.5.0\AndroidManifest.xml:24:18-86
+	android:supportsRtl
+		ADDED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:10:13-39
+	android:allowBackup
+		ADDED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:9:13-40
+	android:theme
+		ADDED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:11:13-44
+	android:usesCleartextTraffic
+		ADDED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:8:13-48
+activity#me.rafael.yokota.androidApp.MainActivity
+ADDED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:12:9-17:20
+	android:name
+		ADDED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:12:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:13:13-16:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:14:17-68
+	android:name
+		ADDED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:14:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:15:17-76
+	android:name
+		ADDED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:15:27-74
+uses-sdk
+INJECTED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml
+MERGED from [androidx.databinding:viewbinding:4.0.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\8e86a200a91d84825c2bd65b3d61e9bd\viewbinding-4.0.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.databinding:viewbinding:4.0.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\8e86a200a91d84825c2bd65b3d61e9bd\viewbinding-4.0.1\AndroidManifest.xml:20:5-44
+MERGED from [:shared] C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\shared\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:shared] C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\shared\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [com.vmadalin:easypermissions-ktx:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\d72a40c1e0db6d828b3bea1be7255fde\easypermissions-ktx-1.0.0\AndroidManifest.xml:8:5-10:41
+MERGED from [com.vmadalin:easypermissions-ktx:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\d72a40c1e0db6d828b3bea1be7255fde\easypermissions-ktx-1.0.0\AndroidManifest.xml:8:5-10:41
+MERGED from [androidx.navigation:navigation-ui-ktx:2.3.5] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\f93b44a6442c5532a663d2ae9d6bd458\navigation-ui-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui-ktx:2.3.5] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\f93b44a6442c5532a663d2ae9d6bd458\navigation-ui-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui:2.3.5] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\8cbbf9c986f717ac645fcb5e55d60f63\navigation-ui-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui:2.3.5] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\8cbbf9c986f717ac645fcb5e55d60f63\navigation-ui-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.material:material:1.3.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\4db9b4a70f21b73fa51005cfc6b90712\material-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.3.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\4db9b4a70f21b73fa51005cfc6b90712\material-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.2] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\cb11a934a5ec34a4d81b197773528543\constraintlayout-2.0.2\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.2] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\cb11a934a5ec34a4d81b197773528543\constraintlayout-2.0.2\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat:1.3.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\562f830943b4b2eda474ef0b6b001d8f\appcompat-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.3.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\562f830943b4b2eda474ef0b6b001d8f\appcompat-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.3.5] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\9f01cf8013eeec8dfdc88323cf740982\navigation-fragment-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.3.5] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\9f01cf8013eeec8dfdc88323cf740982\navigation-fragment-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.3.5] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\3b4a6c83b6a1e20190445f5a4df27bc3\navigation-runtime-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.3.5] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\3b4a6c83b6a1e20190445f5a4df27bc3\navigation-runtime-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment-ktx:1.2.5] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\f72c66da3ef2767bbad0284a2a1876e8\fragment-ktx-1.2.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment-ktx:1.2.5] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\f72c66da3ef2767bbad0284a2a1876e8\fragment-ktx-1.2.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity-ktx:1.1.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\509ef79109563e9e43981a4e7209ab60\activity-ktx-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity-ktx:1.1.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\509ef79109563e9e43981a4e7209ab60\activity-ktx-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.3.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\1f237e6ab1e79050827e8fe2129014ad\lifecycle-runtime-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.3.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\1f237e6ab1e79050827e8fe2129014ad\lifecycle-runtime-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\cb02aa294d77ef7bb4e2e9fb291a2012\lifecycle-viewmodel-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\cb02aa294d77ef7bb4e2e9fb291a2012\lifecycle-viewmodel-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common-ktx:2.3.5] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\859d637a6107df79cb913bb986c3d608\navigation-common-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common-ktx:2.3.5] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\859d637a6107df79cb913bb986c3d608\navigation-common-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core-ktx:1.3.2] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\7bb26a201b45d51da94659cd8bf5d234\core-ktx-1.3.2\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.core:core-ktx:1.3.2] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\7bb26a201b45d51da94659cd8bf5d234\core-ktx-1.3.2\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\1c4e0991d94283d28a4b62ee1f738d28\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\1c4e0991d94283d28a4b62ee1f738d28\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\b12a7f0e891fcedbef9abdb35e178779\recyclerview-1.2.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\b12a7f0e891fcedbef9abdb35e178779\recyclerview-1.2.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.3.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\12ae04dc0bfefe905f76593573346d5a\lifecycle-livedata-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.3.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\12ae04dc0bfefe905f76593573346d5a\lifecycle-livedata-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.datastore:datastore:1.0.0-beta01] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\0de77b99eabefa648a20e27b3c1a6e02\datastore-1.0.0-beta01\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.datastore:datastore:1.0.0-beta01] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\0de77b99eabefa648a20e27b3c1a6e02\datastore-1.0.0-beta01\AndroidManifest.xml:20:5-22:41
+MERGED from [com.squareup.sqldelight:android-driver:1.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\f28f0d6d0199b9b7b2a7d210f41c180a\android-driver-1.5.0\AndroidManifest.xml:5:5-44
+MERGED from [com.squareup.sqldelight:android-driver:1.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\f28f0d6d0199b9b7b2a7d210f41c180a\android-driver-1.5.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\f4af8bf9671515ca0a7a257326805b5c\lifecycle-livedata-core-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\f4af8bf9671515ca0a7a257326805b5c\lifecycle-livedata-core-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\298105974a831c0edfceaebf422890fa\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\298105974a831c0edfceaebf422890fa\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-location:18.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\fffdeabdb09e0e6a8450630a5d423372\play-services-location-18.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-location:18.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\fffdeabdb09e0e6a8450630a5d423372\play-services-location-18.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.github.pwittchen:weathericonview:1.1.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\df91cbecde5c807eb45bdc1b2fc4f7e5\weathericonview-1.1.0\AndroidManifest.xml:8:5-10:41
+MERGED from [com.github.pwittchen:weathericonview:1.1.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\df91cbecde5c807eb45bdc1b2fc4f7e5\weathericonview-1.1.0\AndroidManifest.xml:8:5-10:41
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\4d982326c0e09d759246263fd38db886\picasso-2.71828\AndroidManifest.xml:5:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\4d982326c0e09d759246263fd38db886\picasso-2.71828\AndroidManifest.xml:5:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\699597802ca69b37e7548c47485c01e2\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\699597802ca69b37e7548c47485c01e2\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\71b6237e0fde5cdaf4dc3ec83a788741\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\71b6237e0fde5cdaf4dc3ec83a788741\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\991b69979474e7cf37c4d9c84e2a52d0\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\991b69979474e7cf37c4d9c84e2a52d0\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.3.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\bf2ab0b9f9b2ef551a2b44ce04e19c3b\appcompat-resources-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.3.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\bf2ab0b9f9b2ef551a2b44ce04e19c3b\appcompat-resources-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\ef4127f0a749a2fc4b69bebd9c4ab7f2\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\ef4127f0a749a2fc4b69bebd9c4ab7f2\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\f5508ea9e02b7e2dcea2ec338182d75a\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\f5508ea9e02b7e2dcea2ec338182d75a\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\2a7a7a6e1a734b0d27bc369069a8f52a\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\2a7a7a6e1a734b0d27bc369069a8f52a\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\344113a6d294c7c39ad9f5cf0b85ece9\navigation-fragment-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\344113a6d294c7c39ad9f5cf0b85ece9\navigation-fragment-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\335d7ba71a1456f4ab93af9a08c1b5e5\play-services-base-17.5.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\335d7ba71a1456f4ab93af9a08c1b5e5\play-services-base-17.5.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\a677ae62d4d94c558b4763a3d153448c\play-services-places-placereport-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\a677ae62d4d94c558b4763a3d153448c\play-services-places-placereport-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.2.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\d0dd96e66081ee53ade60f0fdf3fdd87\play-services-tasks-17.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.2.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\d0dd96e66081ee53ade60f0fdf3fdd87\play-services-tasks-17.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\3c6f906fc19bd5f05c24b057d2cc2946\play-services-basement-17.5.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\3c6f906fc19bd5f05c24b057d2cc2946\play-services-basement-17.5.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.3.4] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\59b87f5f861a83a32bb6677101422d45\fragment-1.3.4\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.4] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\59b87f5f861a83a32bb6677101422d45\fragment-1.3.4\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime:2.3.5] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\259dc97da48fe4fed52661d578da62d9\navigation-runtime-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime:2.3.5] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\259dc97da48fe4fed52661d578da62d9\navigation-runtime-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.2.3] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\712bb48be296e5de8b9b14058db2db67\activity-1.2.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.2.3] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\712bb48be296e5de8b9b14058db2db67\activity-1.2.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\2128df6c5fd0f42cad500db40649c7f1\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\2128df6c5fd0f42cad500db40649c7f1\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\3c3ae3b1976c8d6db79adccb83adb1d5\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\3c3ae3b1976c8d6db79adccb83adb1d5\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\1268a30dca0e2ca331acc2d8fd83fb70\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\1268a30dca0e2ca331acc2d8fd83fb70\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\f19a4fdbf6a56d8f54a607df72748642\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\f19a4fdbf6a56d8f54a607df72748642\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\d1e62aca7a974eb44cf50b17bad662de\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\d1e62aca7a974eb44cf50b17bad662de\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\53f03823a62ef6ec6dc8b59dd96de0d7\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\53f03823a62ef6ec6dc8b59dd96de0d7\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\0bcb7ee9cd7a57be5cf79306aa3a4f3f\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\0bcb7ee9cd7a57be5cf79306aa3a4f3f\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\83133b04557ff1c38369964d65f18350\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\83133b04557ff1c38369964d65f18350\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\837c762166c5ad88bfd05db529b9476e\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\837c762166c5ad88bfd05db529b9476e\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.3.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\dcfbaf287b5550131fe04d051a4c5253\transition-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.3.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\dcfbaf287b5550131fe04d051a4c5253\transition-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common:2.3.5] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\04e6b9511ed7e451bdb660ab855d93cd\navigation-common-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common:2.3.5] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\04e6b9511ed7e451bdb660ab855d93cd\navigation-common-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\15648aef3b2439df80412b8bcf6d960e\core-1.5.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\15648aef3b2439df80412b8bcf6d960e\core-1.5.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\bceb26aa3aa3b25cf7ab74b10cc10927\lifecycle-runtime-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\bceb26aa3aa3b25cf7ab74b10cc10927\lifecycle-runtime-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\b6bf9a17f17906708acd88381fd4793b\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\b6bf9a17f17906708acd88381fd4793b\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\633d69ab5cf54471293194959e1e10c6\lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\633d69ab5cf54471293194959e1e10c6\lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\f13554fe05d7007604a91890f7bdda5b\savedstate-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\f13554fe05d7007604a91890f7bdda5b\savedstate-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\6601affaa949b1b6e208adfa13e02cd2\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\6601affaa949b1b6e208adfa13e02cd2\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite-framework:2.1.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\fbaa7d7d296949085f74be4eac363070\sqlite-framework-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite-framework:2.1.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\fbaa7d7d296949085f74be4eac363070\sqlite-framework-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite:2.1.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\a4a038b40ebca7b99890d355a5ca73f4\sqlite-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite:2.1.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\a4a038b40ebca7b99890d355a5ca73f4\sqlite-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\92aa0eddbaeaebb93707e64ce4139ae2\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\92aa0eddbaeaebb93707e64ce4139ae2\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.3.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\32a9aecdfa6d779d338446fe31babb32\lifecycle-livedata-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.3.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\32a9aecdfa6d779d338446fe31babb32\lifecycle-livedata-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\b248ebb6b121335105524eb45cc450c0\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\b248ebb6b121335105524eb45cc450c0\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\2937e87cb34d283d9c76cb4d5759a606\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\2937e87cb34d283d9c76cb4d5759a606\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\04fbb32f320640a5fa641c62c442163b\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\04fbb32f320640a5fa641c62c442163b\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\8f3708861a4301092e7c600208b5a7b0\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\8f3708861a4301092e7c600208b5a7b0\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\4a8895587c2e5d48093ab6127a4c0467\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\4a8895587c2e5d48093ab6127a4c0467\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\c99cdfac8d86165eb67a18b20b01b00c\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\c99cdfac8d86165eb67a18b20b01b00c\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\fb10c4d323d18d17c7f4e749a50904b6\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\fb10c4d323d18d17c7f4e749a50904b6\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\8f366673ff4ee68bbea359401dfd137e\annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\8f366673ff4ee68bbea359401dfd137e\annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.android.support:exifinterface:27.1.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\8df71f4b8bac8af98eb88a3ae4085960\exifinterface-27.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:exifinterface:27.1.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\8df71f4b8bac8af98eb88a3ae4085960\exifinterface-27.1.0\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml
+activity#com.vmadalin.easypermissions.components.TestActivity
+ADDED from [com.vmadalin:easypermissions-ktx:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\d72a40c1e0db6d828b3bea1be7255fde\easypermissions-ktx-1.0.0\AndroidManifest.xml:13:9-89
+	android:name
+		ADDED from [com.vmadalin:easypermissions-ktx:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\d72a40c1e0db6d828b3bea1be7255fde\easypermissions-ktx-1.0.0\AndroidManifest.xml:13:19-86
+activity#com.vmadalin.easypermissions.components.TestAppCompatActivity
+ADDED from [com.vmadalin:easypermissions-ktx:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\d72a40c1e0db6d828b3bea1be7255fde\easypermissions-ktx-1.0.0\AndroidManifest.xml:14:9-98
+	android:name
+		ADDED from [com.vmadalin:easypermissions-ktx:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\d72a40c1e0db6d828b3bea1be7255fde\easypermissions-ktx-1.0.0\AndroidManifest.xml:14:19-95
+activity#com.vmadalin.easypermissions.components.TestSupportFragmentActivity
+ADDED from [com.vmadalin:easypermissions-ktx:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\d72a40c1e0db6d828b3bea1be7255fde\easypermissions-ktx-1.0.0\AndroidManifest.xml:15:9-104
+	android:name
+		ADDED from [com.vmadalin:easypermissions-ktx:1.0.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\d72a40c1e0db6d828b3bea1be7255fde\easypermissions-ktx-1.0.0\AndroidManifest.xml:15:19-101
+provider#com.squareup.picasso.PicassoProvider
+ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\4d982326c0e09d759246263fd38db886\picasso-2.71828\AndroidManifest.xml:8:9-11:40
+	android:authorities
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\4d982326c0e09d759246263fd38db886\picasso-2.71828\AndroidManifest.xml:10:13-72
+	android:exported
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\4d982326c0e09d759246263fd38db886\picasso-2.71828\AndroidManifest.xml:11:13-37
+	android:name
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\4d982326c0e09d759246263fd38db886\picasso-2.71828\AndroidManifest.xml:9:13-64
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\335d7ba71a1456f4ab93af9a08c1b5e5\play-services-base-17.5.0\AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\335d7ba71a1456f4ab93af9a08c1b5e5\play-services-base-17.5.0\AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\335d7ba71a1456f4ab93af9a08c1b5e5\play-services-base-17.5.0\AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:17.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\335d7ba71a1456f4ab93af9a08c1b5e5\play-services-base-17.5.0\AndroidManifest.xml:24:13-79
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:17.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\3c6f906fc19bd5f05c24b057d2cc2946\play-services-basement-17.5.0\AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:17.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\3c6f906fc19bd5f05c24b057d2cc2946\play-services-basement-17.5.0\AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:17.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\3c6f906fc19bd5f05c24b057d2cc2946\play-services-basement-17.5.0\AndroidManifest.xml:24:13-58
