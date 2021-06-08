@@ -6,7 +6,7 @@ import me.rafael.yokota.shared.Repository
 import me.rafael.yokota.shared.model.*
 import me.rafael.yokota.shared.network.WeatherAPI
 
-class ClimaViewModel() {
+class ClimaViewModelShared() {
     private val mRepository = Repository()
     private val _weatherNow = MutableStateFlow<Result>(
         Result(
@@ -20,7 +20,6 @@ class ClimaViewModel() {
     )
     val weatherNow: StateFlow<Result> get() = _weatherNow
 
-
     private val _oneCallWeather = MutableStateFlow<OneCallResult>(
         OneCallResult(
             lat = 0.0,
@@ -32,18 +31,11 @@ class ClimaViewModel() {
 
     val oneCallWeather: StateFlow<OneCallResult> get() = _oneCallWeather
 
-
-
-    suspend fun getClimaTempo (lat: Double, long: Double)  {
-
-        _weatherNow.value= mRepository.getWeather(lat,long)
-
-
+    suspend fun getClimaTempo(lat: Double, long: Double) {
+        _weatherNow.value = mRepository.getWeather(lat, long)
     }
 
     suspend fun getOneCallData(lat: Double, long: Double) {
-//        val s = ""
         _oneCallWeather.value = mRepository.getOneCallApi(lat, long)
-//        val x = ""
     }
 }

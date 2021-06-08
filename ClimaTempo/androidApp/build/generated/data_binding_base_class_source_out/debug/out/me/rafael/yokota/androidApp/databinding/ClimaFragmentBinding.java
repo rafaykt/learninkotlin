@@ -4,7 +4,6 @@ package me.rafael.yokota.androidApp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -20,9 +19,6 @@ import me.rafael.yokota.androidApp.R;
 public final class ClimaFragmentBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
-
-  @NonNull
-  public final Button buttonLatlong;
 
   @NonNull
   public final TextView latitude;
@@ -45,12 +41,11 @@ public final class ClimaFragmentBinding implements ViewBinding {
   @NonNull
   public final ImageView weatherIcon;
 
-  private ClimaFragmentBinding(@NonNull ConstraintLayout rootView, @NonNull Button buttonLatlong,
-      @NonNull TextView latitude, @NonNull TextView longitude, @NonNull RecyclerView rowItemWeather,
+  private ClimaFragmentBinding(@NonNull ConstraintLayout rootView, @NonNull TextView latitude,
+      @NonNull TextView longitude, @NonNull RecyclerView rowItemWeather,
       @NonNull TextView tvCityname, @NonNull TextView tvDescription,
       @NonNull TextView tvTemperature, @NonNull ImageView weatherIcon) {
     this.rootView = rootView;
-    this.buttonLatlong = buttonLatlong;
     this.latitude = latitude;
     this.longitude = longitude;
     this.rowItemWeather = rowItemWeather;
@@ -87,12 +82,6 @@ public final class ClimaFragmentBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.button_latlong;
-      Button buttonLatlong = rootView.findViewById(id);
-      if (buttonLatlong == null) {
-        break missingId;
-      }
-
       id = R.id.latitude;
       TextView latitude = rootView.findViewById(id);
       if (latitude == null) {
@@ -135,8 +124,8 @@ public final class ClimaFragmentBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ClimaFragmentBinding((ConstraintLayout) rootView, buttonLatlong, latitude,
-          longitude, rowItemWeather, tvCityname, tvDescription, tvTemperature, weatherIcon);
+      return new ClimaFragmentBinding((ConstraintLayout) rootView, latitude, longitude,
+          rowItemWeather, tvCityname, tvDescription, tvTemperature, weatherIcon);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
