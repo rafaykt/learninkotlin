@@ -22,8 +22,8 @@
 14
 15    <application
 15-->C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:7:5-18:19
-16        android:allowBackup="false"
-16-->C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:9:13-40
+16        android:allowBackup="true"
+16-->C:\Users\Rafael Yokota\Documents\Projetos\learninkotlin\ClimaTempo\androidApp\src\main\AndroidManifest.xml:9:13-39
 17        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 17-->[androidx.core:core:1.5.0] C:\Users\Rafael Yokota\.gradle\caches\transforms-2\files-2.1\15648aef3b2439df80412b8bcf6d960e\core-1.5.0\AndroidManifest.xml:24:18-86
 18        android:debuggable="true"

@@ -85,7 +85,17 @@ class ClimaFragment : Fragment(), EasyPermissions.PermissionCallbacks {
             getDeviceLocation()
     }
 
-    /* Easy permissions  */
+    override fun onStop() {
+        super.onStop()
+        viewModel.cancelCoroutines()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        viewModel.cancelCoroutines()
+    }
+
+    /* Easy permissions {*/
     private fun hasLocationPermission() =
         EasyPermissions.hasPermissions(requireContext(), Manifest.permission.ACCESS_FINE_LOCATION)
 
@@ -109,7 +119,7 @@ class ClimaFragment : Fragment(), EasyPermissions.PermissionCallbacks {
     override fun onPermissionsGranted(requestCode: Int, perms: List<String>) {
         Toast.makeText(requireContext(), "Got permission", Toast.LENGTH_SHORT).show()
     }
-    /* Easy permissions  */
+    /*} Easy Permissions*/
 
     private fun getDeviceLocation() {
         try {
@@ -119,10 +129,8 @@ class ClimaFragment : Fragment(), EasyPermissions.PermissionCallbacks {
                     location.latitude,
                     location.longitude
                 )
-                lifecycleScope.launch(Dispatchers.IO) {
                     viewModel.getClimaTempo(location.latitude, location.longitude)
                     viewModel.getOneCallData(location.latitude, location.longitude)
-                }
             }
         } catch (e: SecurityException) {
             Log.e("Exception: %s", e.message, e)

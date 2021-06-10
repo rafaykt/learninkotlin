@@ -1,4 +1,5 @@
 import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
+import org.jetbrains.kotlin.konan.properties.Properties
 
 plugins {
     kotlin("multiplatform")
@@ -13,6 +14,7 @@ val coroutinesVersion = "1.3.9-native-mt"
 val serializationVersion = "1.0.0-RC"
 val sqlDelightVersion: String by project
 val ktorVersion = "1.4.0"
+val crashkIos = "0.3.1"
 
 kotlin {
     android(){
@@ -62,6 +64,7 @@ kotlin {
             dependencies {
                 implementation("io.ktor:ktor-client-ios:$ktorVersion")
                 implementation("com.squareup.sqldelight:native-driver:$sqlDelightVersion")
+                api( "co.touchlab:crashkios:$crashkIos")
             }
         }
         val iosTest by getting
@@ -69,6 +72,7 @@ kotlin {
 }
 
 android {
+
     compileSdkVersion(29)
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
     defaultConfig {
@@ -76,6 +80,7 @@ android {
         targetSdkVersion(29)
     }
 }
+
 
 val packForXcode by tasks.creating(Sync::class) {
     group = "build"
