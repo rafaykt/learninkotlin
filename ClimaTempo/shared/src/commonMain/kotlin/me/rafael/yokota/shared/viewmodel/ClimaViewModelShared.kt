@@ -1,13 +1,22 @@
 package me.rafael.yokota.shared.viewmodel
 
+import ClimaDispatcher
+import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import me.rafael.yokota.shared.Repository
 import me.rafael.yokota.shared.model.*
-import me.rafael.yokota.shared.network.WeatherAPI
+import kotlin.coroutines.CoroutineContext
 
 class ClimaViewModelShared() {
     private val mRepository = Repository()
+
+    private val job = SupervisorJob()
+    private val coroutineContext: CoroutineContext
+        get() = job + ClimaDispatcher
+    private val climaDispatcherScope = CoroutineScope(coroutineContext)
+
+
     private val _weatherNow = MutableStateFlow<Result>(
         Result(
             cod = 0,
@@ -28,14 +37,22 @@ class ClimaViewModelShared() {
             daily = emptyList()
         )
     )
-
     val oneCallWeather: StateFlow<OneCallResult> get() = _oneCallWeather
 
-    suspend fun getClimaTempo(lat: Double, long: Double) {
-        _weatherNow.value = mRepository.getWeather(lat, long)
+    fun getClimaTempo(lat: Double, long: Double) {
+        climaDispatcherScope.launch{
+            _weatherNow.value = mRepository.getWeather(lat, long)
+        }
+
     }
 
-    suspend fun getOneCallData(lat: Double, long: Double) {
-        _oneCallWeather.value = mRepository.getOneCallApi(lat, long)
+    fun getOneCallData(lat: Double, long: Double) {
+        climaDispatcherScope.launch{
+            _oneCallWeather.value = mRepository.getOneCallApi(lat, long)
+        }
+    }
+
+    fun cancelCoroutines(){
+        climaDispatcherScope.cancel()
     }
 }

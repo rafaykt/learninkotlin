@@ -1,9 +1,12 @@
+import org.jetbrains.kotlin.konan.properties.Properties
+
 plugins {
     id("com.android.application")
     kotlin("android")
     id("kotlin-android-extensions")
     id("kotlin-android")
 }
+
 
 group = "me.rafael.yokota"
 version = "1.0-SNAPSHOT"
@@ -32,6 +35,7 @@ dependencies {
 
 }
 
+
 android {
     compileSdkVersion(29)
     defaultConfig {
@@ -40,11 +44,15 @@ android {
         targetSdkVersion(29)
         versionCode = 1
         versionName = "1.0"
+
+
     }
     buildTypes {
+
         getByName("release") {
             isMinifyEnabled = false
         }
+
     }
     buildFeatures {
         viewBinding = true
