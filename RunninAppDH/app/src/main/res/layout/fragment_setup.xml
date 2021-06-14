@@ -30,8 +30,9 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etName"
             android:layout_width="match_parent"
+            android:minWidth="200dp"
             android:layout_height="wrap_content"
-            android:ems="10"
+            android:ems="20"
             android:hint="Your Name"
             android:inputType="textPersonName" />
 
@@ -40,6 +41,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilWeight"
         android:layout_width="wrap_content"
+        android:minWidth="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="@+id/tilName"
