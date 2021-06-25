@@ -6,7 +6,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.firsttest.model.ImageResponse
-import com.example.firsttest.model.ImageResult
 import com.example.firsttest.repository.ArtRepositoryInterface
 import com.example.firsttest.roomdb.ArtModel
 import com.example.firsttest.util.Resource
@@ -59,7 +58,7 @@ class ArtViewModel @ViewModelInject constructor(
         val yearInt = try{
             year.toInt()
         }catch( exception: Exception){
-            insertArtMsg.postValue(Resource.error(("year should be a number", null))
+            insertArtMsg.postValue(Resource.error("year should be a number", null) )
             return
         }
 
