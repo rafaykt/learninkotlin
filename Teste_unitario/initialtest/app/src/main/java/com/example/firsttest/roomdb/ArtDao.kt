@@ -1,15 +1,10 @@
 package com.example.firsttest.roomdb
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
+import androidx.room.*
 
 @Dao
 interface ArtDao {
-
-    suspend fun getArts() : List<ArtModel>
 
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
@@ -18,6 +13,7 @@ interface ArtDao {
     @Delete
     suspend fun deleteArt(art: ArtModel)
 
+    @Query("SELECT * FROM arts")
     fun observeArts (): LiveData<List<ArtModel>>
 
 
