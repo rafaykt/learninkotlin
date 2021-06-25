@@ -81,9 +81,4 @@ class ArtViewModel @ViewModelInject constructor(
 
     }
 
-    fun mapToListString (lista:ImageResponse): List<String>{
-        val resposta = lista.hits.
-        }
-    }
-
 }

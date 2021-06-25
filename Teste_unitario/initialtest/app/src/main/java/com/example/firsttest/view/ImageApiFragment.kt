@@ -18,8 +18,8 @@ import com.example.firsttest.viewmodel.ArtViewModel
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import java.util.*
 import java.util.Collections.emptyList
+
 import javax.inject.Inject
 
 
@@ -64,15 +64,13 @@ class ImageApiFragment @Inject constructor(
 
     }
 
-
     private fun subscribeToObservers() {
         viewModel.imageList.observe(viewLifecycleOwner, Observer {
             when(it.status) {
                 Status.SUCCESS -> {
-                    var listString = emptyList<String>()
-                    val urls = it.data?.hits.map{
-
-                    }
+                    val urls = it.data?.hits?.map { imageResult ->  imageResult.previewURL }
+                    imageRecyclerAdapter.images = urls ?: listOf()
+                    fragmentBinding?.progressBar?.visibility = View.GONE
 
                 }
 
