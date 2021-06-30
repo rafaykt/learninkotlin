@@ -27,7 +27,7 @@ class MovieRepository(context: Context) {
                 it.onError(e)
             }
         }
-//            .subscribeOn(Schedulers.io())
+//            .subscribeOn(Schedulers.io())até
 //            .observeOn(Schedulers.io())
     }
     // Maybe
