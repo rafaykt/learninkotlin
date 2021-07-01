@@ -76,10 +76,12 @@ class TrackingServices : LifecycleService() {
                         isFirstRun = false
                     } else {
                         Timber.d("Resuming Service. . .")
+                        startForegroundService()
                     }
                 }
                 ACTION_PAUSE_SERVICE -> {
                     Timber.d("Paused service")
+                    pauseServices()
                 }
                 ACTION_STOP_SERVICE -> {
                     Timber.d("Stopped service")
@@ -167,6 +169,10 @@ class TrackingServices : LifecycleService() {
         },
         FLAG_UPDATE_CURRENT
     )
+
+    private fun pauseServices(){
+        isTracking.postValue(false)
+    }
 
     @RequiresApi(Build.VERSION_CODES.O)
     private fun createNotificationChannel(notificationManager: NotificationManager) {
