@@ -26,25 +26,37 @@ import com.example.runninappdh.other.Constants.LOCATION_UPDATE_INTERVAL
 import com.example.runninappdh.other.Constants.NOTIFICATION_CHANNEL_ID
 import com.example.runninappdh.other.Constants.NOTIFICATION_CHANNEL_NAME
 import com.example.runninappdh.other.Constants.NOTIFICATION_ID
+import com.example.runninappdh.other.Constants.TIMER_UPDATE_INTERVAL
 import com.example.runninappdh.other.TrackingUtility
-import com.example.runninappdh.services.TrackingServices.Companion.isTracking
-import com.example.runninappdh.ui.MainActivity
+ import com.example.runninappdh.ui.MainActivity
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationCallback
 import com.google.android.gms.location.LocationRequest
 import com.google.android.gms.location.LocationRequest.PRIORITY_HIGH_ACCURACY
 import com.google.android.gms.location.LocationResult
 import com.google.android.gms.maps.model.LatLng
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import timber.log.Timber
 
 typealias Polyline = MutableList<LatLng>
-typealias Polylines = MutableList<Polyline>
 
 class TrackingServices : LifecycleService() {
 
     var isFirstRun = true
 
     lateinit var fusedLocationProviderClient: FusedLocationProviderClient
+
+    private val timeRunInSeconds = MutableLiveData<Long>()
+
+    companion object {
+        val timeRunInMillis = MutableLiveData<Long>()
+        val isTracking = MutableLiveData<Boolean>()
+        val pathPoints = MutableLiveData<Polylines>()
+    }
+
 
     override fun onCreate() {
         super.onCreate()
@@ -56,14 +68,12 @@ class TrackingServices : LifecycleService() {
         })
     }
 
-    private fun postInitialValues(){
+    private fun postInitialValues() {
         isTracking.postValue(false)
         pathPoints.postValue(mutableListOf())
-    }
 
-    companion object {
-        val isTracking = MutableLiveData<Boolean>()
-        val pathPoints = MutableLiveData<Polylines>()
+        timeRunInSeconds.postValue(0L)
+        timeRunInMillis.postValue(0L)
     }
 
 
@@ -76,7 +86,8 @@ class TrackingServices : LifecycleService() {
                         isFirstRun = false
                     } else {
                         Timber.d("Resuming Service. . .")
-                        startForegroundService()
+//                        startForegroundService()
+                        startTimer()
                     }
                 }
                 ACTION_PAUSE_SERVICE -> {
@@ -108,10 +119,10 @@ class TrackingServices : LifecycleService() {
     }
 
     @SuppressLint("MissingPermission")
-    private fun updateLocationTracking(isTracking: Boolean){
-        if(isTracking){
-            if(TrackingUtility.hasLocationPermissions((this))){
-                val request = LocationRequest().apply{
+    private fun updateLocationTracking(isTracking: Boolean) {
+        if (isTracking) {
+            if (TrackingUtility.hasLocationPermissions(this)) {
+                val request = LocationRequest().apply {
                     interval = LOCATION_UPDATE_INTERVAL
                     fastestInterval = FASTEST_LOCATION_INTERVAL
                     priority = PRIORITY_HIGH_ACCURACY
@@ -122,7 +133,7 @@ class TrackingServices : LifecycleService() {
                     Looper.getMainLooper()
                 )
             }
-        }else{
+        } else {
             fusedLocationProviderClient.removeLocationUpdates(locationCallback)
         }
     }
@@ -132,31 +143,60 @@ class TrackingServices : LifecycleService() {
             super.onLocationResult(result)
             if (isTracking.value!!) {
                 result?.locations?.let { locations ->
-                    for(location in locations){
+                    for (location in locations) {
                         addPathPoint(location)
-                        Timber.d("New location: ${location.latitude}, ${location.longitude}")
+                        Timber.d("NEW LOCATION: ${location.latitude}, ${location.longitude}")
                     }
                 }
             }
+        }
+    }
+
+    private var isTimerEnabled = false
+    private var lapTime = 0L
+    private var timeRun = 0L
+    private var timeStarted = 0L
+    private var lastSecondTimeStamp = 0L
+
+    private fun startTimer() {
+        addEmptyPolyline()
+        isTracking.postValue(true)
+        timeStarted = System.currentTimeMillis()
+        isTimerEnabled = true
+        CoroutineScope(Dispatchers.Main).launch {
+            while (isTracking.value!!) {
+                // time difference between now and timeStarted
+                lapTime = System.currentTimeMillis() - timeStarted
+                // post the new lapTime
+                timeRunInMillis.postValue(timeRun + lapTime)
+                if (timeRunInMillis.value!! >= lastSecondTimeStamp + 1000L) {
+                    timeRunInSeconds.postValue(timeRunInSeconds.value!! + 1)
+                    lastSecondTimeStamp += 1000L
+                }
+                delay(TIMER_UPDATE_INTERVAL)
+            }
+            timeRun += lapTime
         }
 
     }
 
 
     private fun startForegroundService() {
-        addEmptyPolyline()
+        startTimer()
         isTracking.postValue(true)
+
         val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE)
                 as NotificationManager
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             createNotificationChannel(notificationManager)
         }
+
         val notificationBuilder = NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ID)
             .setAutoCancel(false)
             .setOngoing(true)
             .setSmallIcon(R.drawable.ic_directions_run_black_24dp)
-            .setContentTitle("Running APP")
+            .setContentTitle("Running App")
             .setContentText("00:00:00")
             .setContentIntent(getMainActivityPendingIntent())
 
@@ -170,8 +210,9 @@ class TrackingServices : LifecycleService() {
         FLAG_UPDATE_CURRENT
     )
 
-    private fun pauseServices(){
+    private fun pauseServices() {
         isTracking.postValue(false)
+        isTimerEnabled=false
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
@@ -184,4 +225,6 @@ class TrackingServices : LifecycleService() {
         notificationManager.createNotificationChannel(channel)
     }
 }
+
+typealias Polylines = MutableList<Polyline>
 
