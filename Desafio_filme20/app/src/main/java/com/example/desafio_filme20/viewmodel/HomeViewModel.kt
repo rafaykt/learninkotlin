@@ -35,8 +35,6 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
         )
     }
 
-
-
     fun addToFavorites(film: Film){
         film.favorite = true
         compositeDisposable.add(mRepository.save(film).subscribeOn(Schedulers.io()).observeOn(Schedulers.io()).subscribe{})
