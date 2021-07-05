@@ -1,8 +1,10 @@
 package com.example.runninappdh.ui.fragments
 
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.View
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
@@ -11,6 +13,10 @@ import com.example.runninappdh.other.Constants
 import com.example.runninappdh.other.TrackingUtility
 import com.example.runninappdh.ui.viewmodels.MainViewModel
 import com.example.runninappdh.ui.viewmodels.StatisticsViewModel
+import com.github.mikephil.charting.components.XAxis
+import com.github.mikephil.charting.data.BarData
+import com.github.mikephil.charting.data.BarDataSet
+import com.github.mikephil.charting.data.BarEntry
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_settings.*
 import kotlinx.android.synthetic.main.fragment_statistics.*
@@ -27,6 +33,33 @@ class StatisticsFragment: Fragment(R.layout.fragment_statistics) {
         subscribeToObservers()
 
     }
+
+    private fun setupBarChart(){
+        barChart.xAxis.apply{
+            position = XAxis.XAxisPosition.BOTTOM
+            setDrawLabels(false)
+            axisLineColor= Color.WHITE
+            textColor= Color.WHITE
+            setDrawGridLines(false)
+        }
+
+        barChart.axisLeft.apply {
+            axisLineColor = Color.WHITE
+            textColor = Color.WHITE
+            setDrawGridLines(false)
+        }
+        barChart.axisRight.apply {
+            axisLineColor = Color.WHITE
+            textColor = Color.WHITE
+            setDrawGridLines(false)
+        }
+
+        barChart.apply{
+            description.text=" Avg Speed over time"
+            legend.isEnabled=false
+        }
+    }
+
 
 
     private fun subscribeToObservers() {
@@ -61,5 +94,20 @@ class StatisticsFragment: Fragment(R.layout.fragment_statistics) {
             }
         })
 
+
+        viewModel.runsSortedByDate.observe(viewLifecycleOwner,{
+            it?.let{
+                val allAvgSpeeds = it.indices.map { i -> BarEntry(i.toFloat(), it[i].avgSpeedInKMH)}
+                val barDataSet = BarDataSet(allAvgSpeeds, "Avg speed over time").apply {
+                    valueTextColor = Color.WHITE
+                    color = ContextCompat.getColor(requireContext(), R.color.colorAccent)
+                    
+                }
+                barChart.data = BarData(barDataSet)
+                barChart.invalidate()
+
+
+            }
+        })
     }
 }
