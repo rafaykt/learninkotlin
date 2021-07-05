@@ -1,7 +1,7 @@
 package com.example.runninappdh.repositories
 
 import com.example.runninappdh.db.Run
-import com.example.runninappdh.db.dao.RunDAO
+import com.example.runninappdh.db.RunDAO
 import javax.inject.Inject
 
 class MainRepository @Inject constructor(
@@ -15,15 +15,15 @@ class MainRepository @Inject constructor(
 
     fun getAllRunsSortedByDistance() = runDao.getAllRunsSortedByDistance()
 
-    fun getAllRunsSortedByCalories() = runDao.getAllRunsSortedByCalories()
+    fun getAllRunsSortedByCalories() = runDao.getAllRunsSortedByCaloriesBurned()
 
-    fun getAllRunsSortedBySpeed() = runDao.getAllRunsSortedBySpeed()
+    fun getAllRunsSortedBySpeed() = runDao.getAllRunsSortedByAvgSpeed()
 
     fun getAllRunsSortedByTimeInMillis() = runDao.getAllRunsSortedByTimeInMillis()
 
     fun getTotalAvgSpeed() = runDao.getTotalAvgSpeed()
 
-    fun getTotalCaloriesBurnt() = runDao.getTotalCaloriesBurnt()
+    fun getTotalCaloriesBurnt() = runDao.getTotalCaloriesBurned()
 
     fun getTotalDistance() = runDao.getTotalDistance()
 
