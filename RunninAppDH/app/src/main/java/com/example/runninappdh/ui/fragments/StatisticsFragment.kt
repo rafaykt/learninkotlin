@@ -101,7 +101,7 @@ class StatisticsFragment: Fragment(R.layout.fragment_statistics) {
                 val barDataSet = BarDataSet(allAvgSpeeds, "Avg speed over time").apply {
                     valueTextColor = Color.WHITE
                     color = ContextCompat.getColor(requireContext(), R.color.colorAccent)
-                    
+
                 }
                 barChart.data = BarData(barDataSet)
                 barChart.invalidate()
