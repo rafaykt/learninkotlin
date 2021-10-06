@@ -5,6 +5,7 @@ plugins {
     kotlin("android")
     id("kotlin-android-extensions")
     id("kotlin-android")
+    id("com.google.gms.google-services")
 }
 
 
@@ -31,6 +32,7 @@ dependencies {
     implementation ("androidx.datastore:datastore:1.0.0-beta01")
     implementation("com.vmadalin:easypermissions-ktx:1.0.0")
     implementation("com.squareup.picasso:picasso:2.71828")
+    implementation("com.google.firebase:firebase-messaging-ktx:22.0.0")
 
 
 }
