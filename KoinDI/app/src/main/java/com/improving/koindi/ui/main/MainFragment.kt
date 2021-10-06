@@ -1,21 +1,19 @@
 package com.improving.koindi.ui.main
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.improving.koindi.R
+import androidx.navigation.fragment.findNavController
 import com.improving.koindi.databinding.MainFragmentBinding
+import org.koin.androidx.viewmodel.ext.android.viewModel
+import org.koin.core.parameter.parametersOf
 
 class MainFragment : Fragment() {
-
-    companion object {
-        fun newInstance() = MainFragment()
+    private val viewModel: MainViewModel by viewModel{
+        parametersOf(findNavController())
     }
-
-    private lateinit var viewModel: MainViewModel
      private var _binding: MainFragmentBinding? = null
     private val binding get() = _binding!!
     override fun onCreateView(
@@ -31,7 +29,7 @@ class MainFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        viewModel = ViewModelProvider(this, MainViewModel.MainViewModelFactory(MainRepository())).get(MainViewModel::class.java)
+
         viewModel.getFilmes()
         viewModel.filmesLiveData.observe(viewLifecycleOwner, {
             binding.textViewFilme.text = it[0].titulo
