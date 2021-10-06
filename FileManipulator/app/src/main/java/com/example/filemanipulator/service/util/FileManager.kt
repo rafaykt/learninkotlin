@@ -53,11 +53,6 @@ class FileManager() {
 
     suspend fun writeFuncionariosIntoFile(context: Context, listaFuncionarios: List<Funcionario> ){
 
-        val contentResolver = context.contentResolver
-        val funcionarioList = arrayListOf<Funcionario>()
-        val fileOutputStream: FileOutputStream
-
-
         try{
             val file = FileWriter(context.getFileStreamPath("output_desafio.txt").toString())
             listaFuncionarios.forEach {

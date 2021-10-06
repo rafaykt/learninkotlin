@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">411020528730-fv4e6jr5qukm6r1qngbah4b0fs60tibk.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">411020528730</string>
+    <string name="google_api_key" translatable="false">AIzaSyB97IHp-yTgXqfFHbUKdrb7yK_7D3NahnU</string>
+    <string name="google_app_id" translatable="false">1:411020528730:android:852ddae8ac9bc225d1dc63</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyB97IHp-yTgXqfFHbUKdrb7yK_7D3NahnU</string>
+    <string name="google_storage_bucket" translatable="false">teste-rafael-ito.appspot.com</string>
+    <string name="project_id" translatable="false">teste-rafael-ito</string>
+</resources>

@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "411020528730",
+    "project_id": "teste-rafael-ito",
+    "storage_bucket": "teste-rafael-ito.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:411020528730:android:23d7e61fff56084ad1dc63",
+        "android_client_info": {
+          "package_name": "me.rafael.yokota"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "411020528730-fv4e6jr5qukm6r1qngbah4b0fs60tibk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB97IHp-yTgXqfFHbUKdrb7yK_7D3NahnU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "411020528730-fv4e6jr5qukm6r1qngbah4b0fs60tibk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:411020528730:android:852ddae8ac9bc225d1dc63",
+        "android_client_info": {
+          "package_name": "me.rafael.yokota.androidApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "411020528730-fv4e6jr5qukm6r1qngbah4b0fs60tibk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB97IHp-yTgXqfFHbUKdrb7yK_7D3NahnU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "411020528730-fv4e6jr5qukm6r1qngbah4b0fs60tibk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
