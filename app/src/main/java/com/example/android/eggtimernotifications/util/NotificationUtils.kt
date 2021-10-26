@@ -20,11 +20,9 @@ import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
-import android.graphics.BitmapFactory
 import androidx.core.app.NotificationCompat
 import com.example.android.eggtimernotifications.MainActivity
 import com.example.android.eggtimernotifications.R
-import com.example.android.eggtimernotifications.receiver.SnoozeReceiver
 
 // Notification ID.
 private val NOTIFICATION_ID = 0
