@@ -41,9 +41,9 @@ fun NotificationManager.sendNotification(messageBody: String, applicationContext
     // Create the content intent for the notification, which launches
     // this activity
     // TODO: Step 1.11 create intent
-
+    val intent = Intent(applicationContext, MainActivity::class.java)
     // TODO: Step 1.12 create PendingIntent
-
+    val pendingIntent: PendingIntent = PendingIntent.getActivity(applicationContext, NOTIFICATION_ID, intent, PendingIntent.FLAG_UPDATE_CURRENT )
     // TODO: Step 2.0 add style
 
     // TODO: Step 2.2 add snooze action
@@ -57,7 +57,8 @@ fun NotificationManager.sendNotification(messageBody: String, applicationContext
         .setContentTitle(applicationContext.getString(R.string.notification_title))
         .setContentText(messageBody)
     // TODO: Step 1.13 set content intent
-
+        .setContentIntent(pendingIntent)
+        .setAutoCancel(true)
         // TODO: Step 2.1 add style to builder
 
         // TODO: Step 2.3 add snooze action
@@ -68,3 +69,6 @@ fun NotificationManager.sendNotification(messageBody: String, applicationContext
 }
 
 // TODO: Step 1.14 Cancel all notifications
+fun NotificationManager.cancelNotifications(){
+    cancelAll()
+}
