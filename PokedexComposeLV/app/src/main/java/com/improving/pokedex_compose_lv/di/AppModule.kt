@@ -1,4 +1,4 @@
-package com.plcoding.jetpackcomposepokedex.di
+package com.improving.pokedex_compose_lv.di
 
 import dagger.Module
 import dagger.hilt.InstallIn

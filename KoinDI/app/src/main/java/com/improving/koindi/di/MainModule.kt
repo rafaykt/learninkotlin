@@ -11,6 +11,7 @@ val mainModule = module {
     factory{
         MainRepository()
     }
+
     viewModel{ (navController: NavController)->
         MainViewModel(
             repository = get(),

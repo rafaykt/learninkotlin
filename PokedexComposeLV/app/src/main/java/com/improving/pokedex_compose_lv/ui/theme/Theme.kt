@@ -1,4 +1,4 @@
-package com.plcoding.jetpackcomposepokedex.ui.theme
+package com.improving.pokedex_compose_lv.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
